@@ -6,9 +6,11 @@ Ext.define('library.view.main.SearchResult', {
     requires: [
         'library.view.main.MainModel',
 		'library.view.main.FilterTree',
-		'library.view.main.ResultGrid'
+		'library.view.main.ResultGrid',
+		'library.store.CatalogSearchResult'
 
     ],
+
 	viewModel:{
 		type:'main'
 	},
@@ -39,14 +41,6 @@ Ext.define('library.view.main.SearchResult', {
 		]
 		
 	},
-/*	{
-		bind:{
-		html: '<h2>{resultCount} Matches Found For {searchString}</h2>'
-		},
-		xtype:'label',
-		margin: '0 0 0 200'
-	},*/
-			
 	{
 		xtype:'component',
 		width:'100%',
@@ -66,7 +60,8 @@ Ext.define('library.view.main.SearchResult', {
 		},
 		{
 			xtype:'result-grid',
-			margin:'10 0 0 10'
+			margin:'10 0 0 10',
+			store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false})
 		}
 		]
 	}

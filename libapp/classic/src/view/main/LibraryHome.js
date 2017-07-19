@@ -21,15 +21,14 @@ Ext.define('library.view.main.LibraryHome', {
 		},
 		{
 			title: 'Gurukul - A Cognition Shift in Learning',
-			html: 'Contact Screen',
+			html: 'Gurukul - A Cognition Shift in Learning',
 			padding: 15
 		},
 		{
 			title: 'Shrutis & Smritis',
-			html: 'Contact Screen',
+			html: 'Shrutis & Smritis',
 			padding: 15
 		}
-		
 	],
 	listeners:
 	{
@@ -39,6 +38,4 @@ Ext.define('library.view.main.LibraryHome', {
 			}
 		}
 	}
-
-
 });

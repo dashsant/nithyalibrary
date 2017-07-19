@@ -8,6 +8,7 @@
 Ext.define('library.view.main.Main', {
     extend: 'Ext.Panel',
     xtype: 'app-main',
+	id:'app-main',
 	height:'100%',
 	width:'100%',
     requires: [
@@ -22,14 +23,15 @@ Ext.define('library.view.main.Main', {
 		
 
     ],
+	viewModel: 'main',
     layout: 'vbox',
     items: [{
-        html: "Swamiji's quote goes here. We need to store all the quotes in a database. Need to show one quote as a time in an interval of 30 seconds",
-		xtype:'component',
-		padding: '4 20 5 20',
-        style: 'background-color:rgb(217, 65, 3);font-size:12;color:#fff;font-weight: 400;',
-		height:40,
-		width:'100%'
+			html: "Swamiji's quote goes here. We need to store all the quotes in a database. Need to show one quote as a time in an interval of 30 seconds",
+			xtype:'component',
+			padding: '4 20 5 20',
+			style: 'background-color:rgb(217, 65, 3);font-size:12;color:#fff;font-weight: 400;',
+			height:40,
+			width:'100%'
 		},
 		{
 			xtype:'panel',
@@ -38,23 +40,32 @@ Ext.define('library.view.main.Main', {
 			items:
 			[
 				{
-				xtype: 'textfield',
-				width:400,
-				name: 'searchText'
+					xtype: 'textfield',
+					width:400,
+					name: 'searchText',
+					bind: {
+							value: '{searchString}'
+						}
 				},
 				{
-				xtype: 'button',
-				height:32,
-				text:'S',
-				width:32,
-				padding:0,
-				border:false,
-				style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
-				//icon:'/resources/search-32.png',
-				name: 'btnSearch',
-				handler:function(){
-					Ext.getCmp('bottomCardPanel').setActiveItem(1);
-				}
+					xtype: 'button',
+					height:32,
+					text:'S',
+					width:32,
+					padding:0,
+					border:false,
+					style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
+					//icon:'/resources/search-32.png',
+					name: 'btnSearch',
+					handler:function(){
+						var s = Ext.getCmp('result-grid-id').getStore();
+						d = Ext.getCmp('app-main').getViewModel().getData();
+						console.log(d);
+						s.getProxy().setExtraParam("searchString" , d.searchString);
+						s.load();
+
+						Ext.getCmp('bottomCardPanel').setActiveItem(1);
+					}
 				}
 			]	
 		},
