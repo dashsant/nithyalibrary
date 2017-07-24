@@ -20,7 +20,7 @@ Ext.define('library.view.main.Main', {
         'library.view.main.List',
 		'library.view.main.LibraryHome',
 		'library.view.main.SearchResult',
-		
+
 
     ],
 	viewModel: 'main',
@@ -36,13 +36,22 @@ Ext.define('library.view.main.Main', {
 		{
 			xtype:'panel',
 			layout:'hbox',
-			margin: '25 0 0 125',
+			margin: '25 0 0 0',
 			items:
 			[
+        {
+          xtype: 'image',
+          name: 'Logo',
+          padding: '0 0 0 0',
+          width:50,
+          height:50,
+          src:'../../resources/NUP_logo_no_text.jpg',
+        },
 				{
 					xtype: 'textfield',
 					width:400,
 					name: 'searchText',
+          padding: '0 0 0 25',
 					bind: {
 							value: '{searchString}'
 						}
@@ -50,8 +59,36 @@ Ext.define('library.view.main.Main', {
 				{
 					xtype: 'button',
 					height:32,
-					text:'S',
-					width:32,
+					text:'AdvancedSearch',
+					width:120,
+					border:false,
+					style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
+					//icon:'/resources/search-32.png',
+					name: 'btnSearch',
+					handler:function(){
+						var s = Ext.getCmp('result-grid-id').getStore();
+						d = Ext.getCmp('app-main').getViewModel().getData();
+						console.log(d);
+						s.getProxy().setExtraParam("searchString" , d.searchString);
+						s.load();
+
+						Ext.getCmp('bottomCardPanel').setActiveItem(1);
+					}
+				},
+        {
+					xtype: 'textfield',
+					width:400,
+					name: 'searchText',
+          padding: '0 0 0 25',
+					bind: {
+							value: '{searchString}'
+						}
+				},
+				{
+					xtype: 'button',
+					height:32,
+					text:'ManuscriptSearch',
+					width:120,
 					padding:0,
 					border:false,
 					style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
@@ -67,7 +104,7 @@ Ext.define('library.view.main.Main', {
 						Ext.getCmp('bottomCardPanel').setActiveItem(1);
 					}
 				}
-			]	
+			]
 		},
 		{
 			xtype:'panel',
@@ -86,8 +123,8 @@ Ext.define('library.view.main.Main', {
 				{
 				xtype: 'searchresult'
 				}
-			]	
+			]
 		}
-		
+
 	]
 });
