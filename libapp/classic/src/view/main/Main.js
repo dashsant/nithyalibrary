@@ -52,9 +52,10 @@ Ext.define('library.view.main.Main', {
 					width:400,
 					name: 'searchText',
           padding: '0 0 0 25',
-					bind: {
+          emptyText: 'Search'
+					/*bind: {
 							value: '{searchString}'
-						}
+						}*/
 				},
 				{
 					xtype: 'button',
@@ -80,9 +81,10 @@ Ext.define('library.view.main.Main', {
 					width:400,
 					name: 'searchText',
           padding: '0 0 0 25',
-					bind: {
+          emptyText: 'Search ManuScripts'
+					/*bind: {
 							value: '{searchString}'
-						}
+						}*/
 				},
 				{
 					xtype: 'button',
