@@ -90,6 +90,47 @@ Ext.define('library.view.main.Main', {
 				}
 			]
 		}
-
-	]
+	],
+  dockedItems: [
+      {
+        dock: 'bottom',
+        xtype: 'panel',
+  			layout: 'hbox',
+        height: 50,
+  			items:
+  			[
+          {
+            html: 'Copyright © 2017 Nithyananda University Press'
+          },
+          {
+            name: 'facebook',
+            padding: '0 0 0 25',
+            html:
+            '<a href="https://www.facebook.com/nithyanandauniversitypress">'+
+            '<img src="../../resources/facebook.png" style="width: 20px;height: 20px;" /></a>'
+          },
+          {
+            name: 'twitter',
+            padding: '0 0 0 25',
+            html:
+            '<a href="http://twitter.com/SriNithyananda">'+
+            '<img src="../../resources/twitter.jpg" style="width: 20px;height: 20px;" /></a>'
+          },
+          {
+            name: 'youtube',
+            padding: '0 0 0 25',
+            html:
+            '<a href="http://www.youtube.com/nithyanandatv">'+
+            '<img src="../../resources/youtube.png" style="width: 20px;height: 20px;" /></a>'
+          },
+          {
+            name: 'mailto',
+            padding: '0 0 0 25',
+            html:
+            '<a href="mailto:enpublishers@nithyananda.org">'+
+            '<img src="../../resources/mailto.jpg" style="width: 20px;height: 20px;" /></a>'
+          }
+        ]
+      }
+    ]
 });
