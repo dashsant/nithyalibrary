@@ -40,42 +40,6 @@ Ext.define('library.view.main.Main', {
 			items:
 			[
         {
-          xtype: 'image',
-          name: 'Logo',
-          padding: '0 0 0 0',
-          width:50,
-          height:50,
-          src:'../../resources/NUP_logo_no_text.jpg',
-        },
-				{
-					xtype: 'textfield',
-					width:400,
-					name: 'searchText',
-          padding: '0 0 0 25',
-					bind: {
-							value: '{searchString}'
-						}
-				},
-				{
-					xtype: 'button',
-					height:32,
-					text:'AdvancedSearch',
-					width:120,
-					border:false,
-					style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
-					//icon:'/resources/search-32.png',
-					name: 'btnSearch',
-					handler:function(){
-						var s = Ext.getCmp('result-grid-id').getStore();
-						d = Ext.getCmp('app-main').getViewModel().getData();
-						console.log(d);
-						s.getProxy().setExtraParam("searchString" , d.searchString);
-						s.load();
-
-						Ext.getCmp('bottomCardPanel').setActiveItem(1);
-					}
-				},
-        {
 					xtype: 'textfield',
 					width:400,
 					name: 'searchText',
