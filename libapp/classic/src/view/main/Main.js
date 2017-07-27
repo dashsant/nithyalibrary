@@ -20,7 +20,7 @@ Ext.define('library.view.main.Main', {
         'library.view.main.List',
 		'library.view.main.LibraryHome',
 		'library.view.main.SearchResult',
-		
+
 
     ],
 	viewModel: 'main',
@@ -67,7 +67,7 @@ Ext.define('library.view.main.Main', {
 						Ext.getCmp('bottomCardPanel').setActiveItem(1);
 					}
 				}
-			]	
+			]
 		},
 		{
 			xtype:'panel',
@@ -86,7 +86,7 @@ Ext.define('library.view.main.Main', {
 				{
 				xtype: 'searchresult'
 				}
-			]	
+			]
 		}
 	],
 	dockedItems:
@@ -106,32 +106,27 @@ Ext.define('library.view.main.Main', {
 						xtype:'component',
 						name: 'facebook',
 						padding: '0 0 0 25',
-						html:'<a href="https://www.facebook.com/nithyanandauniversitypress">'+
-						'<img src="../../resources/facebook.png" style="width: 20px;height: 20px;" /></a>'
+						html:'<a href="https://www.facebook.com/nithyanandauniversitypress"><div style="color:#d94103"><i class="fa fa-facebook"></i></div></a>'
 					},
 					{
 						xtype:'component',
 						name: 'twitter',
 						padding: '0 0 0 25',
-						html:'<a href="http://twitter.com/SriNithyananda">'+
-						'<img src="../../resources/twitter.jpg" style="width: 20px;height: 20px;" /></a>'
+						html:'<a href="http://twitter.com/SriNithyananda"><div style="color:#d94103"><i class="fa fa-twitter"></i></div></a>'
 					},
 					{
 						xtype:'component',
 						name: 'youtube',
 						padding: '0 0 0 25',
-						html:
-						'<a href="http://www.youtube.com/nithyanandatv">'+
-						'<img src="../../resources/youtube.png" style="width: 20px;height: 20px;" /></a>'
+						html:'<a href="http://www.youtube.com/nithyanandatv"><div style="color:#d94103"><i class="fa fa-youtube-play"></i></div></a>'
 					},
 					{
 						xtype:'component',
 						name: 'mailto',
 						padding: '0 0 0 25',
-						html:'<a href="mailto:enpublishers@nithyananda.org">'+
-						'<img src="../../resources/mailto.jpg" style="width: 20px;height: 20px;" /></a>'
+						html:'<a href="mailto:enpublishers@nithyananda.org"><div style="color:#d94103"><i class="fa fa-envelope"></i></div></a>'
 					}
-				]	
+				]
 			}
 	]
 
