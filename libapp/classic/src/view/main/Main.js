@@ -20,7 +20,7 @@ Ext.define('library.view.main.Main', {
         'library.view.main.List',
 		'library.view.main.LibraryHome',
 		'library.view.main.SearchResult',
-
+		
 
     ],
 	viewModel: 'main',
@@ -36,24 +36,22 @@ Ext.define('library.view.main.Main', {
 		{
 			xtype:'panel',
 			layout:'hbox',
-			margin: '25 0 0 0',
+			margin: '25 0 0 125',
 			items:
 			[
-        {
+				{
 					xtype: 'textfield',
 					width:400,
 					name: 'searchText',
-          padding: '0 0 0 25',
-          emptyText: 'Search ManuScripts'
-					/*bind: {
+					bind: {
 							value: '{searchString}'
-						}*/
+						}
 				},
 				{
 					xtype: 'button',
 					height:32,
-					text:'ManuscriptSearch',
-					width:120,
+					text:'S',
+					width:32,
 					padding:0,
 					border:false,
 					style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
@@ -69,7 +67,7 @@ Ext.define('library.view.main.Main', {
 						Ext.getCmp('bottomCardPanel').setActiveItem(1);
 					}
 				}
-			]
+			]	
 		},
 		{
 			xtype:'panel',
@@ -88,49 +86,53 @@ Ext.define('library.view.main.Main', {
 				{
 				xtype: 'searchresult'
 				}
-			]
+			]	
 		}
 	],
-  dockedItems: [
-      {
-        dock: 'bottom',
-        xtype: 'panel',
-  			layout: 'hbox',
-        height: 50,
-  			items:
-  			[
-          {
-            html: 'Copyright © 2017 Nithyananda University Press'
-          },
-          {
-            name: 'facebook',
-            padding: '0 0 0 25',
-            html:
-            '<a href="https://www.facebook.com/nithyanandauniversitypress">'+
-            '<img src="../../resources/facebook.png" style="width: 20px;height: 20px;" /></a>'
-          },
-          {
-            name: 'twitter',
-            padding: '0 0 0 25',
-            html:
-            '<a href="http://twitter.com/SriNithyananda">'+
-            '<img src="../../resources/twitter.jpg" style="width: 20px;height: 20px;" /></a>'
-          },
-          {
-            name: 'youtube',
-            padding: '0 0 0 25',
-            html:
-            '<a href="http://www.youtube.com/nithyanandatv">'+
-            '<img src="../../resources/youtube.png" style="width: 20px;height: 20px;" /></a>'
-          },
-          {
-            name: 'mailto',
-            padding: '0 0 0 25',
-            html:
-            '<a href="mailto:enpublishers@nithyananda.org">'+
-            '<img src="../../resources/mailto.jpg" style="width: 20px;height: 20px;" /></a>'
-          }
-        ]
-      }
-    ]
+	dockedItems:
+		[
+			{
+				xtype:'toolbar',
+				dock:'bottom',
+				width:'100%',
+				layout:'hbox',
+				items:
+				[
+					{
+						html: 'Copyright © 2017 Nithyananda University Press',
+						xtype:'component'
+					},
+					{
+						xtype:'component',
+						name: 'facebook',
+						padding: '0 0 0 25',
+						html:'<a href="https://www.facebook.com/nithyanandauniversitypress">'+
+						'<img src="../../resources/facebook.png" style="width: 20px;height: 20px;" /></a>'
+					},
+					{
+						xtype:'component',
+						name: 'twitter',
+						padding: '0 0 0 25',
+						html:'<a href="http://twitter.com/SriNithyananda">'+
+						'<img src="../../resources/twitter.jpg" style="width: 20px;height: 20px;" /></a>'
+					},
+					{
+						xtype:'component',
+						name: 'youtube',
+						padding: '0 0 0 25',
+						html:
+						'<a href="http://www.youtube.com/nithyanandatv">'+
+						'<img src="../../resources/youtube.png" style="width: 20px;height: 20px;" /></a>'
+					},
+					{
+						xtype:'component',
+						name: 'mailto',
+						padding: '0 0 0 25',
+						html:'<a href="mailto:enpublishers@nithyananda.org">'+
+						'<img src="../../resources/mailto.jpg" style="width: 20px;height: 20px;" /></a>'
+					}
+				]	
+			}
+	]
+
 });
