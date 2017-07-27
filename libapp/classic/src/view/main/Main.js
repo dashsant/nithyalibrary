@@ -43,9 +43,10 @@ Ext.define('library.view.main.Main', {
 					xtype: 'textfield',
 					width:400,
 					name: 'searchText',
-					bind: {
+          emptyText: 'Type to search'
+					/*bind: {
 							value: '{searchString}'
-						}
+						}*/
 				},
 				{
 					xtype: 'button',
