@@ -26,12 +26,24 @@ Ext.define('library.view.main.Main', {
 	viewModel: 'main',
     layout: 'vbox',
     items: [{
-			html: "Swamiji's quote goes here. We need to store all the quotes in a database. Need to show one quote as a time in an interval of 30 seconds",
-			xtype:'component',
-			padding: '4 20 5 20',
+			xtype:'container',
+			layout:'hbox',
 			style: 'background-color:rgb(217, 65, 3);font-size:12;color:#fff;font-weight: 400;',
 			height:40,
-			width:'100%'
+			width:'100%',
+			items:[
+			{
+				xtype:'component',
+				width: 36,
+				//html:'<svg width="36" height="36"><defs><pattern id="image" x="0" y="0" patternUnits="userSpaceOnUse" height="1" width="1"> <image x="0" y="0" xlink:href="resources/NUP_logo_no_text.jpg"></image> </pattern> </defs>  <circle id="sasasa" cx="24" cy="20" r="18" fill="url(#image)"/></svg>'
+				html:'<svg width="36" height="35">  <circle id="top" cx="18" cy="18" r="18" stroke="black" stroke-width="3" fill="./reources/swamiji.jpg"/></svg'
+			},
+			{
+				xtype:'component',
+				html: "Swamiji's quote goes here. We need to store all the quotes in a database. Need to show one quote as a time in an interval of 30 seconds",
+				padding: '4 20 5 20'
+			}
+			]
 		},
 		{
 			xtype:'panel',
@@ -107,7 +119,7 @@ Ext.define('library.view.main.Main', {
 						name: 'facebook',
 						padding: '0 0 0 25',
 						html:'<a href="https://www.facebook.com/nithyanandauniversitypress">'+
-						'<img src="../../resources/facebook.png" style="width: 20px;height: 20px;" /></a>'
+						'<img src="../../resources/facebook.png" style="width: 16px;height: 16px;" /></a>'
 					},
 					{
 						xtype:'component',
