@@ -77,8 +77,14 @@ Ext.define('library.view.main.Main', {
 						d = Ext.getCmp('app-main').getViewModel().getData();
 						console.log(d);
 						s.getProxy().setExtraParam("searchString" , d.searchString);
-						s.load();
-
+						//s.load();
+            s.load({
+              params: {
+                  // specify params for the first page load if using paging
+                  start: 0,
+                  limit: 2
+              }
+            });
 						Ext.getCmp('bottomCardPanel').setActiveItem(1);
 					}
 				}
