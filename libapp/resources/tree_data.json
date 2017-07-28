@@ -1,0 +1,380 @@
+[
+{
+    "text": "Sruti", 
+	"iconCls":"filter-tree-icon",
+	"leaf": false,
+	"checked": false,
+    "children": [
+	{
+        "text": "Veda",
+        "leaf": false,
+		"iconCls":"filter-tree-icon",
+        "checked": false,
+		"children":[
+				{
+					"text": "Samhita",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Brahmana",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Aranyaka",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Upanishads",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				}				
+		]
+    },
+	{
+        "text": "Upa Veda",
+        "leaf": false,
+		"iconCls":"filter-tree-icon",
+        "checked": false,
+		"children":[
+				{
+					"text": "Ayurveda",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Dhanurveda",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Gandharva Veda",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Arthashastra",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				}				
+		]
+		
+    },
+	{
+        "text": "Vedangas",
+        "leaf": false,
+		"iconCls":"filter-tree-icon",
+        "checked": false,
+		"children":[
+			{
+					"text": "Siksha",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Vyakarana",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Chhandas",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Niruktha",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},
+				{
+					"text": "Jyothisha",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				},				
+				{
+					"text": "Kalpa",
+					"leaf": true,
+					"iconCls":"filter-tree-icon",
+					"checked": false
+				}				
+				
+		]
+		
+    }
+	]
+},
+{
+    "text": "Smriti", 
+	"iconCls":"filter-tree-icon",
+	"leaf": false,
+	"checked": false,	
+    "children": [
+	{
+        "text": "Manu Smriti",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Yajnavalkya",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Parasara",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Other-Smriti",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }	
+	]
+},
+{
+    "text": "Ithihasa", 
+	"iconCls":"filter-tree-icon",
+	"leaf": false,
+	"checked": false,	
+    "children": [
+	{
+        "text": "Mahabharata",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Ramayana",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Bhagavad Gita",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }
+
+	]
+},
+{
+    "text": "Purana", 
+	"iconCls":"filter-tree-icon",
+	"leaf": false,
+	"checked": false,	
+    "children": [
+	{
+        "text": "Mahapurana",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Upa Puranas",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Other Puranas",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }
+	]
+},
+{
+    "text": "Agama", 
+	"iconCls":"filter-tree-icon",
+	"leaf": false,
+	"checked": false,
+    "children": [
+	{
+        "text": "Jnana Pada",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Kriya Pada",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Yoga Pada",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Carya Pada",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Mantra",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Yantra",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Tantra",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Vaishnava",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Shaiva",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }	,
+	{
+        "text": "Saktha",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }		
+	]
+},
+{
+    "text": "Darshana", 
+	"checked": false,
+	"leaf": false,
+	"iconCls":"filter-tree-icon",
+    "children": [
+	{
+        "text": "Nyaya",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Vaisheshika",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Sankhya",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Yoga",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Purva Mimamsa",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }	
+,
+	{
+        "text": "Uttar Mimamsa",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }		
+	]
+},
+{
+	"text": "Alankaras",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Naatyasaastra",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Kavya",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Stotra",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+    "text": "Script", 
+	"iconCls":"filter-tree-icon",
+    "children": [
+	{
+        "text": "Devanaagari",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Grantha",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Telugu",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Roman",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    },
+	{
+        "text": "Tamil",
+        "leaf": true,
+		"iconCls":"filter-tree-icon",
+        "checked": false
+    }	
+	]
+}
+
+]
