@@ -14,13 +14,13 @@ Ext.define('library.view.main.FilterTree', {
 	requires: [
         'library.store.FilterTreeData'
     ],
-   
+
     store:Ext.create('library.store.FilterTreeData'),
     rootVisible: false,
     useArrows: true,
     //width: 280,
     flex:1,
-	height: '100%',
+	height: 400,
 	border:false,
 	bodyStyle: {border:0}
 
