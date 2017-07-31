@@ -14,9 +14,9 @@ Ext.define('library.view.main.SearchResult', {
 	viewModel:{
 		type:'main'
 	},
-	
+
 	items:[
-	
+
 	{
 		xtype:'container',
 		layout:'hbox',
@@ -37,9 +37,9 @@ Ext.define('library.view.main.SearchResult', {
 				handler: function(){
 					Ext.getCmp('bottomCardPanel').setActiveItem(0);
 				}
-			}			
+			}
 		]
-		
+
 	},
 	{
 		xtype:'component',
@@ -53,17 +53,37 @@ Ext.define('library.view.main.SearchResult', {
 		layout:'hbox',
 		width:'100%',
 		height:800,
-		items:[
+    items:[
 		{
 			xtype:'filter-tree',
-			margin: '10 0 0 10'
+			margin: '10 0 0 10',
+      listeners:{
+            checkchange : function(node, checked) {
+              var that = this;
+              if (!node.get('leaf')) node.cascadeBy(function (n) { n.set('checked', checked); });
+                node = node.parentNode;
+                var siblingStateEqual = true;
+                while (node != null && node.get('id') != 'root') {
+                node.cascadeBy(function (n)
+                {
+                  if (n != node) {
+                      if (n.get('checked') != checked) {
+                          siblingStateEqual = false;
+                      }
+                  }
+                });
+                if (siblingStateEqual == checked) node.set('checked', checked);
+                node = node.parentNode;
+              };
+            }
+          }
 		},
 		{
 			xtype:'result-grid',
 			margin:'10 0 0 10',
 			store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false})
 		}
-		]
+  ]
 	}
 	]
 
