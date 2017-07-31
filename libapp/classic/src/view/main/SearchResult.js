@@ -55,9 +55,14 @@ Ext.define('library.view.main.SearchResult', {
 		height:800,
     items:[
 		{
-			xtype:'filter-tree',
-			margin: '10 0 0 10',
-      listeners:{
+      xtype:'container',
+    		width:200,
+    		height:800,
+        items:[
+          {
+    			xtype:'filter-tree',
+    			margin: '10 0 0 10',
+          listeners:{
             checkchange : function(node, checked) {
               var that = this;
               if (!node.get('leaf')) node.cascadeBy(function (n) { n.set('checked', checked); });
@@ -77,6 +82,13 @@ Ext.define('library.view.main.SearchResult', {
               };
             }
           }
+        },
+        {
+          xtype: 'button',
+           text : 'Apply Filter',
+           margin: '10 0 0 10'
+        }
+      ]
 		},
 		{
 			xtype:'result-grid',

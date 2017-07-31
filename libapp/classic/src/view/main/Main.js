@@ -112,24 +112,6 @@ Ext.define('library.view.main.Main', {
 	],
 	dockedItems:
 		[
-      {
-      xtype:'container',
-      dock:'bottom',
-			layout:'vbox',
-			style: 'background-color:#fff;',
-			//height:40,
-			width:'100%',
-			items:[
-  			{
-          xtype: 'button',
-					//height:32,
-					text:'Apply Filter',
-					margin: '0 0 0 10',
-					border:0,
-					//style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
-					//icon:'/resources/search-32.png',
-					name: 'btnSearch',
-        },
   			{
   				xtype:'toolbar',
   				dock:'bottom',
@@ -174,7 +156,4 @@ Ext.define('library.view.main.Main', {
   				]
 			}
     ]
-  }
-	]
-
 });
