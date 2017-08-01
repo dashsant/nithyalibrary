@@ -1,6 +1,7 @@
 Ext.define('library.view.main.SearchResult', {
     extend: 'Ext.Panel',
     xtype: 'searchresult',
+    autoScroll:'true',
 	layout:'vbox',
 	width:'100%',
     requires: [

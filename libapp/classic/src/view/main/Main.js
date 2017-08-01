@@ -42,8 +42,8 @@ Ext.define('library.view.main.Main', {
 			},
 			{
 				xtype:'component',
-				html: "Swamiji's quote goes here. We need to store all the quotes in a database. Need to show one quote as a time in an interval of 30 seconds",
-				padding: '4 20 5 20'
+				html: "<p style=\"text-indent: 2em;\"><q><i>If you want to retain anything life renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
+				padding: '4 20 15 20' // Same as CSS ordering (top, right, bottom, left)
 			}
 			]
 		},
@@ -112,7 +112,7 @@ Ext.define('library.view.main.Main', {
 	],
 	dockedItems:
 		[
-  			{
+      	{
   				xtype:'toolbar',
   				dock:'bottom',
   				width:'100%',
