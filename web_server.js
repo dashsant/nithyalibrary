@@ -77,7 +77,22 @@ router.post('/librrary/filter', function (req, res) {
 	o.id = el._id;
 	matchList.items.push(o);
 	});
-    console.log(matchList);
+    var aggr = resp.aggregations;
+    var filterTree = {};
+    var b = aggr.script_count.buckets;
+    b.forEach(function(el){
+        filterTree[el.key] = el.doc_count;
+    });
+    b =  aggr.category_count.buckets;
+    b.forEach(function(el){
+        filterTree[el.key] = el.doc_count;
+    });
+    matchList.filterTree = filterTree;
+    matchList.totalMatched = resp.hits.total;
+    if( matchList.totalMatched < 500 )
+        matchList.totalReturned = matchList.totalMatched;
+    else
+	matchList.totalReturned = 500
     res.setHeader('Content-Type', 'application/json');
     res.send(matchList)
   },
