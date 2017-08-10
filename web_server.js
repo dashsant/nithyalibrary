@@ -6,6 +6,11 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var nodeCleanup = require('node-cleanup');
+var elasticsearch = require('elasticsearch');
+var client = new elasticsearch.Client({
+  host: 'localhost:9200',
+  log: 'trace'
+});
 
 
 var path = require('path');
@@ -24,12 +29,63 @@ router.get('/', function(req, res) {
 });
 
 
-
+var esSearchObj = 
+{
+	index: 'nithya_index',
+	type: 'manuscript',
+	body:{
+	  size: 500, 
+	  query: {
+		match: {
+		  search_all: {
+			query: "???",
+			fuzziness: 1,
+			prefix_length: 1
+		  }
+		}
+	  },
+	  aggregations : {
+		category_count : {
+			terms : { 
+				field:"tags"
+			}
+		},
+		script_count : {
+		terms : { 
+			 field:"script"
+			}
+		}
+	  }  
+	}
+}
 // POST method route
 router.post('/librrary/filter', function (req, res) {
-  console.log(req.body)
-  res.setHeader('Content-Type', 'application/json');
-  res.send(req.body)
+  var sb = esSearchObj;
+  sb.body.query.match.search_all.query = req.body.searchText;
+  client.search(sb).then(function (resp)
+  {
+    var hits = resp.hits.hits;
+    var matchList = {
+       items:[]
+    }
+    hits.forEach(function(el){
+        var o = {}
+	o.title = el._source.title;
+	o.subject = el._source.subject;
+	o.url = el._source.url;
+	o.script = el._source.script;
+	o.id = el._id;
+	matchList.items.push(o);
+	});
+    console.log(matchList);
+    res.setHeader('Content-Type', 'application/json');
+    res.send(matchList)
+  },
+  function (err)
+  {
+    console.trace(err.message);
+  }
+  );
 })
 
 app.use(express.static(path.join(__dirname, 'libapp')));
@@ -40,6 +96,5 @@ app.listen(9950);
 
 nodeCleanup(function (exitCode, signal) {
     // release resources here before node exits 
-
     global.App.newsdb.close();
 });
