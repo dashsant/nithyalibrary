@@ -7,6 +7,7 @@
         "mongodb": "2.2.27",
         "body-parser": "1.17.2",
 	"node-cleanup": "2.1.2",
-	"node-datetime": "1.0.1"
+	"node-datetime": "1.0.1",
+	"elasticsearch": "13.3.1"
     }
 }
