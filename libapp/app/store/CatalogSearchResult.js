@@ -10,14 +10,22 @@ Ext.define('library.store.CatalogSearchResult', {
 
 	proxy:{
 		type:'ajax',
-		url:'/resources/test_result_data.json',
+		url:'/api/librrary/filter',
+		paramsAsJson:true,
+		actionMethods:{
+		    	create: 'POST',
+    			read: 'POST',
+    			update: 'POST',
+    			destroy: 'POST'
+		},
 		reader:{
 			type:'json',
 			rootProperty: 'items',
-      totalProperty: 'total'
+      			totalProperty: 'total'
 		},
-		extraParams:{
-			searchString:""
+		extraParams:
+		{
+  			searchText:"Agnimukhaprayogap"
 		}
 	}
 });
