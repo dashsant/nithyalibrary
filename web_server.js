@@ -174,5 +174,4 @@ app.listen(9950);
 
 nodeCleanup(function (exitCode, signal) {
     // release resources here before node exits 
-    global.App.newsdb.close();
 });
