@@ -23,10 +23,10 @@ Ext.define('library.store.CatalogSearchResult', {
 			rootProperty: 'items',
       			totalProperty: 'total'
 		},
-		extraParams:
+		/*extraParams:
 		{
   			searchText:"Agnimukhaprayogap"
-		}
+		}*/
 	}
 });
 /*searchresult.load({

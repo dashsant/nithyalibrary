@@ -57,6 +57,7 @@ Ext.define('library.view.main.Main', {
 					xtype: 'textfield',
 					width:400,
 					name: 'searchText',
+          id: 'searchText',
           emptyText: 'Type to search'
 					/*bind: {
 							value: '{searchString}'
@@ -76,7 +77,7 @@ Ext.define('library.view.main.Main', {
 						var s = Ext.getCmp('result-grid-id').getStore();
 						d = Ext.getCmp('app-main').getViewModel().getData();
 						console.log(d);
-						s.getProxy().setExtraParam("searchString" , d.searchString);
+						s.getProxy().setExtraParam("searchText" , Ext.getCmp('searchText').getValue());
 						//s.load();
             s.load({
               params: {
