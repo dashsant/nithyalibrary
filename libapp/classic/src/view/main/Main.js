@@ -74,16 +74,27 @@ Ext.define('library.view.main.Main', {
 					//icon:'/resources/search-32.png',
 					name: 'btnSearch',
 					handler:function(){
-						var s = Ext.getCmp('result-grid-id').getStore();
-						d = Ext.getCmp('app-main').getViewModel().getData();
-						console.log(d);
-						s.getProxy().setExtraParam("searchText" , Ext.getCmp('searchText').getValue());
-						//s.load();
-            s.load({
-              params: {
-                  // specify params for the first page load if using paging
-                  start: 0,
-                  limit: 2
+            Ext.Ajax.request({
+              url : '/api/librrary/filter',
+              params  : {
+                searchText: Ext.getCmp('searchText').getValue()
+              },
+              method: 'POST',
+              success : function(response){
+                    var itemsObj = Ext.JSON.decode(response.responseText).items;
+
+                    var finalArr = [];
+                    for (var i = 0; i < itemsObj.length; i++) {
+                      var arr =[];
+                      arr.push(itemsObj[i].title);
+                      arr.push(itemsObj[i].subject);
+                      arr.push(itemsObj[i].script);
+                      arr.push(itemsObj[i].url);
+                      finalArr.push(arr);
+                  }
+                    var s = Ext.getCmp('result-grid-id').getStore();
+                    s.getProxy().setData(finalArr);
+                    s.load();
               }
             });
 						Ext.getCmp('bottomCardPanel').setActiveItem(1);
