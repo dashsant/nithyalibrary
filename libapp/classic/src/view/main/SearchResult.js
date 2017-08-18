@@ -25,7 +25,7 @@ Ext.define('library.view.main.SearchResult', {
 			{
 				bind:{
 				html: '<h2>{resultReturned} Matches Found For {searchString}</h2>'
-        }
+      },
 				xtype:'label',
 				margin: '0 0 0 200'
 			},
