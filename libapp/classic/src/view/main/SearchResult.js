@@ -15,7 +15,6 @@ Ext.define('library.view.main.SearchResult', {
 	viewModel:{
 		type:'main'
 	},
-
 	items:[
 
 	{
@@ -25,8 +24,8 @@ Ext.define('library.view.main.SearchResult', {
 		items:[
 			{
 				bind:{
-				html: '<h2>{resultCount} Matches Found For {searchString}</h2>'
-				},
+				html: '<h2>{resultReturned} Matches Found For {searchString}</h2>'
+        }
 				xtype:'label',
 				margin: '0 0 0 200'
 			},

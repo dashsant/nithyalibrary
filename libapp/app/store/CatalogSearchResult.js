@@ -5,7 +5,6 @@ Ext.define('library.store.CatalogSearchResult', {
 	storeId:'searchresultstore_id',
   fields: [
     'title', 'subject', 'script','url'
-      //'id', 'script', 'subject', 'title', 'url'
   ],
     pageSize: 10,
 

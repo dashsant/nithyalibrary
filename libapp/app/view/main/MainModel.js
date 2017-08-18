@@ -5,11 +5,12 @@ Ext.define('library.view.main.MainModel', {
     extend: 'Ext.app.ViewModel',
 
     alias: 'viewmodel.main',
-
+    id: 'main-model-id',
     data: {
         name: 'library',
-		resultCount:4,
-		searchString:'Ramayan',
+		resultMatched: '',
+    resultReturned: '',
+		searchString:'',
     },
     stores: {
         searchresult: {
@@ -17,5 +18,5 @@ Ext.define('library.view.main.MainModel', {
             autoLoad: false
         }
     }
-	
+
 });

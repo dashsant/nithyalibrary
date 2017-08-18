@@ -24,6 +24,7 @@ Ext.define('library.view.main.Main', {
 
     ],
 	viewModel: 'main',
+
     layout: 'vbox',
     items: [{
 			xtype:'container',
@@ -92,9 +93,26 @@ Ext.define('library.view.main.Main', {
                       arr.push(itemsObj[i].url);
                       finalArr.push(arr);
                   }
+                  //loading store data
                     var s = Ext.getCmp('result-grid-id').getStore();
                     s.getProxy().setData(finalArr);
                     s.load();
+                  // loading data into MainModel
+                  var viewModel = Ext.getCmp('app-main').getViewModel();
+
+                  viewModel.bind({
+                    searchString: Ext.getCmp('searchText').getValue(),
+                    resultMatched: Ext.JSON.decode(response.responseText).totalMatched,
+                    resultReturned: Ext.JSON.decode(response.responseText).totalReturned,
+                    deep: true
+                },function(data){viewModel.setData(data);});
+
+                viewModel.set('searchString', Ext.getCmp('searchText').getValue());
+                viewModel.notify();
+                viewModel.set('resultMatched', Ext.JSON.decode(response.responseText).totalMatched);
+                viewModel.notify();
+                viewModel.set('resultReturned', Ext.JSON.decode(response.responseText).totalReturned);
+                viewModel.notify();
               }
             });
 						Ext.getCmp('bottomCardPanel').setActiveItem(1);
