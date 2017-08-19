@@ -23,9 +23,8 @@ Ext.define('library.view.main.SearchResult', {
 		width:'100%',
 		items:[
 			{
-				bind:{
-				html: '<h2>{resultReturned} Matches Found For {searchString}</h2>'
-      },
+				id:'searchLabel-id',
+				html: '',
 				xtype:'label',
 				margin: '0 0 0 200'
 			},

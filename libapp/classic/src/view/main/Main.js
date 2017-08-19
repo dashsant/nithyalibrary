@@ -38,8 +38,6 @@ Ext.define('library.view.main.Main', {
 				width: 36,
 				padding:'2 2 2 2',
 				html:'<img src="/resources/NUP_logo_no_text.jpg"  height="36" width="36">',
-				//html:'<svg width="36" height="36"><defs><pattern id="image" x="0" y="0" patternUnits="userSpaceOnUse" height="1" width="1"> <image x="0" y="0" xlink:href="resources/NUP_logo_no_text.jpg"></image> </pattern> </defs>  <circle id="sasasa" cx="24" cy="20" r="18" fill="url(#image)"/></svg>'
-				//html:'<svg width="36" height="35">  <circle id="top" cx="18" cy="18" r="18" stroke="black" stroke-width="3" fill="./reources/swamiji.jpg"/></svg'
 			},
 			{
 				xtype:'component',
@@ -58,11 +56,8 @@ Ext.define('library.view.main.Main', {
 					xtype: 'textfield',
 					width:400,
 					name: 'searchText',
-          id: 'searchText',
-          emptyText: 'Type to search'
-					/*bind: {
-							value: '{searchString}'
-						}*/
+					id: 'searchText',
+					emptyText: 'Type to search'
 				},
 				{
 					xtype: 'button',
@@ -75,46 +70,44 @@ Ext.define('library.view.main.Main', {
 					//icon:'/resources/search-32.png',
 					name: 'btnSearch',
 					handler:function(){
-            Ext.Ajax.request({
-              url : '/api/librrary/filter',
-              params  : {
-                searchText: Ext.getCmp('searchText').getValue()
-              },
-              method: 'POST',
-              success : function(response){
-                    var itemsObj = Ext.JSON.decode(response.responseText).items;
+						Ext.Ajax.request({
+						  url : '/api/librrary/filter',
+						  params  : {
+							searchText: Ext.getCmp('searchText').getValue()
+						  },
+						  method: 'POST',
+						  success : function(response){
+								var itemsObj = Ext.JSON.decode(response.responseText).items;
 
-                    var finalArr = [];
-                    for (var i = 0; i < itemsObj.length; i++) {
-                      var arr =[];
-                      arr.push(itemsObj[i].title);
-                      arr.push(itemsObj[i].subject);
-                      arr.push(itemsObj[i].script);
-                      arr.push(itemsObj[i].url);
-                      finalArr.push(arr);
-                  }
-                  //loading store data
-                    var s = Ext.getCmp('result-grid-id').getStore();
-                    s.getProxy().setData(finalArr);
-                    s.load();
-                  // loading data into MainModel
-                  var viewModel = Ext.getCmp('app-main').getViewModel();
+								var finalArr = [];
+								for (var i = 0; i < itemsObj.length; i++) {
+								  var arr =[];
+								  arr.push(itemsObj[i].title);
+								  arr.push(itemsObj[i].subject);
+								  arr.push(itemsObj[i].script);
+								  arr.push(itemsObj[i].url);
+								  finalArr.push(arr);
+							  }
+							  //loading store data
+							  var s = Ext.getCmp('result-grid-id').getStore();
+							  s.getProxy().setData(finalArr);
+							  s.load();
+							  // loading data into MainModel
+							  var viewModel = Ext.getCmp('app-main').getViewModel();
+							  var sText = Ext.getCmp('searchText').getValue();
+							  var totalMatched = Ext.JSON.decode(response.responseText).totalMatched;
+							  var totalReturned = Ext.JSON.decode(response.responseText).totalReturned;
 
-                  viewModel.bind({
-                    searchString: Ext.getCmp('searchText').getValue(),
-                    resultMatched: Ext.JSON.decode(response.responseText).totalMatched,
-                    resultReturned: Ext.JSON.decode(response.responseText).totalReturned,
-                    deep: true
-                },function(data){viewModel.setData(data);});
-
-                viewModel.set('searchString', Ext.getCmp('searchText').getValue());
-                viewModel.notify();
-                viewModel.set('resultMatched', Ext.JSON.decode(response.responseText).totalMatched);
-                viewModel.notify();
-                viewModel.set('resultReturned', Ext.JSON.decode(response.responseText).totalReturned);
-                viewModel.notify();
-              }
-            });
+							  viewModel.bind({
+								searchString: sText,
+								resultMatched: totalMatched,
+								resultReturned: totalReturned,
+								deep: true
+							},function(data){viewModel.setData(data);});
+							var h = '<h2>' + totalReturned +' Matches Found For ' + sText +'</h2>';
+							Ext.getCmp('searchLabel-id').setHtml(h);
+						  }
+						});
 						Ext.getCmp('bottomCardPanel').setActiveItem(1);
 					}
 				}
