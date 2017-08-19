@@ -104,7 +104,11 @@ Ext.define('library.view.main.Main', {
 								resultReturned: totalReturned,
 								deep: true
 							},function(data){viewModel.setData(data);});
-							var h = '<h2>' + totalReturned +' Matches Found For ' + sText +'</h2>';
+							var h;
+							if(totalMatched > totalReturned )
+								h = '<h2>' + totalReturned +' Matches Found For ' + sText +'</h2>';
+							else
+								h = '<h2> More than 500 ' +' Matches Found For ' + sText +'</h2>';
 							Ext.getCmp('searchLabel-id').setHtml(h);
 						  }
 						});
