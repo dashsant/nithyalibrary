@@ -20,7 +20,7 @@ Ext.define('library.view.main.FilterTree', {
     useArrows: true,
     //width: 280,
     width:320,
-	height: 400,
+	height: 350,
 	border:false,
 	bodyStyle: {border:0},
 		columns: [{
