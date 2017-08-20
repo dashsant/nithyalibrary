@@ -10,11 +10,9 @@
 Ext.define('library.view.main.FilterTree', {
     extend: 'Ext.tree.Panel',
     xtype: 'filter-tree',
-
 	requires: [
         'library.store.FilterTreeData'
     ],
-
     store:Ext.create('library.store.FilterTreeData'),
     rootVisible: false,
     useArrows: true,
@@ -28,11 +26,8 @@ Ext.define('library.view.main.FilterTree', {
 		dataIndex: 'text',
 		width:300,
 		renderer: function (value, matadata, record, rowIndex , colIndex, store, view) {
-		
 		return value;
      }
-		
-		
 	}]
 
 });
