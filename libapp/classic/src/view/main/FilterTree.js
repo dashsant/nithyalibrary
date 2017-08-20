@@ -19,9 +19,20 @@ Ext.define('library.view.main.FilterTree', {
     rootVisible: false,
     useArrows: true,
     //width: 280,
-    flex:1,
+    width:320,
 	height: 400,
 	border:false,
-	bodyStyle: {border:0}
+	bodyStyle: {border:0},
+		columns: [{
+		xtype: 'treecolumn',
+		dataIndex: 'text',
+		width:300,
+		renderer: function (value, matadata, record, rowIndex , colIndex, store, view) {
+		
+		return value;
+     }
+		
+		
+	}]
 
 });
