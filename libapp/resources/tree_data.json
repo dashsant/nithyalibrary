@@ -45,7 +45,7 @@
     },
 	{
         "text": "Upa Veda",
-        "id": "Upa Veda",
+        "id": "Upa-Veda",
         "leaf": false,
 		"iconCls":"filter-tree-icon",
         "checked": false,
@@ -145,7 +145,7 @@
     "children": [
 	{
         "text": "Manu Smriti",
-        "id": "Manu Smriti",
+        "id": "Manu-Smriti",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
@@ -196,7 +196,7 @@
     },
 	{
         "text": "Bhagavad Gita",
-        "id": "Bhagavad Gita",
+        "id": "Bhagavad-Gita",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
@@ -220,14 +220,14 @@
     },
 	{
         "text": "Upa Puranas",
-        "id": "Upa Puranas",
+        "id": "Upa-Puranas",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
     },
 	{
         "text": "Other Puranas",
-        "id": "Other Puranas",
+        "id": "Other-Puranas",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
@@ -243,28 +243,28 @@
     "children": [
 	{
         "text": "Jnana Pada",
-        "id": "Jnana Pada",
+        "id": "Jnana-Pada",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
     },
 	{
         "text": "Kriya Pada",
-        "id": "Kriya Pada",
+        "id": "Kriya-Pada",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
     },
 	{
         "text": "Yoga Pada",
-        "id": "Yoga Pada",
+        "id": "Yoga-Pada",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
     },
 	{
         "text": "Carya Pada",
-        "id": "Carya Pada",
+        "id": "Carya-Pada",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
@@ -350,7 +350,7 @@
     },
 	{
         "text": "Purva Mimamsa",
-        "id": "Purva Mimamsa",
+        "id": "Purva-Mimamsa",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
@@ -358,7 +358,7 @@
 ,
 	{
         "text": "Uttar Mimamsa",
-        "id": "Uttar Mimamsa",
+        "id": "Uttar-Mimamsa",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
