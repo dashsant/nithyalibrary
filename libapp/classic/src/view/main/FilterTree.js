@@ -28,7 +28,12 @@ Ext.define('library.view.main.FilterTree', {
 			renderer: function (value, matadata, record, rowIndex , colIndex, store, view) {
 				var viewModel = Ext.getCmp('app-main').getViewModel();
 				filterTreeData = viewModel.data.filterTree;
-				console.log(record);
+				console.log(filterTreeData);
+				if(filterTreeData.hasOwnProperty(record.id)){
+					var c = filterTreeData[record.id];
+					console.log(value + " ("+ c +")");
+					return value + " ("+ c +")";
+				}
 				return value;
 			}
 		}
