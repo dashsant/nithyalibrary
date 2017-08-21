@@ -8,14 +8,21 @@ Ext.define('library.view.main.MainController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.main',
 	onSearchTextClick:function(){
+		var v =  Ext.getCmp('searchText').getValue().trim();
+		if(v.length == 0)
+			return;
 		Ext.Ajax.request({
 		  url : '/api/librrary/filter',
 		  params  : {
-			searchText: Ext.getCmp('searchText').getValue()
+			searchText: v
 		  },
 		  method: 'POST',
 		  success : function(response){
-				var itemsObj = Ext.JSON.decode(response.responseText).items;
+			        var jsonObj = Ext.JSON.decode(response.responseText)
+				var itemsObj = jsonObj.items;
+				var viewModel = Ext.getCmp('app-main').getViewModel();
+				
+				viewModel.data.filterTree = jsonObj.filterTree
 
 				var finalArr = [];
 				for (var i = 0; i < itemsObj.length; i++) {
@@ -48,9 +55,10 @@ Ext.define('library.view.main.MainController', {
 			else
 				h = '<h2> More than 500 ' +' Matches Found For ' + sText +'</h2>';
 			Ext.getCmp('searchLabel-id').setHtml(h);
+			Ext.getCmp('bottomCardPanel').setActiveItem(1);
 		  }
 		});
-		Ext.getCmp('bottomCardPanel').setActiveItem(1);
+		//Ext.getCmp('bottomCardPanel').setActiveItem(1);
 	},	
 	onApplyFilterClick:function(){
 		console.log("onApplyFilterClick");
