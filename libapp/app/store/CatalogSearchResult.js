@@ -3,16 +3,19 @@ Ext.define('library.store.CatalogSearchResult', {
 
     alias: 'store.searchresultstore',
 	storeId:'searchresultstore_id',
-  fields: [
+	fields: [
     'title', 'subject', 'script','url'
-  ],
+	],
     pageSize: 10,
-
+	data:{
+			items:[]
+		},
     proxy: {
         type: 'memory',
         enablePaging: true,
         reader: {
-            type: 'array'
+            type: 'json',
+			rootProperty:'items'
         }
     }
 });

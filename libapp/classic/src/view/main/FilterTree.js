@@ -10,6 +10,7 @@
 Ext.define('library.view.main.FilterTree', {
     extend: 'Ext.tree.Panel',
     xtype: 'filter-tree',
+	id:'filter-tree-id',
 	requires: [
         'library.store.FilterTreeData'
     ],
