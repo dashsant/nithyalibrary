@@ -69,8 +69,8 @@ Ext.define('library.view.main.MainController', {
 		for(var i=0;i<selectedScripts.length;i++)
 		{
 			var data = selectedScripts[i].getData();
-			if(data.parentId !== 'Script') catFil.push(data.text);
-			else scriptFil.push(data.text);
+			if(data.parentId !== 'Script') catFil.push(data.id);
+			else scriptFil.push(data.id);
 		}
 		Ext.Ajax.request({
 		   url : '/api/librrary/filter',
@@ -92,6 +92,7 @@ Ext.define('library.view.main.MainController', {
 							  arr.push(itemsObj[i].url);
 							  finalArr.push(arr);
 						  }
+						  console.log(finalArr.length);
 						  //loading store data
 						  var s = Ext.getCmp('result-grid-id').getStore();
 						  s.getProxy().setData(finalArr);
