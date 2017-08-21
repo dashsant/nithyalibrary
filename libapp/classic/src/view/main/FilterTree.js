@@ -13,21 +13,49 @@ Ext.define('library.view.main.FilterTree', {
 	requires: [
         'library.store.FilterTreeData'
     ],
+	controller:'main',
     store:Ext.create('library.store.FilterTreeData'),
     rootVisible: false,
     useArrows: true,
-    //width: 280,
     width:320,
-	height: 350,
-	border:false,
+	height:400 ,
 	bodyStyle: {border:0},
-		columns: [{
-		xtype: 'treecolumn',
-		dataIndex: 'text',
-		width:300,
-		renderer: function (value, matadata, record, rowIndex , colIndex, store, view) {
-		return value;
-     }
-	}]
+	columns: [
+		{
+			xtype: 'treecolumn',
+			dataIndex: 'text',
+			width:300,
+			renderer: function (value, matadata, record, rowIndex , colIndex, store, view) {
+				return value;
+			}
+		}
+	],
+	bbar: [
+		{ 
+			xtype: 'button', 
+			text: 'Apply Filter',
+			handler: 'onApplyFilterClick' 
+		}
+	],
+	listeners:{
+			checkchange : function(node, checked) {
+			var that = this;
+			if (!node.get('leaf')) node.cascadeBy(function (n) { n.set('checked', checked); });
+			node = node.parentNode;
+			var siblingStateEqual = true;
+			while (node != null && node.get('id') != 'root') {
+				node.cascadeBy(function (n)
+				{
+					if (n != node) {
+						if (n.get('checked') != checked) {
+							siblingStateEqual = false;
+						}
+					}
+				});
+				if (siblingStateEqual == checked) node.set('checked', checked);
+				node = node.parentNode;
+			};
+		}
+	}	
 
 });

@@ -18,7 +18,7 @@ Ext.define('library.view.main.ResultGrid', {
        xtype: 'result-grid',
        bind: '{searchResultStore}',
        columns: [
-           { text: 'Title',  dataIndex: 'title', flex:1 , renderer: function (value, l , record , m) {
+           { text: 'Title',  dataIndex: 'title', flex:3 , renderer: function (value, l , record , m) {
 
    														var tmp = "";
    														tmp = "<b>Title: </b>" + record.get("title") +"<br>";

@@ -24,6 +24,7 @@ Ext.define('library.view.main.Main', {
 
     ],
 	viewModel: 'main',
+	controller:'main',
 
     layout: 'vbox',
     items: [{
@@ -69,51 +70,7 @@ Ext.define('library.view.main.Main', {
 					style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
 					//icon:'/resources/search-32.png',
 					name: 'btnSearch',
-					handler:function(){
-						Ext.Ajax.request({
-						  url : '/api/librrary/filter',
-						  params  : {
-							searchText: Ext.getCmp('searchText').getValue()
-						  },
-						  method: 'POST',
-						  success : function(response){
-								var itemsObj = Ext.JSON.decode(response.responseText).items;
-
-								var finalArr = [];
-								for (var i = 0; i < itemsObj.length; i++) {
-								  var arr =[];
-								  arr.push(itemsObj[i].title);
-								  arr.push(itemsObj[i].subject);
-								  arr.push(itemsObj[i].script);
-								  arr.push(itemsObj[i].url);
-								  finalArr.push(arr);
-							  }
-							  //loading store data
-							  var s = Ext.getCmp('result-grid-id').getStore();
-							  s.getProxy().setData(finalArr);
-							  s.load();
-							  // loading data into MainModel
-							  var viewModel = Ext.getCmp('app-main').getViewModel();
-							  var sText = Ext.getCmp('searchText').getValue();
-							  var totalMatched = Ext.JSON.decode(response.responseText).totalMatched;
-							  var totalReturned = Ext.JSON.decode(response.responseText).totalReturned;
-
-							  viewModel.bind({
-								searchString: sText,
-								resultMatched: totalMatched,
-								resultReturned: totalReturned,
-								deep: true
-							},function(data){viewModel.setData(data);});
-							var h;
-							if(totalMatched > totalReturned )
-								h = '<h2>' + totalReturned +' Matches Found For ' + sText +'</h2>';
-							else
-								h = '<h2> More than 500 ' +' Matches Found For ' + sText +'</h2>';
-							Ext.getCmp('searchLabel-id').setHtml(h);
-						  }
-						});
-						Ext.getCmp('bottomCardPanel').setActiveItem(1);
-					}
+					handler : 'onSearchTextClick'  // no scope given here
 				}
 			]
 		},

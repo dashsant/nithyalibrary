@@ -9,7 +9,7 @@ Ext.define('library.view.main.MainModel', {
     data: {
         name: 'library',
 		resultMatched: '',
-    resultReturned: '',
+		resultReturned: '',
 		searchString:'',
     },
     stores: {
