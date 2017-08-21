@@ -43,7 +43,7 @@ Ext.define('library.view.main.MainController', {
 				deep: true
 			},function(data){viewModel.setData(data);});
 			var h;
-			if(totalMatched > totalReturned )
+			if(totalMatched == totalReturned )
 				h = '<h2>' + totalReturned +' Matches Found For ' + sText +'</h2>';
 			else
 				h = '<h2> More than 500 ' +' Matches Found For ' + sText +'</h2>';
