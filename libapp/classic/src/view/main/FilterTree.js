@@ -26,6 +26,9 @@ Ext.define('library.view.main.FilterTree', {
 			dataIndex: 'text',
 			width:300,
 			renderer: function (value, matadata, record, rowIndex , colIndex, store, view) {
+				var viewModel = Ext.getCmp('app-main').getViewModel();
+				filterTreeData = viewModel.data.filterTree;
+				console.log(record);
 				return value;
 			}
 		}
