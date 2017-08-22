@@ -34,6 +34,7 @@ index: 'nithya_index',
 type: 'manuscript',
 body: 
 {
+  size: 500,
   query: { 
     bool: {
     must:[
