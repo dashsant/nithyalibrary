@@ -27,8 +27,20 @@ Ext.define('library.view.main.ResultGrid', {
    														return tmp;
    												}},
            { text: 'url', dataIndex: 'url', flex: 1, renderer: function (value, l , record , m) {
-   														var tmp = '<a href="' + record.get("url")[0]+'">' + "Download" +"</a>";
-   														return tmp;
+														if(record.get("url").length == 1){
+															var tmp = '<a target="_blank" ' + +'href="' + record.get("url")[0]+'">' + "Download" +"</a>";
+															return tmp;
+														}
+														else{
+															var a = record.get("url");
+															var tmp = '<a target="_blank" ' + +'href="' + a[0]+'">' + "Download 1" +"</a> ";
+															
+															for(var i = 1 ; i < a.length ; i++){
+																var t = '<a target="_blank" ' + +'href="' + a[i]+'">' + (i+1).toString() +"</a> ";
+																tmp = tmp+t;
+															}
+															return tmp;
+														}
    												}}
 
        ],
