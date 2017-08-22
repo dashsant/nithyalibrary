@@ -99,7 +99,7 @@ var esSearchObj =
 router.post('/librrary/filter', function (req, res) {
   var sb;
   if( req.body.hasOwnProperty("catFilter") || req.body.hasOwnProperty("catFilter")){
-    sb = esFliterObj;
+    sb = JSON.parse(JSON.stringify(esFliterObj));
     sb.body.query.bool.must[0].match.search_all.query  = req.body.searchText;
     if( req.body.hasOwnProperty("catFilter")){
       if(req.body.catFilter.length > 0){
@@ -118,7 +118,7 @@ router.post('/librrary/filter', function (req, res) {
 
   }
   else{
-    sb = esSearchObj;
+    sb = JSON.parse(JSON.stringify(esSearchObj));
     sb.body.query.match.search_all.query = req.body.searchText;
   }
   client.search(sb).then(function (resp)
@@ -166,7 +166,8 @@ function processSearchResult(hits , aggr)
     return matchList;
 }
 
-app.use(express.static(path.join(__dirname, 'libapp')));
+app.use(express.static(path.join(__dirname, 'libapp/build/production/library')));
+//app.use(express.static(path.join(__dirname, 'libapp')));
 
 app.use('/api', router);
 
