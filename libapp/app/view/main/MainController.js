@@ -21,8 +21,7 @@ Ext.define('library.view.main.MainController', {
 
 			//loading store data
 			var s = Ext.getCmp('result-grid-id').getStore();
-			s.data = itemsObj
-			s.load();
+			s.loadData(itemsObj,false);
 			// loading data into MainModel
 			var viewModel = Ext.getCmp('app-main').getViewModel();
 			var sText = Ext.getCmp('searchText').getValue();
@@ -54,6 +53,7 @@ Ext.define('library.view.main.MainController', {
 		var catFil = [];
 		var scriptFil = [];
 		var selectedScripts = Ext.getCmp('filter-tree-id').getChecked();
+		console.log(selectedScripts);
 
 		for(var i=0;i<selectedScripts.length;i++)
 		{

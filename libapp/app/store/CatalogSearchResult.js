@@ -7,9 +7,6 @@ Ext.define('library.store.CatalogSearchResult', {
 	storeId:'searchresultstore_id',
 	model:'library.model.CatalogDetail',
     pageSize: 10,
-	data:{
-			items:[]
-		},
     proxy: {
         type: 'memory',
         enablePaging: true,
