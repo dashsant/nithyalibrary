@@ -65,6 +65,29 @@ Ext.define('library.view.main.LibraryHome', {
             'Nibandhas,Puranas,Agamas and Tantras,Darshanas and many other writings like Yoga Vasishtha and Panchatantra.</p><br></div><div style="float:right;margin-left:10px;margin-top:5px;">'+
             '<h3>Shrutis & Smritis Videos</h3><br><iframe width="260" height="200" src="https://www.youtube.com/embed/t0JftnvuwSU" frameborder="0" allowfullscreen></iframe></div></div>',
 			padding: 15
+		},
+    {
+			title: 'Other Resources',
+			html: '<div><div style="float:left;margin-right:20px;margin-bottom:20px;font-family:verdana;">'+
+            '<p>Agama Academy aims at providing internet based resources and opportunities to all <br>'+
+            'those who are interested in acquiring knowledge on Agama Sastra which is the primary <br>'+
+            'source and authority for worship, ritual, tradition, culture and temple construction.<br>'+
+            'Agama Academy would actively employ both traditional methods and modern technology and <br>'+
+            'ensure that the vast resource of knowledge and experience on Agama Sastra, one of the <br>'+
+            'world\'s oldest living religious practices of Tamils, are preserved and made accessible <br>'+
+            'for generations to come. <br>'+
+            '<div style="float:left;margin-right:20px;margin-bottom:20px;font-family:Comic Sans MS;">Here is the link for your refrence - <a href=\'http://www.agamaacademy.org/\'>Agama Academy</a></p></div></div></div><br><br>'+
+            '<div><div style="float:left;margin-right:20px;margin-bottom:20px;font-family:verdana;">'+
+            '<p>Himalayan Academy provides documents about Kamikagama.Kamikagama is one of the <br>'+
+            'longest Agamas followed by most of the temples in South India.It is looked up on as the feet of<br>'+
+            'Siva. It deals with all the rituals from karshana (turning the sod) to pratishta <br>'+
+            '(installation) of deities.The uttarablaaga deals with diksa, festivals etc.  <br>'+
+            'So this is a complete manual for priests, laymen and for the inquisitive scholar  <br>'+
+            'who wants to know the details and symbolism of Agamic worship, private and public. <br>'+
+            '<div style="float:left;margin-right:20px;margin-bottom:20px;font-family:Comic Sans MS;">Here is the link for your refrence - <a href=\'https://www.himalayanacademy.com/view/kamika-agama_grantha/\'>Himalayan Academy</a></p></div></div></div>'
+
+              ,
+			padding: 15
 		}
 	],
 	listeners:
