@@ -1,0 +1,46 @@
+{
+    "mappings": {
+      "manuscript_ver1": {
+        "_all": {
+          "enabled": false
+        },
+        "_source": {
+          "enabled": true
+        },
+        "properties": {
+          "recordlocator": {
+	    "type": "keyword"
+	  },
+          "category": {
+            "type": "keyword"
+          },
+          "tags":{
+            "type":"keyword"
+          },
+          "material": {
+            "type": "keyword"
+          },
+          "script": {
+            "type": "keyword"
+          },
+          "subject": {
+            "type": "text",
+            "copy_to": "search_all"
+            
+          },
+          "title": {
+            "type": "text",
+            "copy_to": "search_all"
+          },
+		      "search_all":{
+			      "type": "text"
+		      },
+          "url": {
+            "type": "keyword",
+            "index": false
+          }
+        }
+      }
+    }
+  }
+
