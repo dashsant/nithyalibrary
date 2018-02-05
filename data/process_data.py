@@ -1,7 +1,7 @@
 
 import json
 from elasticsearch import Elasticsearch
-f = open("IFP_noheader.csv" , "r" , encoding="Windows-1252")
+f = open("IFP_ver2.csv" , "r" , encoding="Windows-1252")
 l2 = open("l2-files.json" , "r")
 l2f = open("l2-folders.json" , "r")
 fileURLs = json.load(l2)
@@ -24,8 +24,9 @@ def createDocumnent(es, doc):
 	esdoc["subject"] = doc["subject"] 
 	esdoc["script"] = doc["script"] 
 	esdoc["url"] = doc["url"].split(";")
-	esdoc["tags"] = doc["tags"]
-	esdoc["category"] = doc["category"]
+	esdoc["tags"] = doc["tags"].split("/")
+	esdoc["category"] = esdoc["category"].replace(" " , "-")
+	esdoc["category"] = doc["category"].split("/")
 	try:
 		body = json.dumps(esdoc)
 		es.create("nithya_index_ver1", "manuscript" , doc["recKey"],body)
@@ -64,14 +65,13 @@ def main():
 		doc["title"] = rsc(a[2])
 		doc["subject"] = rsc(a[3])
 		doc["script"] = rsc(a[4])
-		doc["material"] = rsc(a[5])
+		doc["tags"] = rsc(a[5])
+		doc["category"] = rsc(a[5])
+		doc["material"] = rsc(a[6])
 		doc["url"] = url
-		#create values for tag and category by assigning same value as subject
-		doc["tags"] = [doc["subject"]]
-		doc["category"] = [doc["subject"]]
 		createDocumnent(es , doc)
 		
-		lineOut = str(doc["recKey"]) + "," + doc["recLoc"] + "," + doc["title"] + "," + doc["subject"] + "," + doc["script"] + "," + doc["material"] + "," + doc["url"]
+		lineOut = str(doc["recKey"]) + "," + doc["recLoc"] + "," + doc["title"] + "," + doc["subject"] + "," + doc["script"] + "," + doc["tags"] + "," + doc["category"] + "," + doc["material"] + "," + doc["url"]
 		recKey += 1
 		o.write(lineOut)
 		o.write("\n")
