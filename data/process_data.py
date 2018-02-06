@@ -29,7 +29,7 @@ def createDocumnent(es, doc):
 	esdoc["category"] = doc["category"].split("/")
 	try:
 		body = json.dumps(esdoc)
-		es.create("nithya_index_ver1", "manuscript" , doc["recKey"],body)
+		es.create("nithya_index", "manuscript" , doc["recKey"],body)
 	except e:
 		print(e)
 
