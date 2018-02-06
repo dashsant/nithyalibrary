@@ -1,6 +1,9 @@
 {
-    "mappings": {
-      "manuscript_ver1": {
+    "settings" : {
+        "number_of_shards" : 1
+    },
+	"mappings": {
+      "manuscript": {
         "_all": {
           "enabled": false
         },
