@@ -25,7 +25,7 @@ def createDocumnent(es, doc):
 	esdoc["script"] = doc["script"] 
 	esdoc["url"] = doc["url"].split(";")
 	esdoc["tags"] = doc["tags"].split("/")
-	esdoc["category"] = esdoc["category"].replace(" " , "-")
+	esdoc["category"] = doc["category"].replace(" " , "-")
 	esdoc["category"] = doc["category"].split("/")
 	try:
 		body = json.dumps(esdoc)
