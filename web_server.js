@@ -9,7 +9,7 @@ var nodeCleanup = require('node-cleanup');
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
   host: 'localhost:9200',
-  log: 'trace'
+  log: 'error'
 });
 
 
@@ -39,12 +39,11 @@ body:
     bool: {
     must:[
       {
-       match: {
-       search_all: {
+       multi_match: {
         query: "???",
-        fuzziness: 1,
-        prefix_length: 1
-      }
+        type: "phrase_prefix",
+		fields: [  "search_all" ],
+        tie_breaker: 0.3
     }}],
     filter: [ 
       
@@ -54,7 +53,7 @@ body:
   aggregations : {
     category_count : {
         terms : { 
-            field:"tags"
+            field:"category"
         }
     },
 	script_count : {
@@ -74,18 +73,17 @@ var esSearchObj =
 	body:{
 	  size: 500, 
 	  query: {
-		match: {
-		  search_all: {
+		multi_match: {
 			query: "???",
-			fuzziness: 1,
-			prefix_length: 1
-		  }
+			type: "phrase_prefix",
+			fields: [  "search_all" ],
+			tie_breaker: 0.3
 		}
 	  },
 	  aggregations : {
 		category_count : {
 			terms : { 
-				field:"tags"
+				field:"category"
 			}
 		},
 		script_count : {
@@ -101,11 +99,11 @@ router.post('/librrary/filter', function (req, res) {
   var sb;
   if( req.body.hasOwnProperty("catFilter") || req.body.hasOwnProperty("catFilter")){
     sb = JSON.parse(JSON.stringify(esFliterObj));
-    sb.body.query.bool.must[0].match.search_all.query  = req.body.searchText;
+    sb.body.query.bool.must[0].multi_match.query  = req.body.searchText;
     if( req.body.hasOwnProperty("catFilter")){
       if(req.body.catFilter.length > 0){
         var catTerms = {};
-        catTerms.terms = { tags:req.body.catFilter}
+        catTerms.terms = { category:req.body.catFilter}
         sb.body.query.bool.filter.push(catTerms);
       }
     }
@@ -120,7 +118,7 @@ router.post('/librrary/filter', function (req, res) {
   }
   else{
     sb = JSON.parse(JSON.stringify(esSearchObj));
-    sb.body.query.match.search_all.query = req.body.searchText;
+    sb.body.query.multi_match.query = req.body.searchText;
   }
   client.search(sb).then(function (resp)
   {
@@ -172,7 +170,7 @@ app.use(express.static(path.join(__dirname, 'libapp/build/production/library')))
 
 app.use('/api', router);
 
-app.listen(9950);
+app.listen(80);
 
 nodeCleanup(function (exitCode, signal) {
     // release resources here before node exits 
