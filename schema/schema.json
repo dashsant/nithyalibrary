@@ -41,7 +41,11 @@
           "url": {
             "type": "keyword",
             "index": false
-          }
+          },
+		  "tree_index":{
+			"type": "keyword",
+			"index": false
+		  }
         }
       }
     }
