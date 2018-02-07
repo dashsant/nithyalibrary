@@ -1,0 +1,33 @@
+- Create an instance from the NithyLibrary AMI
+- Attach the Elastic IP to this instance
+- Add inbound security group rule to accept traffic from port 80. The security group name
+  can be found in the EC2 instance details.
+- Attach NithyLibraryIndex volume to this instance. Steps to do this as follows.
+	https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+	lsblk - This will list all the attached volumes
+	sudo mkdir /data
+	sudo cp /etc/fstab /etc/fstab.orig
+	vi /etc/fstab
+	add the following line to fstab file
+	sudo file -s /dev/xvda1
+
+	Assuming that you find /dev/xvda1 to have UUID de9a1ccd-a2dd-44f1-8be8-0123456abcdef, you would add the following entry to /etc/fstab to mount an ext4 file system at mount point /data:
+
+	UUID=de9a1ccd-a2dd-44f1-8be8-0123456abcdef       /data   ext4    defaults,nofail        0       2
+	sudo mount -a
+	
+Starting node js as a service
+-----------------------------
+sudo /usr/bin/pm2 start web_server.js
+sudo /usr/bin/pm2 save
+Refer to the following article for more details:
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-centos-7
+
+
+Deploying web application
+-------------------------
+Download the most up to date release from git and replace the code 
+
+Importing catalogs
+-------------------
+Run the 
