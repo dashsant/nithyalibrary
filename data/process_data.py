@@ -26,7 +26,7 @@ def createDocumnent(es, doc):
 	esdoc["url"] = doc["url"].split(";")
 	esdoc["tags"] = doc["tags"].split("/")
 	esdoc["category"] = doc["category"].replace(" " , "-")
-	esdoc["category"] = doc["category"].split("/")
+	esdoc["category"] = esdoc["category"].split("/")
 	try:
 		body = json.dumps(esdoc)
 		es.create("nithya_index", "manuscript" , doc["recKey"],body)
