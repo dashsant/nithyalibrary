@@ -18,10 +18,7 @@ Ext.define('library.view.main.Main', {
         'library.view.main.MainController',
         'library.view.main.MainModel',
         'library.view.main.List',
-		'library.view.main.LibraryHome',
-		'library.view.main.SearchResult',
-
-
+		'library.view.main.LibraryHome'
     ],
 	viewModel: 'main',
 	controller:'main',
@@ -49,19 +46,35 @@ Ext.define('library.view.main.Main', {
 		},
 		{
 			xtype:'panel',
-			layout:'hbox',
-			margin: '25 0 0 125',
+			layout:{
+				type: 'hbox',
+				align: 'middle'
+			},
+			margin: '5 0 0 5',
+			defaultButton:'btnSearch',
+			referenceHolder: true,
 			items:
 			[
 				{
+					margin: '5 0 0 75',
+					xtype: 'container',
+					width:100,
+					style:'line-height:180%',
+					html:"<h3>Nithyananda<br>Digital<br>Library</h3>"
+				},			
+
+				{
 					xtype: 'textfield',
 					width:400,
+					
+					margin: '0 0 0 50',
 					name: 'searchText',
 					id: 'searchText',
 					emptyText: 'Type to search'
 				},
 				{
 					xtype: 'button',
+					reference: 'btnSearch',
 					height:32,
 					text:'S',
 					width:32,
@@ -75,23 +88,23 @@ Ext.define('library.view.main.Main', {
 			]
 		},
 		{
-			xtype:'panel',
-			layout:{
-				type:'card',
-				align:'stretch'
-			},
-			id:'bottomCardPanel',
-			margin: '25 0 0 0',
-			width:'100%',
-			items:
-			[
-				{
-				xtype: 'libraryhome'
-				},
-				{
-				xtype: 'searchresult'
-				}
-			]
+			xtype:'libraryhome',
+			//layout:{
+			//	type:'card',
+			//	align:'stretch'
+			//},
+			id:'libraryhomePage',
+			//margin: '25 0 0 0',
+			//width:'100%',
+			//items:
+			//[
+			//	{
+			//	xtype: 'libraryhome'
+			//	},
+			//	{
+			//	xtype: 'searchresult'
+			//	}
+			//]
 		}
 	],
 	dockedItems:

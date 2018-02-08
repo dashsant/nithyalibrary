@@ -35,7 +35,7 @@ Ext.define('library.view.main.MainController', {
 				h = '<h2> More than 500 ' +' Matches Found For ' + sText +'</h2>';
 			Ext.getCmp('searchLabel-id').setHtml(h);
 			Ext.getCmp('filter-tree-id').getStore().load();
-			Ext.getCmp('bottomCardPanel').setActiveItem(1);
+			Ext.getCmp('libraryhomePage').setActiveItem(4);
 		  }
 		});		
 	},
@@ -46,20 +46,18 @@ Ext.define('library.view.main.MainController', {
 			return;
 		var p = { searchText: v }
 		this.getSearchResult(p);
-		//Ext.getCmp('bottomCardPanel').setActiveItem(1);
 	},	
 	onApplyFilterClick:function(){
 		console.log("onApplyFilterClick");
 		var catFil = [];
 		var scriptFil = [];
-		var selectedScripts = Ext.getCmp('filter-tree-id').getChecked();
-		console.log(selectedScripts);
+		var selectedItems = Ext.getCmp('filter-tree-id').getChecked();
 
-		for(var i=0;i<selectedScripts.length;i++)
+		for(var i=0;i<selectedItems.length;i++)
 		{
-			var data = selectedScripts[i].getData();
-			if(data.parentId !== 'Script') catFil.push(data.id);
-			else scriptFil.push(data.id);
+			var data = selectedItems[i].getData();
+			if(data.parentId !== 'Script') 
+				catFil.push(data.id);
 		}
 		var p = {
 			 searchText: Ext.getCmp('searchText').getValue(),
