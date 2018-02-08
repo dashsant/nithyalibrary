@@ -1,0 +1,31 @@
+# Go to the application folder
+
+cd /www/nithyalibrary
+
+# If the data has changed then do the following
+
+# Delete the index
+curl -XDELETE "http://localhost:9200/nithya_index"
+
+cd /www/nithyalibrary/schema
+
+# Recreate the index
+curl -XPUT "http://localhost:9200/nithya_index" -H 'Content-Type: application/json' -d @schema.json
+
+# Validate the schema is created properly by getting the schema
+curl -XGET "http://localhost:9200/_mapping"
+
+# Run the python program to enter the data
+python3 /www/nithyalibrary/data/process_data.py
+
+# Re deploy the web application
+
+1. Replace the web_server.js
+2. Get lib.tgz from release folder.
+3. uncompress the file inside libapp.
+4. Restart the application
+
+sudo pm2 list
+sudo pm2 restart web_server
+
+
