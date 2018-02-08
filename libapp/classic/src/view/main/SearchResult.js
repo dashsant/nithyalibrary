@@ -9,43 +9,17 @@ Ext.define('library.view.main.SearchResult', {
 		'library.view.main.FilterTree',
 		'library.view.main.ResultGrid',
 		'library.store.CatalogSearchResult'
-
     ],
 
 	viewModel:{
 		type:'main'
 	},
 	items:[
-
 	{
-		xtype:'container',
-		layout:'hbox',
-		width:'100%',
-		items:[
-			{
-				id:'searchLabel-id',
-				html: '',
-				xtype:'label',
-				margin: '0 0 0 200'
-			},
-			{
-				text:"Go To Home",
-				xtype:'button',
-				margin: '10 0 0 200',
-				style: 'background-color: rgb(240, 176, 148);',
-				handler: function(){
-					Ext.getCmp('bottomCardPanel').setActiveItem(0);
-				}
-			}
-		]
-
-	},
-	{
-		xtype:'component',
-		width:'100%',
-		height: '2px',
-		style:'background-color:rgb(217, 65, 3);',
-		margin: '10 0 0 10'
+		id:'searchLabel-id',
+		html: '',
+		xtype:'label',
+		margin: '0 0 0 200'
 	},
 	{
 		xtype:'container',
