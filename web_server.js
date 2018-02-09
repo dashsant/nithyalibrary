@@ -8,8 +8,8 @@ var bodyParser = require('body-parser');
 var nodeCleanup = require('node-cleanup');
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
-  host: 'localhost:9200',
-  log: 'error'
+  host: '45.18.12.178:9200',
+  log: 'trace'
 });
 
 
@@ -132,6 +132,51 @@ router.post('/librrary/filter', function (req, res) {
   }
   );
 })
+
+// POST method route
+router.post('/librrary/scripture/by_category', function (req, res) {
+	var sb = 
+	{
+		index: 'nithya_index',
+		type: 'manuscript',
+		body:{	
+			size: req.body.sz, 
+			from: req.body.fr,
+			query: {
+				match: {
+					category:{
+					query: req.body.q,
+					fuzziness:1
+					}
+				}
+			}
+		}
+	}		
+
+  client.search(sb).then(function (resp)
+  {
+    var matchList = {
+       items:[]
+    }
+    resp.hits.hits.forEach(function(el){
+        var o = {}
+        o.title = el._source.title;
+        o.subject = el._source.subject;
+        o.url = el._source.url;
+        o.script = el._source.script;
+        o.id = el._id;
+        matchList.items.push(o);
+    });
+    res.setHeader('Content-Type', 'application/json');
+    res.send(matchList)
+  },
+  function (err)
+  {
+    console.trace(err.message);
+  }
+  );
+})
+
 
 function processSearchResult(hits , aggr)
 {
