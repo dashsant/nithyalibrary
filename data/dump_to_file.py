@@ -1,7 +1,7 @@
 
 import json
 from elasticsearch import Elasticsearch
-f = open("IFP_ver2.csv" , "r" , encoding="Windows-1252")
+f = open("IFP_ver2.txt" , "r" , encoding="Windows-1252")
 l2 = open("l2-files.json" , "r")
 l2f = open("l2-folders.json" , "r")
 
@@ -11,6 +11,7 @@ folderURLs = json.load(l2f)
 l2.close()
 l2f.close()
 o = open("output.csv" , "w")
+c = open("cats_tree.csv" , "w")
 
 def getCatsMap():
 	cats_map = {}
@@ -21,7 +22,6 @@ def getCatsMap():
 		cats_map[a[0]] = a[1]
 	c.close()
 	s = set(cats_map.values())
-	print("\n".join(s))
 	
 	return cats_map
 
@@ -40,7 +40,8 @@ def rsc(str):
 	s = s.replace(';' , '')
 	return s
 
-def createDocumnent(es, doc , cats_map):
+def createDocumnent(tree , doc , cats_map):
+	
 	esdoc = {}
 	esdoc["recKey"] = doc["recKey"]
 	esdoc["recordlocator"] = doc["recLoc"]
@@ -50,30 +51,30 @@ def createDocumnent(es, doc , cats_map):
 	esdoc["script"] = doc["script"] 
 	esdoc["url"] = doc["url"].split(";")
 	esdoc["category"] = doc["category"].strip().replace(" " , "-")
+
 	esdoc["category"] = getCategories(cats_map ,esdoc["category"].split("/"))
 	if "Uncategorised" in esdoc["category"]:
 		esdoc["category"] = ["Uncategorised"]
 
-
 	x = '/'.join(esdoc["category"])
+	tree[x] = 1
 	lineOut = str(esdoc["recKey"]) + "," + esdoc["recordlocator"] + "," + esdoc["title"] + "," + esdoc["subject"] + "," + esdoc["script"]  + "," + x + "," + esdoc["material"] + "," + doc["url"]
 	
 	o.write(lineOut)
 	o.write("\n")
 
-	try:
-		body = json.dumps(esdoc)
-		#es.create("nithya_index", "manuscript" , esdoc["recKey"],body)
-	except e:
-		print(e)
-
 def main():	
 	recKey = 0
-	#es = Elasticsearch()
 	cats_map = getCatsMap()
+	cats_tree = {}
+	errorLines = 0
 	for line in f:
-		a = line.split(",")
+		a = line.split("\t")
 		t = a[1].strip()
+		if len(a) != 9:
+			errorLines = errorLines+1
+			print(line)
+			continue
 		if (len(t) == 0):
 			continue
 		b = a[1].split(" ")
@@ -103,9 +104,14 @@ def main():
 		doc["category"] = rsc(a[5])
 		doc["material"] = rsc(a[6])
 		doc["url"] = url
-		createDocumnent(doc , doc , cats_map)
+		createDocumnent(cats_tree, doc , cats_map)
 		recKey += 1
 	o.close()
 	f.close()
+	for i in cats_tree:
+		c.write(i)
+		c.write("\n")
+	print("Number Of Error Lines " + str(errorLines))
 
+	
 main()

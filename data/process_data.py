@@ -1,7 +1,7 @@
 
 import json
 from elasticsearch import Elasticsearch
-f = open("IFP_ver2.csv" , "r" , encoding="Windows-1252")
+f = open("IFP_ver2.txt" , "r" , encoding="Windows-1252")
 l2 = open("l2-files.json" , "r")
 l2f = open("l2-folders.json" , "r")
 
@@ -63,7 +63,7 @@ def main():
 	es = Elasticsearch()
 	cats_map = getCatsMap()
 	for line in f:
-		a = line.split(",")
+		a = line.split("\t")
 		t = a[1].strip()
 		if (len(t) == 0):
 			continue
