@@ -6,23 +6,27 @@
 Ext.define('library.Application', {
     extend: 'Ext.app.Application',
     
-    name: 'library',
+    name: 'Nithyanand Digital Library',
 
     stores: [
         // TODO: add global / shared stores here
     ],
     
     launch: function () {
-        // TODO - Launch the application
+		/*
+		Ext.Ajax.request({
+		  url : '/api/librrary/msagg',
+		  method: 'POST',
+		  success : function(response){
+			var jsonObj = Ext.JSON.decode(response.responseText)
+			var itemsObj = jsonObj.catstats;
+			
+		  }
+		});
+		*/
     },
 
     onAppUpdate: function () {
-        Ext.Msg.confirm('Application Update', 'This application has an update, reload?',
-            function (choice) {
-                if (choice === 'yes') {
-                    window.location.reload();
-                }
-            }
-        );
+
     }
 });
