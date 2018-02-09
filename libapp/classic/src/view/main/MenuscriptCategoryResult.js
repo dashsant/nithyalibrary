@@ -1,12 +1,12 @@
-Ext.define('library.view.main.SearchResult', {
+Ext.define('library.view.main.MenuscriptCategoryResult', {
     extend: 'Ext.Panel',
-    xtype: 'searchresult',
+    xtype: 'menuscriptcategoryresult',
     autoScroll:'true',
 	layout:'vbox',
 	width:'100%',
     requires: [
         'library.view.main.MainModel',
-		'library.view.main.FilterTree',
+		'library.view.main.MenuscriptCategoryTree',
 		'library.view.main.ResultGrid',
 		'library.store.CatalogSearchResult'
     ],
@@ -16,26 +16,21 @@ Ext.define('library.view.main.SearchResult', {
 	},
 	items:[
 	{
-		id:'searchLabel-id',
-		html: '<h2> Currently there are no previous results available to be shown </h2>',
-		xtype:'label',
-		margin: '0 0 0 200'
-	},
-	{
 		xtype:'container',
 		layout:'hbox',
 		width:'100%',
 		height:800,
 		items:[
 		{
-			xtype:'filter-tree',
-			id: 'filter-tree-id',
+			xtype:'menuscript-cat-tree',
+			id: 'menuscript-cat-tree-id',
 			margin: '10 0 0 10'
 
-		},
+		}
+		,
 		{
 			xtype:'result-grid',
-			id:'result-grid-id',
+			id:'menuscript-category-result-grid',
 			margin:'10 0 0 10',
 			store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false})
 		}

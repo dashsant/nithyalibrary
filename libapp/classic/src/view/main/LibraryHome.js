@@ -10,7 +10,9 @@ Ext.define('library.view.main.LibraryHome', {
         border: false
     },
     requires: [
-		'library.view.main.SearchResult'
+		'library.view.main.SearchResult',
+		'library.view.main.MenuscriptCategoryResult'
+		
     ],
 	items:[
 		{
@@ -27,7 +29,12 @@ Ext.define('library.view.main.LibraryHome', {
 			padding: 15
 		},
 		{
-			title: "Scriptures"
+			title: "Scriptures",
+			items:[
+				{
+					xtype:'menuscriptcategoryresult'
+				}
+			]
 		},
 		{
 			title: 'Books',
