@@ -9,19 +9,21 @@ Ext.define('library.view.main.MainController', {
     alias: 'controller.main',
 	getSearchResult:function(p)
 	{
+		Ext.getCmp('libraryhomePage').setActiveItem(4);
 		Ext.Ajax.request({
 		  url : '/api/librrary/filter',
 		  params  : p,
 		  method: 'POST',
 		  success : function(response){
+			
 			var jsonObj = Ext.JSON.decode(response.responseText)
 			var itemsObj = jsonObj.items;
 			var viewModel = Ext.getCmp('app-main').getViewModel();
 			viewModel.data.filterTree = jsonObj.filterTree
 
-			//loading store data
-			var s = Ext.getCmp('result-grid-id').getStore();
-			s.loadData(itemsObj,false);
+
+			//console.log(itemsObj);
+			//Ext.getCmp('searchresult-id').refresh();
 			// loading data into MainModel
 			var viewModel = Ext.getCmp('app-main').getViewModel();
 			var sText = Ext.getCmp('searchText').getValue();
@@ -35,7 +37,10 @@ Ext.define('library.view.main.MainController', {
 				h = '<h2> More than 500 ' +' Matches Found For ' + sText +'</h2>';
 			Ext.getCmp('searchLabel-id').setHtml(h);
 			Ext.getCmp('filter-tree-id').getStore().load();
-			Ext.getCmp('libraryhomePage').setActiveItem(4);
+			//loading store data
+			var s = Ext.getCmp('result-grid-id').getStore();
+			s.loadData(itemsObj,false);
+			
 		  }
 		});		
 	},

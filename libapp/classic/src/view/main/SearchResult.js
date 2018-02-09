@@ -17,7 +17,7 @@ Ext.define('library.view.main.SearchResult', {
 	items:[
 	{
 		id:'searchLabel-id',
-		html: '',
+		html: '<h2> Currently there are no previous results available to be shown </h2>',
 		xtype:'label',
 		margin: '0 0 0 200'
 	},
