@@ -183,20 +183,22 @@
 	{
         "text": "Mahabharata",
         "id": "Mahabharata",
+        "leaf": false,
+		"iconCls":"filter-tree-icon",
+        "checked": false, 
+	"Children": [
+	{
+        "text": "Bhagavad Gita",
+        "id": "Bhagavad-Gita",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
+    }
+]
     },
 	{
         "text": "Ramayana",
         "id": "Ramayana",
-        "leaf": true,
-		"iconCls":"filter-tree-icon",
-        "checked": false
-    },
-	{
-        "text": "Bhagavad Gita",
-        "id": "Bhagavad-Gita",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
@@ -231,7 +233,15 @@
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
-    }
+    },
+	{
+	"text": "Stotra",
+  "id": "Stotra",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+}
+
 	]
 },
 {
@@ -242,48 +252,6 @@
 	"checked": false,
     "children": [
 	{
-        "text": "Jnana Pada",
-        "id": "Jnana-Pada",
-        "leaf": true,
-		"iconCls":"filter-tree-icon",
-        "checked": false
-    },
-	{
-        "text": "Kriya Pada",
-        "id": "Kriya-Pada",
-        "leaf": true,
-		"iconCls":"filter-tree-icon",
-        "checked": false
-    },
-	{
-        "text": "Yoga Pada",
-        "id": "Yoga-Pada",
-        "leaf": true,
-		"iconCls":"filter-tree-icon",
-        "checked": false
-    },
-	{
-        "text": "Carya Pada",
-        "id": "Carya-Pada",
-        "leaf": true,
-		"iconCls":"filter-tree-icon",
-        "checked": false
-    },
-	{
-        "text": "Mantra",
-        "id": "Mantra",
-        "leaf": true,
-		"iconCls":"filter-tree-icon",
-        "checked": false
-    },
-	{
-        "text": "Yantra",
-        "id": "Yantra",
-        "leaf": true,
-		"iconCls":"filter-tree-icon",
-        "checked": false
-    },
-	{
         "text": "Tantra",
         "id": "Tantra",
         "leaf": true,
@@ -291,22 +259,22 @@
         "checked": false
     },
 	{
-        "text": "Vaishnava",
-        "id": "Vaishnava",
+        "text": "Vaishnava Agama",
+        "id": "Vaishnava-Agama",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
     },
 	{
-        "text": "Shaiva",
-        "id": "Shaiva",
+        "text": "Shaiva Agama",
+        "id": "Shaiva-Agama",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
     }	,
 	{
-        "text": "Saktha",
-        "id": "Saktha",
+        "text": "Saktha Agama",
+        "id": "Saktha-Agama",
         "leaf": true,
 		"iconCls":"filter-tree-icon",
         "checked": false
@@ -366,15 +334,30 @@
 	]
 },
 {
-	"text": "Alankaras",
-  "id": "Alankaras",
+    "text": "Others",
+    "id": "Others",
+	"checked": false,
+	"leaf": false,
+	"iconCls":"filter-tree-icon",
+    "children": [
+
+{
+	"text": "Mantra",
+  "id": "Mantra",
 	"leaf": true,
 	"iconCls":"filter-tree-icon",
 	"checked": false
 },
 {
-	"text": "Naatyasaastra",
-  "id": "Naatyasaastra",
+	"text": "Paddhati",
+  "id": "Paddhati",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Nighantu",
+  "id": "Nighantu",
 	"leaf": true,
 	"iconCls":"filter-tree-icon",
 	"checked": false
@@ -387,16 +370,55 @@
 	"checked": false
 },
 {
-	"text": "Stotra",
-  "id": "Stotra",
+	"text": "Vaastu",
+  "id": "Vaastu",
 	"leaf": true,
 	"iconCls":"filter-tree-icon",
 	"checked": false
 },
 {
+	"text": "Smaarta",
+  "id": "Smaarta",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Prayoga",
+  "id": "Prayoga",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Pujaa",
+  "id": "Pujaa",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Yantra",
+  "id": "Yantra",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+},
+{
+	"text": "Vacana",
+  "id": "Vacana",
+	"leaf": true,
+	"iconCls":"filter-tree-icon",
+	"checked": false
+}
+]
+},
+
+{
     "text": "Script",
     "id": "Script",
 	"iconCls":"filter-tree-icon",
+	"expanded":true,
     "children": [
 	{
         "text": "Devanaagari",

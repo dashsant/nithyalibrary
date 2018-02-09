@@ -6,10 +6,10 @@ Ext.define('library.store.CatalogSearchResult', {
     alias: 'store.searchresultstore',
 	storeId:'searchresultstore_id',
 	model:'library.model.CatalogDetail',
-    pageSize: 10,
+    //pageSize: 10,
     proxy: {
         type: 'memory',
-        enablePaging: true,
+        //enablePaging: true,
         reader: {
             type: 'json',
 			rootProperty:'items'
