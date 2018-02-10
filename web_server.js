@@ -9,7 +9,7 @@ var nodeCleanup = require('node-cleanup');
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
   host: '45.18.12.178:9200',
-  log: 'trace'
+  log: 'error'
 });
 
 
@@ -135,13 +135,14 @@ router.post('/librrary/filter', function (req, res) {
 
 // POST method route
 router.post('/librrary/scripture/by_category', function (req, res) {
+	
 	var sb = 
 	{
 		index: 'nithya_index',
 		type: 'manuscript',
 		body:{	
-			size: req.body.sz, 
-			from: req.body.fr,
+			size: req.body.limit, 
+			from: req.body.start,
 			query: {
 				match: {
 					category:{
@@ -151,12 +152,15 @@ router.post('/librrary/scripture/by_category', function (req, res) {
 				}
 			}
 		}
-	}		
+	}
+console.log(sb);	
 
   client.search(sb).then(function (resp)
   {
     var matchList = {
-       items:[]
+       items:[],
+	   total:resp.hits.total,
+	   success:true
     }
     resp.hits.hits.forEach(function(el){
         var o = {}
