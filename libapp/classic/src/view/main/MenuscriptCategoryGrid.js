@@ -1,20 +1,9 @@
-Ext.define('library.view.main.ResultGrid', {
+Ext.define('library.view.main.MenuscriptCategoryGrid', {
     extend: 'Ext.grid.Panel',
-    requires: [
-            'library.store.CatalogSearchResult'
-        ],
-        viewModel: {
-        stores: {
-            searchResultStore: {
-                type: 'searchresultstore'
-            }
-        }
-    },
+		xtype:'menuscript-category-grid',
 		height:'100%',
 		flex:3,
 		hideHeaders:true,
-       xtype: 'result-grid',
-    //   bind: '{searchResultStore}',
        columns: [
            { text: 'Title',  dataIndex: 'title', flex:3 , renderer: function (value, l , record , m) {
 
@@ -24,7 +13,7 @@ Ext.define('library.view.main.ResultGrid', {
 			tmp = tmp + "<b>Script: </b>" + record.get("script");
    			return tmp;
    			}
-	   },
+			},
            { text: 'url', dataIndex: 'url', flex: 1, renderer: function (value, l , record , m) {
 			var a = record.get("url");
 			if(typeof(a) === 'string'){
@@ -49,7 +38,10 @@ Ext.define('library.view.main.ResultGrid', {
 			}
 		}
 	   }
-       ]
-//       width: 400,
-//       height: 400
+       ],
+	   	bbar: {
+				xtype: 'pagingtoolbar',
+				id:'menuscript-pagingtoolbar-id'
+				
+			}
 });

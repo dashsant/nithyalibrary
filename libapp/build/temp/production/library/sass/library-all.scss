@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'library' );
-$image-search-path: 'C:/sencha/libapp/build/production/library/modern/resources';
+$image-search-path: 'C:/work/Personal/Development/nithyalibrary/libapp/build/production/library/modern/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-ext-abstractcomponent: dynamic(false);;
 $include-ext-abstractmanager: dynamic(false);;
@@ -617,6 +617,10 @@ $include-ext-viewport-viewport: dynamic(true);;
 $include-ext-viewport-wp: dynamic(true);;
 $include-ext-viewport-windowsphone: dynamic(true);;
 $include-library-application: dynamic(true);;
+$include-library-model-catalogdetail: dynamic(true);;
+$include-library-store-catalogsearchresult: dynamic(true);;
+$include-library-store-filtertreedata: dynamic(false);;
+$include-library-store-menuscriptcategorytreestore: dynamic(false);;
 $include-library-store-personnel: dynamic(true);;
 $include-library-view-main-list: dynamic(true);;
 $include-library-view-main-main: dynamic(true);;
