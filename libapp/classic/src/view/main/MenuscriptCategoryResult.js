@@ -7,8 +7,9 @@ Ext.define('library.view.main.MenuscriptCategoryResult', {
     requires: [
         'library.view.main.MainModel',
 		'library.view.main.MenuscriptCategoryTree',
-		'library.view.main.ResultGrid',
-		'library.store.CatalogSearchResult'
+		'library.view.main.MenuscriptCategoryGrid',
+		'library.store.CatalogSearchResult',
+		'library.store.MenuscriptCategoryStore'
     ],
 
 	viewModel:{
@@ -29,10 +30,13 @@ Ext.define('library.view.main.MenuscriptCategoryResult', {
 		}
 		,
 		{
-			xtype:'result-grid',
+			xtype:'menuscript-category-grid',
 			id:'menuscript-category-result-grid',
 			margin:'10 0 0 10',
-			store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false})
+			store:Ext.create('library.store.MenuscriptCategoryStore',{autoLoad:false}),
+			height:400,
+			width:'100%'
+
 		}
 		]
 	}

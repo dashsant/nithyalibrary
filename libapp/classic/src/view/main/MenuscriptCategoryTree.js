@@ -42,24 +42,24 @@ Ext.define('library.view.main.MenuscriptCategoryTree', {
 	listeners:{
 		itemclick: function( me, record, item, index, e, eOpts )
 		{
-			console.log(record.id);
 			var p ={
-				sz:50,
-				fr:0,
 				q:record.id
 			}
-			Ext.Ajax.request({
-			  url : '/api/librrary/scripture/by_category',
-			  params  : p,
-			  method: 'POST',
-			  success : function(response){
-				var jsonObj = Ext.JSON.decode(response.responseText)
-				var itemsObj = jsonObj.items;
-				//loading store data
-				var s = Ext.getCmp('menuscript-category-result-grid').getStore();
-				s.loadData(itemsObj,false);
-			  }
-			});			
+			
+
+			var s = Ext.getCmp('menuscript-category-result-grid').getStore();
+			if(typeof(Ext.getCmp('menuscript-pagingtoolbar-id')) != 'undefined')
+				console.log(Ext.getCmp('menuscript-pagingtoolbar-id').getData());
+			s.getProxy().setExtraParams(p);
+			s.load({
+					params: {
+						start: 0,
+						limit: 25
+					}
+				});
+					
+			
+	
 		}
 	}
 
