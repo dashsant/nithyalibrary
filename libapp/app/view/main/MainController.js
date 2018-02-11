@@ -9,7 +9,7 @@ Ext.define('library.view.main.MainController', {
     alias: 'controller.main',
 	getSearchResult:function(p)
 	{
-		Ext.getCmp('libraryhomePage').setActiveItem(4);
+		Ext.getCmp('libraryhomePage').setActiveItem(5);
 		Ext.Ajax.request({
 		  url : '/api/librrary/filter',
 		  params  : p,

@@ -19,9 +19,9 @@ Ext.define('library.view.main.ResultGrid', {
            { text: 'Title',  dataIndex: 'title', flex:3 , renderer: function (value, l , record , m) {
 
    			var tmp = "";
-   			tmp = "<b>Title: </b>" + record.get("title") +"<br>";
-   			tmp = tmp + "<b>Subject: </b>" + record.get("subject") + "<br>";
-			tmp = tmp + "<b>Script: </b>" + record.get("script");
+   			tmp = "<b style=\"font-weight:bold;\">Title: </b>" + record.get("title") +"<br>";
+   			tmp = tmp + "<b style=\"font-weight:bold;\">Subject: </b>" + record.get("subject") + "<br>";
+			tmp = tmp + "<b style=\"font-weight:bold;\">Script: </b>" + record.get("script");
    			return tmp;
    			}
 	   },
