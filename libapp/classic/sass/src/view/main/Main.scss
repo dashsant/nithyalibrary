@@ -5,11 +5,11 @@
     $ui: 'navigation',
     $ui-tab-background-color: transparent,
     $ui-tab-background-color-over: #505050,
-    $ui-tab-background-color-active: #303030,
+    $ui-tab-background-color-active: #843f33,
     $ui-tab-background-gradient: 'none',
     $ui-tab-background-gradient-over: 'none',
     $ui-tab-background-gradient-active: 'none',
-    $ui-tab-color: #acacac,
+    $ui-tab-color: #000,
     $ui-tab-color-over: #c4c4c4,
     $ui-tab-color-active: #fff,
     $ui-tab-glyph-color: #acacac,
@@ -54,7 +54,8 @@
     $ui-header-background-color: $base-color,
     $ui-header-padding: 0,
     $ui-header-text-margin: 36px,
-    $ui-header-noborder-adjust: false
+    $ui-header-noborder-adjust: false,
+	$ui-header-border-width: 1px
 );
 
 .x-title-icon-navigation {
@@ -75,6 +76,38 @@
     .x-tab-active & {
         color: #fff;
     }
+}
+
+.x-tab-active {
+	position: relative;
+}
+
+.x-tab-active:after, .x-tab-active:before {
+	content: '';
+    display: block;
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.x-tab-active {
+	border: 1px solid red;
+}
+
+.x-tab-active:before {
+    top: 9px;
+    border-color: #a00;
+    border-width: 11px;
+}
+.x-tab-active:after {
+    top: 10px;
+    border-color: #fdd;
+    border-width: 10px;
+}
+
+.x-tab-navigation {
+	border: 1px solid gray;
 }
 
 .x-panel-header-title-navigation > .x-title-text-navigation:after {

@@ -27,7 +27,7 @@ Ext.define('library.view.main.Main', {
     items: [{
 			xtype:'container',
 			layout:'hbox',
-			style: 'background-color:rgb(217, 65, 3);font-size:12;color:#fff;font-weight: 400;',
+			style: 'background-color:rgb(141, 67, 54);font-size:12;color:#fff;font-weight: 400;',
 			height:40,
 			width:'100%',
 			items:[
@@ -39,8 +39,8 @@ Ext.define('library.view.main.Main', {
 			},
 			{
 				xtype:'component',
-				html: "<p style=\"text-indent: 2em;\"><q><i>If you want to retain anything life renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
-				padding: '4 20 15 20' // Same as CSS ordering (top, right, bottom, left)
+				html: "<p style=\"text-indent: 2em;margin-top:10px;\"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
+				padding: '-2 20 15 20' // Same as CSS ordering (top, right, bottom, left)
 			}
 			]
 		},
@@ -58,7 +58,7 @@ Ext.define('library.view.main.Main', {
 				{
 					margin: '5 0 0 75',
 					xtype: 'container',
-					width:100,
+					width:200,
 					style:'line-height:180%',
 					html:"<h3>Nithyananda<br>Digital<br>Library</h3>"
 				},			
@@ -76,14 +76,15 @@ Ext.define('library.view.main.Main', {
 					xtype: 'button',
 					reference: 'btnSearch',
 					height:32,
-					text:'S',
-					width:32,
+					text:'Search',
+					width:78,
 					padding:0,
 					border:false,
-					style: 'background-color: rgb(240, 176, 148);font-size:18;color:#fff;font-weight: bold;',
+					style: 'background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;text-indent:2px',
 					//icon:'/resources/search-32.png',
 					name: 'btnSearch',
-					handler : 'onSearchTextClick'  // no scope given here
+					handler : 'onSearchTextClick',  // no scope given here
+					iconCls: 'x-fa fa-search'
 				}
 			]
 		},
@@ -94,6 +95,7 @@ Ext.define('library.view.main.Main', {
 			//	align:'stretch'
 			//},
 			id:'libraryhomePage',
+			autoScroll:true,
 			//margin: '25 0 0 0',
 			//width:'100%',
 			//items:
