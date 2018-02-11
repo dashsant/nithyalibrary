@@ -1,7 +1,6 @@
 
 import json
 from elasticsearch import Elasticsearch
-f = open("IFP_ver2.txt" , "r" , encoding="Windows-1252")
 l2 = open("l2-files.json" , "r")
 l2f = open("l2-folders.json" , "r")
 
@@ -59,32 +58,43 @@ def createDocumnent(es, doc , cats_map):
 		print(e)
 
 def main():	
+	clean_data = True
+	if clean_data:
+		f = open("output_noheader.tsv" , "r")
+	else:
+		f = open("IFP_ver2.txt" , "r" , encoding="Windows-1252")
+
 	recKey = 0
 	es = Elasticsearch()
 	cats_map = getCatsMap()
 	for line in f:
 		a = line.split("\t")
-		t = a[1].strip()
-		if (len(t) == 0):
-			continue
-		b = a[1].split(" ")
-		if(len(b) == 1):
-			continue
-		recLoc = b[0]+b[1]
-		if recLoc in folderURLs:
-			url = folderURLs[recLoc]
-		else:
-			matchedLinks = []
-			for i in fileURLs:
-				if i.find(recLoc) >= 0:
-					matchedLinks.append(fileURLs[i])
-			if(len(matchedLinks) == 0):
+		if clean_data == False:
+			t = a[1].strip()
+			if (len(t) == 0):
 				continue
-			url = ""
-			for i in matchedLinks:
-				url = url + i + ";"
-			url = url[0:len(url)-1]
+			b = a[1].split(" ")
+			if(len(b) == 1):
+				continue
+			recLoc = b[0]+b[1]
+			if recLoc in folderURLs:
+				url = folderURLs[recLoc]
+			else:
+				matchedLinks = []
+				for i in fileURLs:
+					if i.find(recLoc) >= 0:
+						matchedLinks.append(fileURLs[i])
+				if(len(matchedLinks) == 0):
+					continue
+				url = ""
+				for i in matchedLinks:
+					url = url + i + ";"
+				url = url[0:len(url)-1]
 
+		else:
+			url = a[7]
+			recKey = int(a[0])
+			recLoc = a[1]
 		doc = {}
 		doc["recKey"] = recKey
 		doc["recLoc"] = recLoc
