@@ -1,6 +1,8 @@
 /**
  * Generates a set of style rules for the "navigation" tab UI.
  */
+ 
+
 @include extjs-tab-panel-ui(
     $ui: 'navigation',
     $ui-tab-background-color: transparent,
@@ -104,6 +106,10 @@
     top: 10px;
     border-color: #fdd;
     border-width: 10px;
+}
+
+.x-grid-cell > b {
+	font-weight: bold;
 }
 
 .x-tab-navigation {

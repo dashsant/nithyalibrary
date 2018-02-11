@@ -32,16 +32,25 @@ Ext.define('library.view.main.LibraryHome', {
 		},
 		{
 			title: 'Vedagamas',
-			//glyph:72,
-			html:'<div><h1>Vedagamas – The Complete Process for Completion & Enlightenment</h1><br>'+
-			'<b style="font-weight:bold;">Delivered by Sadāshiva, received by Devi, adopted as the Cosmic Constitution by the maintainer, Vishnu, is Agama.</b><i> – Paramahamsa Nithyananda</i><br><br>'+
-			'<b style="font-weight:bold;">Agama</b> literally means, that which has been bequeathed or ‘come down.’ They are an assemblage of scriptures of a gamut of Hindu devotional schools, with three main branches: Shaivism (of Lord Shiva), Vaishnavism (of Lord Vishnu) and Shaktism (of Adi Shakti). The Agama literature is humungous and includes: 28 Shaivagamass, 77 Shakta Agamas, which are also called ‘tantras’ (Hindu mystical texts), and 215 Vaishnava Agamas. But as Paramahamsa Nithyananda asserts, <b style="font-weight:bold;">“There are Agamas - Shakta Agamas, Vaishnav Agamas, Shaiva Agamas - but all Agamas non-controversially agree, that they have been delivered by Sadashiva.”</b><br><br>'+
-			'Most of the plenipotentiaries, such as, Sanjukta Gupta, of the Hindu tradition asserted that the maxims of these Agamas brought out the true spirit of the Vedas (ancient scriptures, meaning, ‘to know’ or to have knowledge of). Agamas teach systematic methods of spirituality that involve worship in the form of rituals, pujas (acts of worship) and yajnas (a ritual sacrifice with a particular objective), but they also lay down the means to live the lifestyle of the Gods themselves.<br><br>' +
-			'<b style="font-weight:bold;">Agama – The Shaastra Pramaana:</b><br>'+
-			'<p style="text-align:center;">āgatāṃ śivavaktrebhyo gataṃ ca girijāmukhe ।<br>mataṃ hi vāsudevasya tasmādāgama ucyate ॥<br>~ svacchanda tantra</p>'+
-			'“That which has come from Śiva’s mouth and directly heard and received by Devi Girijā (Pārvati), which has been ordained by Śri Vāsudeva (Viṣṇu) to govern the world, therefore that is called Āgama.”<br>The Agamas are forms of instructions from Shiva to Shakti and take their name from the first three letters of the words agatam (originated), gatam (fell) and matam (ordained) as mentioned in the shloka.'+
-			'<h2>Shaivagamas – A Chronicle:</h2>The Agamas existed mostly in South India, in Tamil Nadu recorded on palm leaf manuscripts and preserved in the homes of Shivacharyas who were entrusted with organising and performing the pujas and rituals in the Shiva temples for several millenniums. They are in <i>grantha</i> script evolved by the Tamil people to preserve Sanskrit scriptures 1000s of years ago.<br>The Agamas saw their greatest revival soon after Adi Shankaracharya unified Sanatana Hindu Dharma, during the times of the Shaiva devout Chola rulers, from the 9th to 12th centuries CE.<br>A distinctive Shaiva Advaita philosophy took shape from the days of Thirumoolar and Karaikal Ammaiyar which was given a fresh life and a new direction by the Saiva Nayamars such as Sambanthar, Appar, Sundarar and Manikkavasagar. Under these saints, the Agamas flourished into temple building and temple worship from the 9th to the 13th centuries CE. The greatest exponent of this revival was the saint, Thirugnanasambanthar.<br>While the Shaiva Agamas led to the Shaiva Siddhanta philosophy in Tamil-speaking regions of South-India, it gave rise to Kashmir Saivism in the Northern region of India i.e. in Kashmir.</div>',
-			padding: 15
+			items:[
+				{
+					xtype:'container',
+					//glyph:72,
+					autoScroll:true,
+					height: 600,
+					width: '100%',
+					html:'<div><h1>Vedagamas – The Complete Process for Completion & Enlightenment</h1><br>'+
+					'<b style="font-weight:bold;">Delivered by Sadāshiva, received by Devi, adopted as the Cosmic Constitution by the maintainer, Vishnu, is Agama.</b><i> – Paramahamsa Nithyananda</i><br><br>'+
+					'<b style="font-weight:bold;">Agama</b> literally means, that which has been bequeathed or ‘come down.’ They are an assemblage of scriptures of a gamut of Hindu devotional schools, with three main branches: Shaivism (of Lord Shiva), Vaishnavism (of Lord Vishnu) and Shaktism (of Adi Shakti). The Agama literature is humungous and includes: 28 Shaivagamass, 77 Shakta Agamas, which are also called ‘tantras’ (Hindu mystical texts), and 215 Vaishnava Agamas. But as Paramahamsa Nithyananda asserts, <b style="font-weight:bold;">“There are Agamas - Shakta Agamas, Vaishnav Agamas, Shaiva Agamas - but all Agamas non-controversially agree, that they have been delivered by Sadashiva.”</b><br><br>'+
+					'Most of the plenipotentiaries, such as, Sanjukta Gupta, of the Hindu tradition asserted that the maxims of these Agamas brought out the true spirit of the Vedas (ancient scriptures, meaning, ‘to know’ or to have knowledge of). Agamas teach systematic methods of spirituality that involve worship in the form of rituals, pujas (acts of worship) and yajnas (a ritual sacrifice with a particular objective), but they also lay down the means to live the lifestyle of the Gods themselves.<br><br>' +
+					'<b style="font-weight:bold;">Agama – The Shaastra Pramaana:</b><br>'+
+					'<p style="text-align:center;">āgatāṃ śivavaktrebhyo gataṃ ca girijāmukhe ।<br>mataṃ hi vāsudevasya tasmādāgama ucyate ॥<br>~ svacchanda tantra</p>'+
+					'“That which has come from Śiva’s mouth and directly heard and received by Devi Girijā (Pārvati), which has been ordained by Śri Vāsudeva (Viṣṇu) to govern the world, therefore that is called Āgama.”<br>The Agamas are forms of instructions from Shiva to Shakti and take their name from the first three letters of the words agatam (originated), gatam (fell) and matam (ordained) as mentioned in the shloka.'+
+					'<h2>Shaivagamas – A Chronicle:</h2>The Agamas existed mostly in South India, in Tamil Nadu recorded on palm leaf manuscripts and preserved in the homes of Shivacharyas who were entrusted with organising and performing the pujas and rituals in the Shiva temples for several millenniums. They are in <i>grantha</i> script evolved by the Tamil people to preserve Sanskrit scriptures 1000s of years ago.<br>The Agamas saw their greatest revival soon after Adi Shankaracharya unified Sanatana Hindu Dharma, during the times of the Shaiva devout Chola rulers, from the 9th to 12th centuries CE.<br>A distinctive Shaiva Advaita philosophy took shape from the days of Thirumoolar and Karaikal Ammaiyar which was given a fresh life and a new direction by the Saiva Nayamars such as Sambanthar, Appar, Sundarar and Manikkavasagar. Under these saints, the Agamas flourished into temple building and temple worship from the 9th to the 13th centuries CE. The greatest exponent of this revival was the saint, Thirugnanasambanthar.<br>While the Shaiva Agamas led to the Shaiva Siddhanta philosophy in Tamil-speaking regions of South-India, it gave rise to Kashmir Saivism in the Northern region of India i.e. in Kashmir.</div>',
+					padding: 15
+				}
+			]
+
 		},
 		{
 			title: "Scriptures",

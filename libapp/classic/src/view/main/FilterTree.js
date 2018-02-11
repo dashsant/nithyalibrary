@@ -32,7 +32,7 @@ Ext.define('library.view.main.FilterTree', {
 				if(filterTreeData.hasOwnProperty(record.id)){
 					var c = filterTreeData[record.id];
 					console.log(value + " ("+ c +")");
-					var b = "<b>" + value + " ("+ c +")" + "</b>"
+					var b = "<b style=\"color:#843f33\">" + value + " ("+ c +")" + "</b>"
 					return b;
 				}
 				return value;
