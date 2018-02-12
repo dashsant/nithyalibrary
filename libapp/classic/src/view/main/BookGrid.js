@@ -5,7 +5,7 @@ Ext.define('library.view.main.BookGrid', {
 		flex:3,
 		hideHeaders:true,
        columns: [
-           { text: 'Title',  dataIndex: 'title', flex:3 , renderer: function (value, l , record , m) {
+           { text: 'Title',  dataIndex: 'title', flex:2 , renderer: function (value, metaData , record , m) {
 
    			var tmp = "";
    			tmp = "<b style=\"font-weight:bold;\">Title: </b>" + record.get("title") +"<br>";
@@ -14,10 +14,15 @@ Ext.define('library.view.main.BookGrid', {
    			return tmp;
    			}
 			},
-           { text: 'Abstract',  dataIndex: 'abstract', flex:3 , renderer: function (value, l , record , m) {
+           { text: 'Abstract',  dataIndex: 'abstract', flex:3,cellWrap: true , renderer: function (value, l , record , m) {
 
-   			var tmp = "";
-   			tmp = "<b style=\"font-weight:bold;\">Abstract: </b>" + record.get("abstract") +"<br>";
+   			// get only first 300 characters, Rest display as mouse over
+			
+			var tmp = record.get("abstract").substring(0,300);
+			if(record.get("abstract").length > 300)
+				tmp = tmp + " ...";
+   			tmp = "<b style=\"font-weight:bold;\">Abstract: </b>" + tmp +"<br>";
+			l.tdAttr = 'data-qtip="' + Ext.String.htmlEncode(record.get("abstract")) + '"';
    			return tmp;
    			}
 			},			

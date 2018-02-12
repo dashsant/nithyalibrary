@@ -25,11 +25,18 @@ Ext.define('library.view.main.BookResult', {
 			xtype:'book-grid',
 			id:'book-grid',
 			margin:'10 0 10 10',
-			store:Ext.create('library.store.BookStore',{autoLoad:true}),
+			store:Ext.create('library.store.BookStore',{autoLoad:false}),
 			//height:400,
 			height:'90%',
-			width:'100%'
-
+			width:'100%',
+			listeners:{
+				render:function(me , opts){
+					console.log(me);
+					s = Ext.getCmp('book-grid').getStore();
+					if(!s.isLoaded())
+						s.load();
+				}
+			}
 		}
 		]
 	}
