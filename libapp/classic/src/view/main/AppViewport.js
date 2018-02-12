@@ -9,14 +9,12 @@ Ext.define('library.view.main.AppViewport', {
     extend: 'Ext.Viewport',
     xtype: 'app-viewport',
 	id:'app-viewport',
-	scrollable:false,
 	layout:'fit',
 	height:'100%',
 	width:'100%',
     requires: [
         'library.view.main.Main'
     ],
-    layout: 'vbox',
     items: [{
 			xtype:'app-main'
 		}

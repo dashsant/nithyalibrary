@@ -32,7 +32,7 @@ Ext.define('library.view.main.SearchResult', {
 					text: 'Apply Filter',
 					handler: 'onApplyFilterClick',
 					style: 'background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;text-indent:2px', 
-					margin: '5 0 0 0'
+					margin: '8 0 0 0'
 				}
 			]
 		},

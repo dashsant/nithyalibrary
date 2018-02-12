@@ -9,8 +9,9 @@ Ext.define('library.view.main.Main', {
     extend: 'Ext.Panel',
     xtype: 'app-main',
 	id:'app-main',
-	scrollable:true,
-	height:'100%',
+	scrollable:false,
+	//autoScroll:true,
+	height:'98%',
 	width:'100%',
     requires: [
         'Ext.window.MessageBox',
@@ -33,7 +34,7 @@ Ext.define('library.view.main.Main', {
 			items:[
 			{
 				xtype:'component',
-				html: "<p style=\"text-indent: 2em;margin-top:10px;\"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
+				html: "<p style=\"text-indent: 2em;margin-top:10px;letter-spacing: 2px;\"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
 				padding: '-2 20 15 20' // Same as CSS ordering (top, right, bottom, left)
 			}
 			]
@@ -62,7 +63,7 @@ Ext.define('library.view.main.Main', {
 				},			
 				{
 					xtype: 'textfield',
-					width:400,
+					width:350,
 					
 					margin: '0 0 0 50',
 					name: 'searchText',
@@ -92,7 +93,8 @@ Ext.define('library.view.main.Main', {
 			//	align:'stretch'
 			//},
 			id:'libraryhomePage',
-			autoScroll:true,
+			//autoScroll:true,
+			height:'97%',
 			//margin: '25 0 0 0',
 			//width:'100%',
 			//items:
