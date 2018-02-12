@@ -63,7 +63,7 @@ Ext.define('library.view.main.Main', {
 				},			
 				{
 					xtype: 'textfield',
-					width:350,
+					width:300,
 					
 					margin: '0 0 0 50',
 					name: 'searchText',

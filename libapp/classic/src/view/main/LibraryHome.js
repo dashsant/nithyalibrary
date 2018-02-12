@@ -112,24 +112,45 @@ Ext.define('library.view.main.LibraryHome', {
 		},
 		{
 			title: "Scriptures",
-			items:[
-				{
-					xtype:'menuscriptcategoryresult'
-				}
-			],
+			layout: {type: 'vbox',align:'fit'},
+			shrinkWrap:false,
+			flex:1,
+			width:'100%',
+			height:'90%',
+			xtype: 'menuscriptcategoryresult',width:'99%',margin:'0 12 0 0',
 			padding: 15
 		},
 		{
 			title: 'Books',
-			//glyph:72,
-			html:'<div>Site Under Construction</div>',
+			items:[{
+				xtype:'container',
+				layout: {type: 'vbox',align:'fit'},
+				shrinkWrap:false,
+				flex:1,
+				width:'100%',
+				height:'99%',
+				scrollable: true,
+				autoScroll: true,
+				items:[{
+					xtype:'container',width:'99%',margin:'0 12 0 0',
+					html:'<div>Site Under Construction</div>'
+				}]
+			}],
 			padding: 15
 		},
 		{
 			title: 'Search Results',
 			items:[
 				{
-					xtype:'searchresult'
+					xtype:'container',
+					layout: {type: 'vbox',align:'fit'},
+					shrinkWrap:false,
+					flex:1,
+					width:'100%',
+					height:'80%',
+					items:[{
+						xtype:'searchresult',width:'99%',margin:'0 12 0 0'
+					}]
 				}
 			],
 			padding: 15

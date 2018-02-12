@@ -1,7 +1,7 @@
 Ext.define('library.view.main.MenuscriptCategoryGrid', {
     extend: 'Ext.grid.Panel',
 		xtype:'menuscript-category-grid',
-		height:'100%',
+		height:'90%',
 		flex:3,
 		hideHeaders:true,
        columns: [
