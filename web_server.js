@@ -153,7 +153,6 @@ router.post('/librrary/scripture/by_category', function (req, res) {
 			}
 		}
 	}
-console.log(sb);	
 
   client.search(sb).then(function (resp)
   {
@@ -180,6 +179,50 @@ console.log(sb);
   }
   );
 })
+
+router.post('/librrary/book/all', function (req, res) {
+	var sb = 
+	{
+		index: 'nithya_index',
+		type: 'book',
+		body:{	
+			size: 500, 
+			query: {
+				match_all: {
+
+				}
+			}
+		}
+	}
+
+  client.search(sb).then(function (resp)
+  {
+    var matchList = {
+       items:[],
+	   total:resp.hits.total,
+	   success:true
+    }
+    resp.hits.hits.forEach(function(el){
+        var o = {}
+        o.title = el._source.title;
+        o.subject = el._source.subject;
+        o.url = el._source.url;
+        o.script = el._source.script;
+		o.abstract=el._source.abstract;
+		o.author = el._source.author;
+        o.id = el._id;
+        matchList.items.push(o);
+    });
+    res.setHeader('Content-Type', 'application/json');
+    res.send(matchList)
+  },
+  function (err)
+  {
+    console.trace(err.message);
+  }
+  );
+})
+
 
 
 function processSearchResult(hits , aggr)

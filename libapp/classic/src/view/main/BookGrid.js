@@ -1,30 +1,26 @@
-Ext.define('library.view.main.ResultGrid', {
+Ext.define('library.view.main.BookGrid', {
     extend: 'Ext.grid.Panel',
-    requires: [
-            'library.store.CatalogSearchResult'
-        ],
-        viewModel: {
-        stores: {
-            searchResultStore: {
-                type: 'searchresultstore'
-            }
-        }
-    },
-		height:'100%',
+		xtype:'book-grid',
+		height:'90%',
 		flex:3,
 		hideHeaders:true,
-        xtype: 'result-grid',
-    //   bind: '{searchResultStore}',
        columns: [
            { text: 'Title',  dataIndex: 'title', flex:3 , renderer: function (value, l , record , m) {
 
    			var tmp = "";
    			tmp = "<b style=\"font-weight:bold;\">Title: </b>" + record.get("title") +"<br>";
    			tmp = tmp + "<b style=\"font-weight:bold;\">Subject: </b>" + record.get("subject") + "<br>";
-			tmp = tmp + "<b style=\"font-weight:bold;\">Script: </b>" + record.get("script");
+			tmp = tmp + "<b style=\"font-weight:bold;\">Author: </b>" + record.get("author");
    			return tmp;
    			}
-	   },
+			},
+           { text: 'Abstract',  dataIndex: 'abstract', flex:3 , renderer: function (value, l , record , m) {
+
+   			var tmp = "";
+   			tmp = "<b style=\"font-weight:bold;\">Abstract: </b>" + record.get("abstract") +"<br>";
+   			return tmp;
+   			}
+			},			
            { text: 'url', dataIndex: 'url', flex: 1, renderer: function (value, l , record , m) {
 			var a = record.get("url");
 			if(typeof(a) === 'string'){
@@ -50,6 +46,4 @@ Ext.define('library.view.main.ResultGrid', {
 		}
 	   }
        ]
-//       width: 400,
-//       height: 400
 });

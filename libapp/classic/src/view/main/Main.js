@@ -52,15 +52,17 @@ Ext.define('library.view.main.Main', {
 			[
 				{ 
 					margin: '5 15 5 5',
-					xtype: 'component',
-					html:"<img src=\"/resources/Nithyananda-University-logo.png\" width='128px' height='128px'>"
+					xtype: 'image',
+					src:"/resources/nithya_university.png",
+					width:'200px',
+					height:'48px'
 				},			
-				{
+				/*{
 					margin: '30 25 5 5',
 					xtype: 'container',
 					width:'225px',
 					html:"<img src=\"/resources/Nithyananda-Digital-Library-text.png\" width='184px' height='74px'>"
-				},			
+				},*/			
 				{
 					xtype: 'textfield',
 					width:300,
@@ -88,24 +90,9 @@ Ext.define('library.view.main.Main', {
 		},
 		{
 			xtype:'libraryhome',
-			//layout:{
-			//	type:'card',
-			//	align:'stretch'
-			//},
 			id:'libraryhomePage',
-			//autoScroll:true,
 			height:'97%',
-			//margin: '25 0 0 0',
-			//width:'100%',
-			//items:
-			//[
-			//	{
-			//	xtype: 'libraryhome'
-			//	},
-			//	{
-			//	xtype: 'searchresult'
-			//	}
-			//]
+
 		}
 	],
 	dockedItems:

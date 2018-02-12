@@ -12,7 +12,8 @@ Ext.define('library.view.main.LibraryHome', {
     },
     requires: [
 		'library.view.main.SearchResult',
-		'library.view.main.MenuscriptCategoryResult'
+		'library.view.main.MenuscriptCategoryResult',
+		'library.view.main.BookResult',
     ],
 	items:[
 		{
@@ -132,8 +133,8 @@ Ext.define('library.view.main.LibraryHome', {
 				scrollable: true,
 				autoScroll: true,
 				items:[{
-					xtype:'container',width:'99%',margin:'0 12 0 0',
-					html:'<div>Site Under Construction</div>'
+					xtype:'bookresult',width:'99%',margin:'0 12 0 0'
+
 				}]
 			}],
 			padding: 15
