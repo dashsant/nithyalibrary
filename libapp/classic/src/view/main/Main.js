@@ -22,7 +22,7 @@ Ext.define('library.view.main.Main', {
     ],
 	viewModel: 'main',
 	controller:'main',
-
+	bodyStyle:"",
     layout: 'vbox',
     items: [{
 			xtype:'container',
@@ -31,12 +31,6 @@ Ext.define('library.view.main.Main', {
 			height:40,
 			width:'100%',
 			items:[
-			{
-				xtype:'component',
-				width: 36,
-				padding:'2 2 2 2',
-				html:'<img src="/resources/NUP_logo_no_text.jpg"  height="36" width="36">',
-			},
 			{
 				xtype:'component',
 				html: "<p style=\"text-indent: 2em;margin-top:10px;\"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
@@ -55,14 +49,17 @@ Ext.define('library.view.main.Main', {
 			referenceHolder: true,
 			items:
 			[
-				{
-					margin: '5 0 0 75',
-					xtype: 'container',
-					width:200,
-					style:'line-height:180%',
-					html:"<h3>Nithyananda<br>Digital<br>Library</h3>"
+				{ 
+					margin: '5 15 5 5',
+					xtype: 'component',
+					html:"<img src=\"/resources/Nithyananda-University-logo.png\" width='128px' height='128px'>"
 				},			
-
+				{
+					margin: '30 25 5 5',
+					xtype: 'container',
+					width:'225px',
+					html:"<img src=\"/resources/Nithyananda-Digital-Library-text.png\" width='184px' height='74px'>"
+				},			
 				{
 					xtype: 'textfield',
 					width:400,

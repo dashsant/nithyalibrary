@@ -40,13 +40,7 @@ Ext.define('library.view.main.FilterTree', {
 			}
 		}
 	],
-	bbar: [
-		{ 
-			xtype: 'button', 
-			text: 'Apply Filter',
-			handler: 'onApplyFilterClick' 
-		}
-	],
+
 	listeners:{
 			checkchange : function(node, checked) {
 			var that = this;

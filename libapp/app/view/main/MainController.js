@@ -32,9 +32,9 @@ Ext.define('library.view.main.MainController', {
 
 			var h;
 			if(totalMatched == totalReturned )
-				h = '<h2>' + totalReturned +' Matches Found For ' + sText +'</h2>';
+				h = '<h3>' + totalReturned +' Matches Found For ' + sText +'</h3>';
 			else
-				h = '<h2> More than 500 ' +' Matches Found For ' + sText +'</h2>';
+				h = '<h3> More than 500 ' +' Matches Found For ' + sText +'</h3>';
 			Ext.getCmp('searchLabel-id').setHtml(h);
 			Ext.getCmp('filter-tree-id').getStore().load();
 			//loading store data
