@@ -9,10 +9,10 @@ Ext.define('library.view.main.Main', {
     extend: 'Ext.Panel',
     xtype: 'app-main',
 	id:'app-main',
+	scrollable:true,
 	height:'100%',
 	width:'100%',
     requires: [
-        'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 		'Ext.tab.Panel',
         'library.view.main.MainController',

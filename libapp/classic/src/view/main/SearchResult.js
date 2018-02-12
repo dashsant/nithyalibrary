@@ -25,7 +25,8 @@ Ext.define('library.view.main.SearchResult', {
 		xtype:'container',
 		layout:'hbox',
 		width:'100%',
-		height:800,
+		height:600,
+		//height
 		items:[
 		{
 			xtype:'filter-tree',
@@ -38,7 +39,7 @@ Ext.define('library.view.main.SearchResult', {
 			id:'result-grid-id',
 			margin:'10 0 0 10',
 			store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false}),
-			height:400
+			//height:400
 		}
 		]
 	}

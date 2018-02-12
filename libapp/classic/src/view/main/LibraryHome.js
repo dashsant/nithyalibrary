@@ -36,8 +36,8 @@ Ext.define('library.view.main.LibraryHome', {
 				{
 					xtype:'container',
 					//glyph:72,
-					autoScroll:true,
-					height: 600,
+					//autoScroll:true,
+					//height: 600,
 					width: '100%',
 					html:'<div><h1>Vedagamas – The Complete Process for Completion & Enlightenment</h1><br>'+
 					'<b style="font-weight:bold;">Delivered by Sadāshiva, received by Devi, adopted as the Cosmic Constitution by the maintainer, Vishnu, is Agama.</b><i> – Paramahamsa Nithyananda</i><br><br>'+
