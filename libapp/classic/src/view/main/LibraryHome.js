@@ -62,33 +62,49 @@ Ext.define('library.view.main.LibraryHome', {
 					shrinkWrap:false,
 					flex:1,
 					width:'100%',
-					height:'100%',
+					height:'99%',
 					scrollable: true,
 					autoScroll: true,
 					items:[{
-						xtype: 'container',width:'100%',margin:'0 15 15 0',
+						xtype: 'container',width:'99%',margin:'0 12 0 0',
 						bodyStyle: { minHeight: '980px',height:'980px',overflow:'auto' },
 						autoScroll: true,
 						listeners: {
 							render: function() {
 								var me = this;
-								me.setHeight(window.innerHeight);
+								me.setHeight(window.innerHeight - 280);
 							}
 						},
-						html:'<div><p style="line-height:1.4;text-align:justify;font-size:14px"><h2>Vedagamas – The Complete Process for Completion & Enlightenment</h2>'+
+						html:'<p style="line-height:1.4;text-align:justify;font-size:14px"><h2>Vedagamas – The Complete Process for Completion & Enlightenment</h2>'+
 						'<b style="font-weight:bold;">Delivered by Sadāshiva, received by Devi, adopted as the Cosmic Constitution by the maintainer, Vishnu, is Agama.</b><i> – Paramahamsa Nithyananda</i><br><br>'+
 						'<b style="font-weight:bold;">Agama</b> literally means, that which has been bequeathed or ‘come down.’ They are an assemblage of scriptures of a gamut of Hindu devotional schools, with three main branches: Shaivism (of Lord Shiva), Vaishnavism (of Lord Vishnu) and Shaktism (of Adi Shakti). The Agama literature is humungous and includes: 28 Shaivagamass, 77 Shakta Agamas, which are also called ‘tantras’ (Hindu mystical texts), and 215 Vaishnava Agamas. But as Paramahamsa Nithyananda asserts, <b style="font-weight:bold;">“There are Agamas - Shakta Agamas, Vaishnav Agamas, Shaiva Agamas - but all Agamas non-controversially agree, that they have been delivered by Sadashiva.”</b><br><br>'+
 						'Most of the plenipotentiaries, such as, Sanjukta Gupta, of the Hindu tradition asserted that the maxims of these Agamas brought out the true spirit of the Vedas (ancient scriptures, meaning, ‘to know’ or to have knowledge of). Agamas teach systematic methods of spirituality that involve worship in the form of rituals, pujas (acts of worship) and yajnas (a ritual sacrifice with a particular objective), but they also lay down the means to live the lifestyle of the Gods themselves.<br><br>' +
 						'<b style="font-weight:bold;">Agama – The Shaastra Pramaana:</b><br>'+
-						'<p style="text-align:center;">āgatāṃ śivavaktrebhyo gataṃ ca girijāmukhe ।<br>mataṃ hi vāsudevasya tasmādāgama ucyate ॥<br>~ svacchanda tantra</p>'+
+						'<p>āgatāṃ śivavaktrebhyo gataṃ ca girijāmukhe ।<br>mataṃ hi vāsudevasya tasmādāgama ucyate ॥<br>~ svacchanda tantra</p>'+
 						'“That which has come from Śiva’s mouth and directly heard and received by Devi Girijā (Pārvati), which has been ordained by Śri Vāsudeva (Viṣṇu) to govern the world, therefore that is called Āgama.”<br>The Agamas are forms of instructions from Shiva to Shakti and take their name from the first three letters of the words agatam (originated), gatam (fell) and matam (ordained) as mentioned in the shloka.'+
-						'<h2>Shaivagamas – A Chronicle:</h2>The Agamas existed mostly in South India, in Tamil Nadu recorded on palm leaf manuscripts and preserved in the homes of Shivacharyas who were entrusted with organising and performing the pujas and rituals in the Shiva temples for several millenniums. They are in <i>grantha</i> script evolved by the Tamil people to preserve Sanskrit scriptures 1000s of years ago.<br>The Agamas saw their greatest revival soon after Adi Shankaracharya unified Sanatana Hindu Dharma, during the times of the Shaiva devout Chola rulers, from the 9th to 12th centuries CE.<br>A distinctive Shaiva Advaita philosophy took shape from the days of Thirumoolar and Karaikal Ammaiyar which was given a fresh life and a new direction by the Saiva Nayamars such as Sambanthar, Appar, Sundarar and Manikkavasagar. Under these saints, the Agamas flourished into temple building and temple worship from the 9th to the 13th centuries CE. The greatest exponent of this revival was the saint, Thirugnanasambanthar.<br><br>'+
+						'<h2>Shaivagamas – A Chronicle:</h2>The Agamas existed mostly in South India, in Tamil Nadu recorded on palm leaf manuscripts and preserved in the homes of Shivacharyas who were entrusted with organising and performing the pujas and rituals in the Shiva temples for several millenniums. They are in <i>grantha</i> script evolved by the Tamil people to preserve Sanskrit scriptures 1000s of years ago.<br>The Agamas saw their greatest revival soon after Adi Shankaracharya unified Sanatana Hindu Dharma, during the times of the Shaiva devout Chola rulers, from the 9th to 12th centuries CE.<br>'+
+						'A distinctive Shaiva Advaita philosophy took shape from the days of Thirumoolar and Karaikal Ammaiyar which was given a fresh life and a new direction by the Saiva Nayamars such as Sambanthar, Appar, Sundarar and Manikkavasagar. Under these saints, the Agamas flourished into temple building and temple worship from the 9th to the 13th centuries CE. The greatest exponent of this revival was the saint, Thirugnanasambanthar.<br><br>'+
 						'While the Shaiva Agamas led to the Shaiva Siddhanta philosophy in Tamil-speaking regions of South-India, it gave rise to Kashmir Saivism in the Northern region of India i.e. in Kashmir.<br>'+
-						'<h2>Kashmiri Shaivism</h2><p>The Agamas of Kashmiri Shaivism is also called the Trika Shastra. It centers mainly on the Trika system of maalinI, siddha and naamaka Agamas and venerates the triad Shiva, Shakti, Nara (the bound soul) and the union of Shiva with Shakti. The trika philosophy derives its name from the three shaktis, namely, paraa, aparaa and paraapara; and provides three modes of knowledge of reality, that is, non-dual (<i>abheda</i>), non-dual-cum-dual (<i>bheda-bheda</i>) and dual (<i>bheda</i>).<br>'+ 
-						'The literature of Kashmiri Shaivism is divided under three categories: Agama Shaastra, Spanda Shaastra, and Pratyabhijna Shaastra. The founder of Kashmir Shaivism is Vasugupta who is said to have been revealed the Siva Sutras by a siddha. It is Abhinava Gupta however, who is considered to be the greatest theologian of Kashmir Shaivism.</p>'+
+						'<h2>Kashmiri Shaivism</h2>The Agamas of Kashmiri Shaivism is also called the Trika Shastra. It centers mainly on the Trika system of maalinI, siddha and naamaka Agamas and venerates the triad Shiva, Shakti, Nara (the bound soul) and the union of Shiva with Shakti. The trika philosophy derives its name from the three shaktis, namely, paraa, aparaa and paraapara; and provides three modes of knowledge of reality, that is, non-dual (<i>abheda</i>), non-dual-cum-dual (<i>bheda-bheda</i>) and dual (<i>bheda</i>).<br>'+ 
+						'The literature of Kashmiri Shaivism is divided under three categories: Agama Shaastra, Spanda Shaastra, and Pratyabhijna Shaastra. The founder of Kashmir Shaivism is Vasugupta who is said to have been revealed the Siva Sutras by a siddha. It is Abhinava Gupta however, who is considered to be the greatest theologian of Kashmir Shaivism.'+
 						'<h2>Role of Adi Shankaracharya</h2>Adi Shankaracharya travelled to Kashmir where he was initiated into the Shakta Agamic tradition by Abhinava Gupta, the great theologian, mystic, poet, musician, dramatist, logician of that region, 1000s of years ago. Adi Shankracharya integrated Shakta Srividya Sampradaya into the Vedanta Sampradaya.<br>'+ 
 						'It is Adi Shankaracharya who should be credited for organising all traditions of Sanatana Hindu Dharma to its very core.'+
-						'</p></div>',
+						'<h2>Delving into the Shaivagamas</h2>The Shaivagamas, also known as Shaiva Siddhanta Shastras (or the Shaivagamas) in Sanskrit, are replete with mantras, techniques and practices to aid in transcending individuals from a lower to a higher state of consciousness. These scriptures reveal the exact nature of Pati (the Supreme Protector) and the souls that are bound which make known the exact nature of transcendental Parashiva (the Absolute which is beyond comprehension).'+
+						'The Shaiva Siddhanta Shastras have been revealed by Lord Shiva to constitute the final and well ascertained conclusive principles that should be accepted or discarded. Lord Shiva has five faces, and each of these five faces revealed different scriptures of the 28 Shaivagamas. The faces are:<ul>'+ 
+						'<li><strong>Sadyojata</strong> (that which gives both happiness and sadness to creatures),</li>'+ 
+						'<li><strong>Vama</strong> (aspect of Lord Shiva that is peaceful, poetic and graceful),</li> '+
+						'<li><strong>Aghora</strong> (represents the rejuvenating and dissolving qualities of Lord Shiva),</li> '+
+						'<li><strong>Tatpurusha</strong> (represents the supreme soul behind the physical being) and </li>'+
+						'<li><strong>Isana</strong> (form associated with akash or ether).</li></ul> '+
+						'The Shaivagamas were directly delivered by Lord Shiva to Devi and to some of the sages who were adherents of the Shaivite order, such as Kaushika, Kashyapa, Bharadvaja, Agastya and Gautama. Each Shaivagama upholds a particular set of instructions, be it for priests who want to conduct homas and pujas, or for people who want to live the lifestyle of Lord Shiva and who want to strengthen the connection with Him. These Agamas are also meant for those who strive for enlightenment, or simply for those individuals who wish to follow Lord Shiva’s dictums and live His very life.<br><br>'+ 
+						'Of the Shaivagamas, the Kamika Agama is the foremost scripture that came out of the Sadyojata face, and was directly uttered by Lord Shiva to Devi and a Sapta Rishi (Kaushika) on Mount Meru in Ujjain, India. He in turn transmitted it to 3 more sages. Thus began the flowering of a unique and divine culture ensconced in the Hindu-Vedic tradition that set forth ways and means to practice living with the ultimate super-consciousness.<br><br>'+
+						'As Paramahamsa Nithyananda says about the Kamika Agama, “It is the only spiritual inner science to manifest anything one wants as reality.”<br><br>'+
+						'<strong>What do the Agamas Contain?</strong><br><br>The Agamas elaborate 4 paths called <i>paadas</i>, namely:<br><br>'+
+						'1.	<i>Carya Paada</i> which details praayashcitta vidhi (atonement), pavitra vidhi (purification), shivalinga lakshanam (chacteristics of a shivalinga), japam, yogapatta lakshanam (characteristics of meditation with a maala and yogapattam used in yogic postures)<br>'+
+						'2.	<i>Kriya Paada</i>, which details mantra uddaaranam (elevation with mantra), sandhyaavandanam (twilight salutation), puja, japa, homas (worship, chanting, rites), samaya vishesha nirvana achaarya abhisheka (initiation into the spiritual stages). It also includes rules for construction of temple; design principles for sculpting, carving, and consecration of idols of deities for worship in temples <br>'+
+						'3.	<i>Yoga Paada</i>, tells about the 36 tattvas, tattveshvara, yama, niyama, asana, samaadhi procedures – in other words, the precepts of yoga, the physical and mental discipline<br>'+
+						'4.	<i>Jnana Paada</i>, also called Vidya Paada, details the characteristics of pati, pashu, pasha – the doctrine, the philosophical and spiritual knowledge and knowledge of reality & liberation.'+
+						'<br></p>',
 					}]
 				}
 			],
