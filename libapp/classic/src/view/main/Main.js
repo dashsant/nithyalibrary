@@ -59,6 +59,7 @@ Ext.define('library.view.main.Main', {
 				},*/
 				{
 					xtype:'image',
+					margin:'10 0 0 0',
 					src:"/resources/Hinduism now scriptures.png",
 					width:'225px',
 					height:'90px'
@@ -66,7 +67,7 @@ Ext.define('library.view.main.Main', {
 				{
 					xtype: 'textfield',
 					width:350,
-					margin: '20 0 0 170',
+					margin: '20 0 0 220',
 					name: 'searchText',
 					id: 'searchText',
 					emptyText: 'Type to search'
@@ -87,11 +88,11 @@ Ext.define('library.view.main.Main', {
 					iconCls: 'x-fa fa-search'
 				},
 				{ 
-					margin: '-10 15 0 370',
+					margin: '-10 15 0 330',
 					xtype: 'image',
 					src:"/resources/Nithyananda University only logo.png",
-					width:'165px',
-					height:'165px'
+					width:'155px',
+					height:'155px'
 				},
 			]
 		},
