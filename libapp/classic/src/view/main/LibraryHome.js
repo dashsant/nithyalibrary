@@ -73,7 +73,7 @@ Ext.define('library.view.main.LibraryHome', {
 						listeners: {
 							render: function() {
 								var me = this;
-								me.setHeight(window.innerHeight - 280);
+								me.setHeight(window.innerHeight - 230);
 							}
 						},
 						html:'<p style="line-height:1.4;text-align:justify;font-size:14px"><h2>Vedagamas – The Complete Process for Completion & Enlightenment</h2>'+

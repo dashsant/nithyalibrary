@@ -51,11 +51,11 @@ Ext.define('library.view.main.Main', {
 			items:
 			[
 				{ 
-					margin: '5 15 5 5',
+					margin: '5 15 25 5',
 					xtype: 'image',
 					src:"/resources/nithya_university.png",
 					width:'200px',
-					height:'48px'
+					height:'60px'
 				},			
 				/*{
 					margin: '30 25 5 5',

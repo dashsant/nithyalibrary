@@ -20,7 +20,7 @@ Ext.define('library.view.main.MenuscriptCategoryResult', {
 		xtype:'container',
 		layout:'hbox',
 		width:'100%',
-		height:475,
+		height:500,
 		//height:'100%',
 		items:[
 		{

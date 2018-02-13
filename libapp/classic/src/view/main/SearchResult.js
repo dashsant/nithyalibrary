@@ -4,7 +4,7 @@ Ext.define('library.view.main.SearchResult', {
     //autoScroll:'true',
 	layout:'vbox',
 	width:'100%',
-	height:450,
+	height:500,
     requires: [
         'library.view.main.MainModel',
 		'library.view.main.FilterTree',
@@ -41,20 +41,20 @@ Ext.define('library.view.main.SearchResult', {
 			xtype:'container',
 			layout:'hbox',
 			width:'100%',
-			height:450,
+			height:500,
 			items:[
 			{
 				xtype:'filter-tree',
 				id: 'filter-tree-id',
 				margin: '10 0 10 10',
-				height:'80%',
+				height:'90%',
 
 			},
 			{
 				xtype:'result-grid',
 				id:'result-grid-id',
 				margin: '10 0 10 10',
-				height:'80%',
+				height:'90%',
 				store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false})
 			}
 			]
