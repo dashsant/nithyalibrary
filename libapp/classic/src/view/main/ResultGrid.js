@@ -13,7 +13,7 @@ Ext.define('library.view.main.ResultGrid', {
 		height:'100%',
 		flex:3,
 		hideHeaders:true,
-       xtype: 'result-grid',
+        xtype: 'result-grid',
     //   bind: '{searchResultStore}',
        columns: [
            { text: 'Title',  dataIndex: 'title', flex:3 , renderer: function (value, l , record , m) {

@@ -1,9 +1,10 @@
 Ext.define('library.view.main.SearchResult', {
     extend: 'Ext.Panel',
     xtype: 'searchresult',
-    autoScroll:'true',
+    //autoScroll:'true',
 	layout:'vbox',
 	width:'100%',
+	height:450,
     requires: [
         'library.view.main.MainModel',
 		'library.view.main.FilterTree',
@@ -14,34 +15,49 @@ Ext.define('library.view.main.SearchResult', {
 	viewModel:{
 		type:'main'
 	},
+	controller:'main',
 	items:[
-	{
-		id:'searchLabel-id',
-		html: '<h2> Currently there are no previous results available to be shown </h2>',
-		xtype:'label',
-		margin: '0 0 0 200'
-	},
-	{
-		xtype:'container',
-		layout:'hbox',
-		width:'100%',
-		height:800,
-		items:[
 		{
-			xtype:'filter-tree',
-			id: 'filter-tree-id',
-			margin: '10 0 0 10'
-
+			xtype:'container',
+			layout:{type:'hbox', align:'top'},
+			height:45,
+			items:[
+				{
+					id:'searchLabel-id',
+					html: '<h3> Currently there are no previous results available to be shown </h3>',
+					xtype:'label',
+					margin: '0 15 0 0'
+				},
+				{ 
+					xtype: 'button', 
+					text: 'Apply Filter',
+					handler: 'onApplyFilterClick',
+					style: 'background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;text-indent:2px', 
+					margin: '8 0 0 0'
+				}
+			]
 		},
 		{
-			xtype:'result-grid',
-			id:'result-grid-id',
-			margin:'10 0 0 10',
-			store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false}),
-			height:400
-		}
-		]
-	}
-	]
+			xtype:'container',
+			layout:'hbox',
+			width:'100%',
+			height:450,
+			items:[
+			{
+				xtype:'filter-tree',
+				id: 'filter-tree-id',
+				margin: '10 0 10 10',
+				height:'80%',
 
+			},
+			{
+				xtype:'result-grid',
+				id:'result-grid-id',
+				margin: '10 0 10 10',
+				height:'80%',
+				store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false})
+			}
+			]
+		}
+	]
 });

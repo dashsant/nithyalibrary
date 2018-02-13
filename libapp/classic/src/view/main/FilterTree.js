@@ -19,7 +19,8 @@ Ext.define('library.view.main.FilterTree', {
     rootVisible: false,
     useArrows: true,
     width:320,
-	height:400 ,
+//	height:400 ,
+	height:400,
 	bodyStyle: {border:0},
 	columns: [
 		{
@@ -39,13 +40,7 @@ Ext.define('library.view.main.FilterTree', {
 			}
 		}
 	],
-	bbar: [
-		{ 
-			xtype: 'button', 
-			text: 'Apply Filter',
-			handler: 'onApplyFilterClick' 
-		}
-	],
+
 	listeners:{
 			checkchange : function(node, checked) {
 			var that = this;

@@ -18,7 +18,8 @@ Ext.define('library.view.main.MenuscriptCategoryTree', {
     rootVisible: false,
     useArrows: true,
     width:320,
-	height:400 ,
+	//height:400 ,
+	height:'90%' ,
 	bodyStyle: {border:0},
 	columns: [
 		{

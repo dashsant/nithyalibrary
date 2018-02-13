@@ -9,10 +9,11 @@ Ext.define('library.view.main.Main', {
     extend: 'Ext.Panel',
     xtype: 'app-main',
 	id:'app-main',
-	height:'100%',
+	scrollable:false,
+	//autoScroll:true,
+	height:'98%',
 	width:'100%',
     requires: [
-        'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
 		'Ext.tab.Panel',
         'library.view.main.MainController',
@@ -22,7 +23,7 @@ Ext.define('library.view.main.Main', {
     ],
 	viewModel: 'main',
 	controller:'main',
-
+	bodyStyle:"",
     layout: 'vbox',
     items: [{
 			xtype:'container',
@@ -33,13 +34,7 @@ Ext.define('library.view.main.Main', {
 			items:[
 			{
 				xtype:'component',
-				width: 36,
-				padding:'2 2 2 2',
-				html:'<img src="/resources/NUP_logo_no_text.jpg"  height="36" width="36">',
-			},
-			{
-				xtype:'component',
-				html: "<p style=\"text-indent: 2em;margin-top:10px;\"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
+				html: "<p style=\"text-indent: 2em;margin-top:10px;letter-spacing: 2px;\"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
 				padding: '-2 20 15 20' // Same as CSS ordering (top, right, bottom, left)
 			}
 			]
@@ -55,17 +50,22 @@ Ext.define('library.view.main.Main', {
 			referenceHolder: true,
 			items:
 			[
-				{
-					margin: '5 0 0 75',
-					xtype: 'container',
-					width:200,
-					style:'line-height:180%',
-					html:"<h3>Nithyananda<br>Digital<br>Library</h3>"
+				{ 
+					margin: '5 15 5 5',
+					xtype: 'image',
+					src:"/resources/nithya_university.png",
+					width:'200px',
+					height:'48px'
 				},			
-
+				/*{
+					margin: '30 25 5 5',
+					xtype: 'container',
+					width:'225px',
+					html:"<img src=\"/resources/Nithyananda-Digital-Library-text.png\" width='184px' height='74px'>"
+				},*/			
 				{
 					xtype: 'textfield',
-					width:400,
+					width:300,
 					
 					margin: '0 0 0 50',
 					name: 'searchText',
@@ -90,23 +90,9 @@ Ext.define('library.view.main.Main', {
 		},
 		{
 			xtype:'libraryhome',
-			//layout:{
-			//	type:'card',
-			//	align:'stretch'
-			//},
 			id:'libraryhomePage',
-			autoScroll:true,
-			//margin: '25 0 0 0',
-			//width:'100%',
-			//items:
-			//[
-			//	{
-			//	xtype: 'libraryhome'
-			//	},
-			//	{
-			//	xtype: 'searchresult'
-			//	}
-			//]
+			height:'97%',
+
 		}
 	],
 	dockedItems:

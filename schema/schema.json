@@ -7,26 +7,72 @@
         "_all": {
           "enabled": false
         },
+        "properties": {
+          "category": {
+            "type": "keyword"
+          },
+          "material": {
+            "type": "keyword"
+          },
+          "recKey": {
+            "type": "long"
+          },
+          "recordlocator": {
+            "type": "keyword"
+          },
+          "script": {
+            "type": "keyword"
+          },
+          "search_all": {
+            "type": "text"
+          },
+          "subject": {
+            "type": "text",
+            "copy_to": [
+              "search_all"
+            ]
+          },
+          "tags": {
+            "type": "keyword"
+          },
+          "title": {
+            "type": "text",
+            "copy_to": [
+              "search_all"
+            ]
+          },
+          "tree_index": {
+            "type": "keyword",
+            "index": false
+          },
+          "url": {
+            "type": "keyword",
+            "index": false
+          }
+        }
+      },	
+      "book": {
+        "_all": {
+          "enabled": false
+        },
         "_source": {
           "enabled": true
         },
         "properties": {
-          "recordlocator": {
-	    "type": "keyword"
-	  },
           "category": {
             "type": "keyword"
           },
           "tags":{
             "type":"keyword"
           },
-          "material": {
-            "type": "keyword"
-          },
           "script": {
             "type": "keyword"
           },
           "subject": {
+            "type": "text",
+            "copy_to": "search_all"
+          },
+          "author": {
             "type": "text",
             "copy_to": "search_all"
             
@@ -35,9 +81,13 @@
             "type": "text",
             "copy_to": "search_all"
           },
-		      "search_all":{
+		  "search_all":{
 			      "type": "text"
-		      },
+		  },
+          "abstract": {
+            "type": "text",
+			"index": false
+          },		  
           "url": {
             "type": "keyword",
             "index": false
@@ -50,4 +100,3 @@
       }
     }
   }
-
