@@ -1,7 +1,7 @@
 Ext.define('library.view.main.MenuscriptCategoryResult', {
     extend: 'Ext.Panel',
     xtype: 'menuscriptcategoryresult',
-    autoScroll:'true',
+    //autoScroll:'true',
 	layout:'vbox',
 	width:'100%',
     requires: [
@@ -20,14 +20,14 @@ Ext.define('library.view.main.MenuscriptCategoryResult', {
 		xtype:'container',
 		layout:'hbox',
 		width:'100%',
-		height:500,
+		height:470,
 		//height:'100%',
 		items:[
 		{
 			xtype:'menuscript-cat-tree',
 			id: 'menuscript-cat-tree-id',
 			margin: '10 0 10 10',
-			height:'90%'
+			height:'85%'
 		}
 		,
 		{
@@ -36,7 +36,7 @@ Ext.define('library.view.main.MenuscriptCategoryResult', {
 			margin:'10 0 10 10',
 			store:Ext.create('library.store.MenuscriptCategoryStore',{autoLoad:false}),
 			//height:400,
-			height:'90%',
+			height:'85%',
 			width:'100%'
 
 		}
