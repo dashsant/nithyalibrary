@@ -15,29 +15,40 @@ Ext.define('library.view.main.BookResult', {
 	},
 	items:[
 	{
-		xtype:'container',
-		layout:'hbox',
+		xtype:'tabpanel',
+		//layout:'hbox',
 		width:'100%',
 		height:470,
 		//height:'100%',
 		items:[
-		{
-			xtype:'book-grid',
-			id:'book-grid',
-			margin:'10 0 10 10',
-			store:Ext.create('library.store.BookStore',{autoLoad:false}),
-			//height:400,
-			height:'80%',
-			width:'100%',
-			listeners:{
-				render:function(me , opts){
-					console.log(me);
-					s = Ext.getCmp('book-grid').getStore();
-					if(!s.isLoaded())
-						s.load();
+				{
+					title:"Popular Titles"
+
+					
+				},
+		
+				{
+					title:"All",
+					items:[
+					{
+						xtype:'book-grid',
+						id:'book-grid',
+						margin:'10 0 10 10',
+						store:Ext.create('library.store.BookStore',{autoLoad:false}),
+						//height:400,
+						height:'80%',
+						width:'100%',
+						listeners:{
+							render:function(me , opts){
+								console.log(me);
+								s = Ext.getCmp('book-grid').getStore();
+								if(!s.isLoaded())
+									s.load();
+							}
+						}
+					}
+					]
 				}
-			}
-		}
 		]
 	}
 	]
