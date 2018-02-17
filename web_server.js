@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 var nodeCleanup = require('node-cleanup');
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
-  host: '45.18.12.178:9200',
+  host: 'localhost:9200',
   log: 'error'
 });
 
@@ -183,7 +183,7 @@ router.post('/librrary/scripture/by_category', function (req, res) {
 router.post('/librrary/book/all', function (req, res) {
 	var sb = 
 	{
-		index: 'nithya_index',
+		index: 'nithya_book_index',
 		type: 'book',
 		body:{	
 			size: 500, 

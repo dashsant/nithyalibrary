@@ -50,53 +50,7 @@
             "index": false
           }
         }
-      },	
-      "book": {
-        "_all": {
-          "enabled": false
-        },
-        "_source": {
-          "enabled": true
-        },
-        "properties": {
-          "category": {
-            "type": "keyword"
-          },
-          "tags":{
-            "type":"keyword"
-          },
-          "script": {
-            "type": "keyword"
-          },
-          "subject": {
-            "type": "text",
-            "copy_to": "search_all"
-          },
-          "author": {
-            "type": "text",
-            "copy_to": "search_all"
-            
-          },
-          "title": {
-            "type": "text",
-            "copy_to": "search_all"
-          },
-		  "search_all":{
-			      "type": "text"
-		  },
-          "abstract": {
-            "type": "text",
-			"index": false
-          },		  
-          "url": {
-            "type": "keyword",
-            "index": false
-          },
-		  "tree_index":{
-			"type": "keyword",
-			"index": false
-		  }
-        }
+      }	
       }
     }
   }

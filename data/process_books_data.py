@@ -59,7 +59,7 @@ def createDocumnent(es, doc , cats_map):
 	#print(esdoc)
 	try:
 		body = json.dumps(esdoc)
-		es.create("nithya_index", "book" , esdoc["recKey"],body)
+		es.create("nithya_book_index", "book" , esdoc["recKey"],body)
 	except e:
 		print(e)
 
@@ -67,7 +67,7 @@ def createDocumnent(es, doc , cats_map):
 def main():	
 	f = open("book_catalog.tsv","r", encoding="UTF-8")
 	recKey = 0
-	es = Elasticsearch(["45.18.12.178"] , port=9200)
+	es = Elasticsearch()
 	cats_map = getCatsMap()
 	for line in f:
 		a = line.split("\t")
