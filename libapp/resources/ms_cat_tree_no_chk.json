@@ -238,8 +238,8 @@
 		"iconCls":"filter-tree-icon"
     }	,
 	{
-        "text": "Saktha Agama",
-        "id": "Saktha-Agama",
+        "text": "Sakta Agama",
+        "id": "Sakta-Agama",
         "leaf": true,
 		"iconCls":"filter-tree-icon"
     }
