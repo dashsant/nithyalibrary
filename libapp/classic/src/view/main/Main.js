@@ -43,37 +43,38 @@ Ext.define('library.view.main.Main', {
 			xtype:'panel',
 			layout:{
 				type: 'hbox',
-				align: 'middle'
+				align: 'top'
 			},
-			margin: '5 0 0 5',
+			margin: '30 0 0 5',
 			defaultButton:'btnSearch',
 			referenceHolder: true,
 			items:
 			[
-				{ 
-					margin: '5 15 5 5',
-					xtype: 'image',
-					src:"/resources/nithya_university.png",
-					width:'200px',
-					height:'48px'
-				},			
+			
 				/*{
 					margin: '30 25 5 5',
 					xtype: 'container',
 					width:'225px',
 					html:"<img src=\"/resources/Nithyananda-Digital-Library-text.png\" width='184px' height='74px'>"
-				},*/			
+				},*/
+				{
+					xtype:'image',
+					margin:'10 0 0 0',
+					src:"/resources/Hinduism now scriptures.png",
+					width:'225px',
+					height:'90px'
+				},			
 				{
 					xtype: 'textfield',
-					width:300,
-					
-					margin: '0 0 0 50',
+					width:350,
+					margin: '20 0 0 220',
 					name: 'searchText',
 					id: 'searchText',
 					emptyText: 'Type to search'
 				},
 				{
 					xtype: 'button',
+					margin:'20 0 0 0',
 					reference: 'btnSearch',
 					height:32,
 					text:'Search',
@@ -85,14 +86,20 @@ Ext.define('library.view.main.Main', {
 					name: 'btnSearch',
 					handler : 'onSearchTextClick',  // no scope given here
 					iconCls: 'x-fa fa-search'
-				}
+				},
+				{ 
+					margin: '-10 15 0 330',
+					xtype: 'image',
+					src:"/resources/Nithyananda University only logo.png",
+					width:'155px',
+					height:'155px'
+				},
 			]
 		},
 		{
 			xtype:'libraryhome',
 			id:'libraryhomePage',
-			height:'97%',
-
+			height:'99%'
 		}
 	],
 	dockedItems:

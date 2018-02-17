@@ -4,7 +4,7 @@ Ext.define('library.view.main.SearchResult', {
     //autoScroll:'true',
 	layout:'vbox',
 	width:'100%',
-	height:450,
+	height:460,
     requires: [
         'library.view.main.MainModel',
 		'library.view.main.FilterTree',

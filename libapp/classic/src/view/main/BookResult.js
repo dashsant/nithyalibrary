@@ -1,7 +1,7 @@
 Ext.define('library.view.main.BookResult', {
     extend: 'Ext.Panel',
     xtype: 'bookresult',
-    autoScroll:'true',
+    //autoScroll:'true',
 	layout:'vbox',
 	width:'100%',
     requires: [
@@ -18,7 +18,7 @@ Ext.define('library.view.main.BookResult', {
 		xtype:'container',
 		layout:'hbox',
 		width:'100%',
-		height:475,
+		height:470,
 		//height:'100%',
 		items:[
 		{
@@ -27,7 +27,7 @@ Ext.define('library.view.main.BookResult', {
 			margin:'10 0 10 10',
 			store:Ext.create('library.store.BookStore',{autoLoad:false}),
 			//height:400,
-			height:'90%',
+			height:'80%',
 			width:'100%',
 			listeners:{
 				render:function(me , opts){
