@@ -17,11 +17,16 @@ Ext.define('library.view.main.FilterTree', {
 	controller:'main',
     store:Ext.create('library.store.FilterTreeData'),
     rootVisible: false,
-    useArrows: true,
+	useArrows: true,
+	flex:1,
+	forceFit:true,
+	rowLines:false,
     width:320,
-//	height:400 ,
 	height:390,
-	bodyStyle: {border:0},
+	header: false,
+	frame:false,
+	border:false,
+	style: {border:0},
 	columns: [
 		{
 			xtype: 'treecolumn',
@@ -33,7 +38,7 @@ Ext.define('library.view.main.FilterTree', {
 				if(filterTreeData.hasOwnProperty(record.id)){
 					var c = filterTreeData[record.id];
 					console.log(value + " ("+ c +")");
-					var b = "<b style=\"color:#843f33\">" + value + " ("+ c +")" + "</b>"
+					var b = "<b>" + value + " ("+ c +")" + "</b>"
 					return b;
 				}
 				return value;

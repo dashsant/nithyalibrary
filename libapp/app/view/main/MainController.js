@@ -29,6 +29,7 @@ Ext.define('library.view.main.MainController', {
 			var sText = Ext.getCmp('searchText').getValue();
 			var totalMatched = jsonObj.totalMatched;
 			var totalReturned = jsonObj.totalReturned;
+			var applyFilterBtn = Ext.getCmp('apply-filter-btn');
 
 			var h;
 			if(totalMatched == totalReturned )
@@ -40,7 +41,7 @@ Ext.define('library.view.main.MainController', {
 			//loading store data
 			var s = Ext.getCmp('result-grid-id').getStore();
 			s.loadData(itemsObj,false);
-			
+			applyFilterBtn.setHidden(false);
 		  }
 		});		
 	},

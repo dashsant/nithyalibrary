@@ -33,7 +33,9 @@ Ext.define('library.view.main.SearchResult', {
 					text: 'Apply Filter',
 					handler: 'onApplyFilterClick',
 					style: 'background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;text-indent:2px', 
-					margin: '8 0 0 0'
+					margin: '8 0 0 0',
+					id:'apply-filter-btn',
+					hidden:true
 				}
 			]
 		},
@@ -42,18 +44,19 @@ Ext.define('library.view.main.SearchResult', {
 			layout:'hbox',
 			width:'100%',
 			height:450,
+			border:false,
 			items:[
 			{
 				xtype:'filter-tree',
 				id: 'filter-tree-id',
-				margin: '10 0 10 10',
+				margin:'0',padding:'0 12 0 12',
 				height:'80%',
-
+				border: false,
 			},
 			{
 				xtype:'result-grid',
 				id:'result-grid-id',
-				margin: '10 0 10 10',
+				margin: '0',
 				height:'80%',
 				store:Ext.create('library.store.CatalogSearchResult',{autoLoad:false})
 			}

@@ -17,10 +17,11 @@ Ext.define('library.view.main.MenuscriptCategoryTree', {
     store:Ext.create('library.store.MenuscriptCategoryTreeStore'),
     rootVisible: false,
     useArrows: true,
-    width:320,
-	//height:400 ,
-	height:'90%' ,
-	bodyStyle: {border:0},
+	flex:1,
+	height:'100%',
+	border:false,
+	forceFit:true,
+	rowLines:true,
 	columns: [
 		{
 			xtype: 'treecolumn',

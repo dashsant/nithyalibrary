@@ -9,10 +9,9 @@ Ext.define('library.view.main.Main', {
     extend: 'Ext.Panel',
     xtype: 'app-main',
 	id:'app-main',
-	scrollable:false,
-	//autoScroll:true,
-	height:'98%',
+	height:'100%',
 	width:'100%',
+	border:false,
     requires: [
         'Ext.window.MessageBox',
 		'Ext.tab.Panel',
@@ -23,23 +22,85 @@ Ext.define('library.view.main.Main', {
     ],
 	viewModel: 'main',
 	controller:'main',
-	bodyStyle:"",
-    layout: 'vbox',
-    items: [{
-			xtype:'container',
-			layout:'hbox',
-			style: 'background-color:rgb(141, 67, 54);font-size:12;color:#fff;font-weight: 400;',
-			height:40,
-			width:'100%',
-			items:[
-			{
-				xtype:'component',
-				html: "<p style=\"text-indent: 2em;margin-top:10px;letter-spacing: 2px;\"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</p></b> ",
-				padding: '-2 20 15 20' // Same as CSS ordering (top, right, bottom, left)
-			}
-			]
+	bodyStyle:{
+		backgroundImage:'url(/resources/Background.png) !important',
+		backgroundRepeat: 'no-repeat !important',
+		backgroundSize:'cover !important',
+		margin: '0  !important',
+		padding: '0 !important',
+		border: '0 important',
+		borderWidth: 0
+	},
+    layout: 'border',
+    items: [
+		{
+			title: 'header',
+			layout: {type:'vbox',align:'start', pack:'center'},
+			xtype: 'component',
+			region: 'north',
+			header: false,
+			html: '<span style="margin-left:15px"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</b></span>',
+			cls: 'topWide'
 		},
 		{
+			title: 'header',
+			layout:{type:'hbox', align:'fit'},
+			xtype:'container',
+			region: 'north',
+			height: '17%',
+			header: false,
+			items:[
+				{xtype:'component',width:'30%',height:'70%',cls:'productlogo',html:'&nbsp;'},
+				{xtype:'container',width:'40%',height:'80%',defaultButton:'btnSearch',
+				 referenceHolder: true,
+				 layout:{type:'hbox',align:'middle',pack:'center'},
+				 items:[
+					 { xtype: 'textfield', emptyText: 'Type to search', flex:3,name: 'searchText',
+					 id: 'searchText'},
+					 {
+					   xtype: 'button',text:'Search',iconCls: 'x-fa fa-search',padding:'0 5',
+					   border:false,height:'32px',flex:1,name: 'btnSearch',
+					   handler : 'onSearchTextClick', // no scope given here
+					   style: 'min-width:25px;background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;text-indent:2px'
+					 }
+				 ]
+				},
+				{xtype:'component',width:'30%',height:'100%',cls:'swamijilogo',html:'&nbsp;'}
+			]
+		},		
+		{
+			title: 'footer',
+			xtype: 'component',
+			region: 'south',
+			header: false,
+			minHeight: 19,
+			layout: {
+				type: 'hbox', align:'center',pack:'center'
+			},
+			html: '<div style="text-align:center">Copyright © 2018 Nithyananda University Press ' +
+			'<a href="https://www.facebook.com/nithyanandauniversitypress">'+
+			'<img src="resources/facebook.svg" style="display:inline-block;width:28px !important;height:28px !important;margin-right:15px;position:relative;top:8px;">'+
+			'</a>'+
+
+			'<a href="http://twitter.com/SriNithyananda">'+
+			'<img src="resources/twitter.svg" style="display:inline-block;width:18px !important;height:18px !important;margin-right:15px;position:relative;top:4px;">'+
+			'</a>'+
+
+			'<a href="http://www.youtube.com/nithyanandatv">'+
+			'<img src="resources/youtube.svg" style="display:inline-block;width:28px !important;height:28px !important;position:relative;top:8px;margin-right:15px;">'+
+			'</a>'+
+
+			'<a href="mailto:enpublishers@nithyananda.org">'+
+			'<i class="fa fa-envelope" style="color:#d94103;font-size:16px !important;position:relative;top:-1px"></i>'+
+			'</a>'+
+
+			'</div>',
+			style:{
+				color: 'white',background:'transparent', 'font-weight': '700'
+			}
+		},
+
+		/*{
 			xtype:'panel',
 			layout:{
 				type: 'hbox',
@@ -50,13 +111,6 @@ Ext.define('library.view.main.Main', {
 			referenceHolder: true,
 			items:
 			[
-			
-				/*{
-					margin: '30 25 5 5',
-					xtype: 'container',
-					width:'225px',
-					html:"<img src=\"/resources/Nithyananda-Digital-Library-text.png\" width='184px' height='74px'>"
-				},*/
 				{
 					xtype:'image',
 					margin:'10 0 0 0',
@@ -82,7 +136,6 @@ Ext.define('library.view.main.Main', {
 					padding:0,
 					border:false,
 					style: 'background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;text-indent:2px',
-					//icon:'/resources/search-32.png',
 					name: 'btnSearch',
 					handler : 'onSearchTextClick',  // no scope given here
 					iconCls: 'x-fa fa-search'
@@ -95,57 +148,27 @@ Ext.define('library.view.main.Main', {
 					height:'155px'
 				},
 			]
-		},
+		},*/
+
 		{
-			xtype:'libraryhome',
-			id:'libraryhomePage',
-			height:'99%'
-		}
-	],
-	dockedItems:
-		[
-      	{
-  				xtype:'toolbar',
-  				dock:'bottom',
-  				width:'100%',
-          style: {
-            borderTop: 0
-          },
-          layout: {
-            pack: 'center',
-            type: 'hbox'
-          },
-  				items:
-  				[
-  					{
-  						html: 'Copyright © 2017 Nithyananda University Press',
-  						xtype:'component'
-  					},
-  					{
-  						xtype:'component',
-  						name: 'facebook',
-  						padding: '0 0 0 25',
-  						html:'<a href="https://www.facebook.com/nithyanandauniversitypress"><div style="color:#d94103"><i class="fa fa-facebook"></i></div></a>'
-  					},
-  					{
-  						xtype:'component',
-  						name: 'twitter',
-  						padding: '0 0 0 25',
-  						html:'<a href="http://twitter.com/SriNithyananda"><div style="color:#d94103"><i class="fa fa-twitter"></i></div></a>'
-  					},
-  					{
-  						xtype:'component',
-  						name: 'youtube',
-  						padding: '0 0 0 25',
-  						html:'<a href="http://www.youtube.com/nithyanandatv"><div style="color:#d94103"><i class="fa fa-youtube-play"></i></div></a>'
-  					},
-  					{
-  						xtype:'component',
-  						name: 'mailto',
-  						padding: '0 0 0 25',
-  						html:'<a href="mailto:enpublishers@nithyananda.org"><div style="color:#d94103"><i class="fa fa-envelope"></i></div></a>'
-  					}
-  				]
+			title: 'contentArea',
+			layout:{type:'hbox', align:'fit'},
+			xtype: 'container',
+			region: 'center',
+			header: false,
+			cls:'bodyclass',
+			height:'82%',
+			margin:'0 15 0 15',
+			items:[
+				{
+					xtype:'libraryhome',
+					id:'libraryhomePage',
+					flex:1
+				}
+			],
+			style:{
+				color: 'white',
 			}
-    ]
+		},	
+	]
 });

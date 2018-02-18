@@ -1,11 +1,63 @@
 /**
  * Generates a set of style rules for the "navigation" tab UI.
  */
- 
+
+/*$base-color: rgba(0,0,0,0);
+ // text color
+$color: dynamic(#000);
+$font-weight: dynamic(600);
+$font-weight-bold: dynamic(800);*/
+
+ .swamijilogo{
+    background: url('/resources/Nithyananda University only logo.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: top right !important;
+    margin-right: 20px !important;
+    z-index: 1000000 !important;
+}
+
+.productlogo{
+    background: url('/resources/Hinduism now scriptures.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: top left !important;
+    margin-left: 30px !important;
+    margin-top: 5px !important;
+}
+
+.x-viewport {
+    background: url('/resources/Background-big.jpg') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: top left !important;
+}
+
+.topWide {
+    background: transparent;
+    color:#fff;font-weight: 400;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    width: 100% !important;
+}
+.big-50 {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+
+
+.x-panel-body-default, .x-panel-body-navigation, .bodyclass {
+    background: rgba(0,0,0,0) !important;
+}
+
+
+.bodyclass {
+    background: transparent !important;
+}
 
 @include extjs-tab-panel-ui(
     $ui: 'navigation',
-    $ui-tab-background-color: transparent,
+    $ui-tab-background-color: rgba(0,0,0,0),
     $ui-tab-background-color-over: #505050,
     $ui-tab-background-color-active: #843f33,
     $ui-tab-background-gradient: 'none',
@@ -33,7 +85,7 @@
     $ui-tab-icon-width: 24px,
     $ui-tab-icon-height: 24px,
     $ui-tab-icon-spacing: 5px,
-    $ui-bar-background-color: #404040,
+    $ui-bar-background-color: transparent,
     $ui-bar-background-gradient: 'none',
     $ui-bar-padding: 0,
     $ui-strip-height: 0
@@ -57,7 +109,10 @@
     $ui-header-padding: 0,
     $ui-header-text-margin: 36px,
     $ui-header-noborder-adjust: false,
-	$ui-header-border-width: 1px
+    $ui-header-border-width: 0px,
+    $ui-header-inner-border-width: 0px,
+    $ui-header-border-color: #fff
+    
 );
 
 .x-title-icon-navigation {
@@ -80,36 +135,17 @@
     }
 }
 
-.x-tab-active {
-	position: relative;
-}
-
-.x-tab-active:after, .x-tab-active:before {
-	content: '';
-    display: block;
-    position: absolute;
-    left: 100%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-}
-.x-tab-active {
-	border: 1px solid red;
-}
-
-.x-tab-active:before {
-    top: 9px;
-    border-color: #a00;
-    border-width: 11px;
-}
-.x-tab-active:after {
-    top: 10px;
-    border-color: #fdd;
-    border-width: 10px;
+.x-grid-item {
+    background: transparent !important;
+    /*background-color: rgba(0,0,0,0) !important;*/
 }
 
 .x-grid-cell > b {
 	font-weight: bold;
+}
+
+.x-tab-inner-navigation {
+    word-wrap: break-all;
 }
 
 .x-tab-navigation {
@@ -119,4 +155,12 @@
 .x-panel-header-title-navigation > .x-title-text-navigation:after {
     top: 30px;
     right: -24px;
+}
+
+.hovercls {
+    background-color: #505050 !important;
+}
+
+.treecls {
+    color: white !important;
 }

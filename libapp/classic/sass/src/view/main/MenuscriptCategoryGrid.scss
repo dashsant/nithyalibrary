@@ -1,0 +1,22 @@
+$grid-row-cell-font-size: dynamic(14px);
+$grid-row-cell-font-weight: 400;
+$grid-row-cell-line-height: dynamic(17px);
+$grid-row-cell-color: dynamic(#000);
+$grid-row-cell-background-color: dynamic(#1f2933);
+$grid-row-cell-alt-background-color: dynamic(#1a232b);
+$grid-row-cell-over-background-color: dynamic(#843f33);
+$grid-row-cell-focus-background-color: dynamic($grid-row-cell-over-background-color);
+$grid-row-cell-over-border-color: dynamic(#843f33);
+$grid-row-cell-selected-color: dynamic(#fff);
+$grid-row-cell-selected-background-color: dynamic(#843f33);
+$grid-row-cell-selected-border-color: dynamic(#843f33);
+$grid-row-cell-over-background-gradient: dynamic('flat');
+$grid-row-cell-focus-background-gradient: dynamic('flat');
+$panel-header-color: dynamic(#000);
+$panel-header-font-weight: 400;
+
+$grid-paging-toolbar-glyph-color: dynamic(#fff);
+$toolbar-scroller-glyph-color: dynamic(#fff);
+$toolbar-background-color: dynamic(#843f33);
+$toolbar-text-color: dynamic(#fff);
+$toolbar-text-font-weight: bold;

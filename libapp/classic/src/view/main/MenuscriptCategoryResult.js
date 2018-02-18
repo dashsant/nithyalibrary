@@ -20,22 +20,20 @@ Ext.define('library.view.main.MenuscriptCategoryResult', {
 		xtype:'container',
 		layout:'hbox',
 		width:'100%',
-		height:470,
-		//height:'100%',
+		height:450,
 		items:[
 		{
 			xtype:'menuscript-cat-tree',
 			id: 'menuscript-cat-tree-id',
-			margin: '10 0 10 10',
+			margin:'0',padding:'0 12 0 12',
 			height:'85%'
 		}
 		,
 		{
 			xtype:'menuscript-category-grid',
 			id:'menuscript-category-result-grid',
-			margin:'10 0 10 10',
+			margin:'0',
 			store:Ext.create('library.store.MenuscriptCategoryStore',{autoLoad:false}),
-			//height:400,
 			height:'85%',
 			width:'100%'
 

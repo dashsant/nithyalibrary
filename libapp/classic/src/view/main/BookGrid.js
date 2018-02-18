@@ -1,8 +1,7 @@
 Ext.define('library.view.main.BookGrid', {
     extend: 'Ext.grid.Panel',
 		xtype:'book-grid',
-		height:'85%',
-		flex:3,
+		width:'100%',
 		hideHeaders:true,
        columns: [
            { text: 'Title',  dataIndex: 'title', flex:2 , renderer: function (value, metaData , record , m) {
