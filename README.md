@@ -1,1 +1,1 @@
-# nithyalibrary
+# Nithyananda Jnanalaya
