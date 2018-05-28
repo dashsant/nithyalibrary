@@ -1,0 +1,8 @@
+{	
+	"success": true,
+	"data": [
+		{ "id": 1, "label": "Hindi" },
+		{ "id": 2, "label": "Tamil" },
+		{ "id": 3, "label": "Bengali" }
+	]
+}

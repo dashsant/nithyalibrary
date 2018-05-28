@@ -3,6 +3,7 @@
  * calls Ext.application(). This is the ideal place to handle application launch and
  * initialization details.
  */
+ 
 Ext.define('library.Application', {
     extend: 'Ext.app.Application',
     

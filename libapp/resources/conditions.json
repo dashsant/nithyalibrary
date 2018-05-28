@@ -1,0 +1,12 @@
+{	
+	"success": true,
+	"data": [
+		{ "id": 1, "label": "Good" },
+		{ "id": 2, "label": "Bad" },
+		{ "id": 3, "label": "Worm infected" },
+		{ "id": 4, "label": "Fungus"},
+		{ "id": 5, "label": "Stuck folio"},
+		{ "id": 6, "label": "Brittle"},
+		{ "id": 7, "label": "Illustration/script illegible"}
+	]
+}

@@ -19,6 +19,12 @@ var router = express.Router()
 
 var onedaymillisceonds = 24*60*60*1000
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -180,6 +186,18 @@ router.post('/librrary/scripture/by_category', function (req, res) {
   );
 })
 
+app.post('/login', function (req, res) {
+	var username = req.body.username,
+		password = req.body.password,
+		response = {"success":false,"msg":""};
+	
+	if(username == "RajaRajeshwari" && "Sundareshwara"){
+		response.success = true;
+		response.msg = "OK";
+	}
+	res.setHeader('Content-Type', 'application/json');
+    res.send(response);
+});
 router.post('/librrary/book/all', function (req, res) {
 	var sb = 
 	{
@@ -262,7 +280,7 @@ app.use(express.static(path.join(__dirname, 'libapp')));
 
 app.use('/api', router);
 
-app.listen(80);
+app.listen(3000);
 
 nodeCleanup(function (exitCode, signal) {
     // release resources here before node exits 

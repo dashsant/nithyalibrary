@@ -1,2 +1,2 @@
 // @tag full-page
-// @require C:\sencha\libapp\app.js
+// @require C:\wamp\www\nithyanandalibrary\libapp\app.js

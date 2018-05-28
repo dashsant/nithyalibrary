@@ -207,6 +207,20 @@ Ext.define('library.view.main.LibraryHome', {
 					}]
 				}
 			]
+		},
+		{
+			title: 'Admin',
+			items:[{
+				xtype:'container',
+				layout: {type: 'hbox',align:'fit'},
+				shrinkWrap:false,
+				flex:1,
+				width:'100%',
+				height:'98%',
+				items:[{
+					xtype:'adminforms',width:'100%',margin:'0',padding:'0 12 0 12'
+				}]
+			}]
 		}
 	],
 	listeners:

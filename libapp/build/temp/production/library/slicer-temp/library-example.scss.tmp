@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'library' );
-$image-search-path: 'C:/work/Personal/Development/nithyalibrary/libapp/build/production/library/classic/resources';
+$image-search-path: 'C:/wamp/www/nithyanandalibrary/libapp/build/production/library/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;
@@ -907,19 +907,30 @@ $include-ext-window-messagebox: dynamic(true);;
 $include-ext-window-toast: dynamic(true);;
 $include-ext-window-window: dynamic(true);;
 $include-library-application: dynamic(true);;
+$include-library-model-bookdetail: dynamic(true);;
 $include-library-model-catalogdetail: dynamic(true);;
+$include-library-store-bookstore: dynamic(true);;
 $include-library-store-catalogsearchresult: dynamic(true);;
 $include-library-store-filtertreedata: dynamic(true);;
+$include-library-store-menuscriptcategorystore: dynamic(true);;
 $include-library-store-menuscriptcategorytreestore: dynamic(true);;
 $include-library-store-personnel: dynamic(true);;
+$include-library-view-main-adminforms: dynamic(true);;
+$include-library-view-main-appviewport: dynamic(true);;
+$include-library-view-main-bookgrid: dynamic(true);;
+$include-library-view-main-bookresult: dynamic(true);;
 $include-library-view-main-filtertree: dynamic(true);;
 $include-library-view-main-libraryhome: dynamic(true);;
 $include-library-view-main-list: dynamic(true);;
+$include-library-view-main-loginform: dynamic(true);;
 $include-library-view-main-main: dynamic(true);;
 $include-library-view-main-maincontroller: dynamic(true);;
 $include-library-view-main-mainmodel: dynamic(true);;
+$include-library-view-main-menuscriptcategorygrid: dynamic(true);;
 $include-library-view-main-menuscriptcategoryresult: dynamic(true);;
 $include-library-view-main-menuscriptcategorytree: dynamic(true);;
+$include-library-view-main-otherbookmodel: dynamic(true);;
+$include-library-view-main-otherform: dynamic(true);;
 $include-library-view-main-resultgrid: dynamic(true);;
 $include-library-view-main-searchresult: dynamic(true);;
 
@@ -1174,6 +1185,14 @@ $current-resource-root: $library-resource-root;
 $relative-image-path-for-uis: $library-resource-path;
 @import '../../../../../sass/var/all';
 
+/* including package library */
+$library-resource-root: '' !default;
+$library-resource-path: 'images' !default;
+$current-package: false;
+$current-resource-root: $library-resource-root;
+$relative-image-path-for-uis: $library-resource-path;
+@import '../../../../../classic/sass/var/Application';
+
 
 /* ======================== RULE ======================== */
 
@@ -1389,4 +1408,8 @@ $current-package: false;
 $current-resource-root: $library-resource-root;
 $relative-image-path-for-uis: $library-resource-path;
 @import '../../../../../classic/sass/src/view/main/FilterTree';
+@import '../../../../../classic/sass/src/view/main/MenuscriptCategoryTree';
+@import '../../../../../classic/sass/src/view/main/MenuscriptCategoryGrid';
+@import '../../../../../classic/sass/src/view/main/BookResult';
+@import '../../../../../classic/sass/src/view/main/LibraryHome';
 @import '../../../../../classic/sass/src/view/main/Main';
