@@ -1,6 +1,6 @@
 // Init the singleton.  Any tag-based quick tips will start working.
 Ext.tip.QuickTipManager.init();
-
+/*
 Ext.define('library.view.main.OtherBookModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.otherbookmodel',
@@ -32,10 +32,12 @@ Ext.define('library.view.main.OtherBookModel', {
 
     }
 });
+*/
 
 var localBookCategories = Ext.create('Ext.data.Store', {
     fields: ['id', 'label'],
     data : [
+		{"id":0, "label":"" },
         {"id":1, "label":"Book" },
         {"id":2, "label":"Manuscript" }
     ]
@@ -255,7 +257,7 @@ Ext.define('library.view.main.OtherForm', {
 				   allowBlank: false,
 				   bind: '{books.type}',
 				   listeners:{
-					   select:function(combo, record, eOpts){
+					   /*select:function(combo, record, eOpts){
 						    var me = this,
 								newValue = me.getValue(),
 								form = combo.up('form'),
@@ -267,7 +269,10 @@ Ext.define('library.view.main.OtherForm', {
 							} else {
 								categoryCard.getLayout().setActiveItem('empty-card');
 							}
-					   }
+					   },
+					   change:function(){
+						   
+					   }*/
 				   },
 				   plugins:[{
 						ptype:'afterlabelinfo',
@@ -288,30 +293,92 @@ Ext.define('library.view.main.OtherForm', {
 				},				
 				{
 					xtype: 'panel',
-					layout: {type:'card'},
+					layout: { type: 'card' },
 					id: 'categorycard',
-					activeTab: 0,
+					bind: {
+					activeItem: '{books.type}' //'{selectedItem.value}'
+					},
 					margin:0, padding:0,
 					items: [
-						{ xtype:'panel', layout: {type:'vbox', align: 'stretch'}, margin:0, padding:0, itemId:'empty-card', width:'100%', height:'100%' 
+						{ xtype:'panel', layout: { type:'vbox', align: 'stretch'}, margin:0, padding:0, itemId:'empty-card', width:'100%', height:'100%' 
 						},						
-						{ xtype:'panel', layout: {type:'vbox', align: 'stretch'}, margin:0, padding:0, itemId:'book-card', width:'100%', height:'100%',
+						{ xtype:'panel', layout: { type:'vbox', align: 'stretch'}, margin:0, padding:0, itemId:'book-card', width:'100%', height:'100%',
 						defaults:{
 							labelPad: 45
 						},
 						  items: [
 							{
-							   xtype: 'textfield',
-							   fieldLabel: 'Author',
-							   allowBlank: false,
-							   bind: '{books.author}'
-							},
-							{
-								xtype: 'fieldcontainer',
-								fieldLabel: 'Contributors',
-								labelPad: 45,
-								layout:{type:'hbox', align: 'stretch'},
-								items:[ authorsGrid ]
+								layout: 'column',
+								width: '100%',
+								margin:0, padding:0,
+								items: [
+									{
+									   xtype: 'textfield',
+									   fieldLabel: 'Author 1',
+									   columnWidth: 0.60,
+									   allowBlank: false,
+									   bind: '{books.author1}'
+									},
+									{
+									   xtype: 'tagfield',
+									   columnWidth: 0.40,
+									   allowBlank: false,			
+									   displayField: 'label',
+									   valueField: 'id',
+									   store: Ext.create('library.store.Contributors',{autoLoad:true}),
+									   queryMode: 'local',
+									   filterPickList: false,
+									   bind: '{books.contributor1}'
+									},
+									{
+									   xtype: 'textfield',
+									   columnWidth: 0.60,
+									   fieldLabel: 'Author 2',
+									   bind: '{books.author2}'
+									},
+									{
+									   xtype: 'tagfield',
+									   columnWidth: 0.40,
+									   displayField: 'label',
+									   valueField: 'id',
+									   store: Ext.create('library.store.Contributors',{autoLoad:true}),
+									   queryMode: 'local',
+									   filterPickList: false,									   
+									   bind: '{books.contributor2}'
+									},
+									{
+									   xtype: 'textfield',
+									   columnWidth: 0.60,
+									   fieldLabel: 'Author 3',
+									   bind: '{books.author3}'
+									},
+									{
+									   xtype: 'tagfield',
+									   columnWidth: 0.40,
+									   displayField: 'label',
+									   valueField: 'id',
+									   store: Ext.create('library.store.Contributors',{autoLoad:true}),
+									   queryMode: 'local',
+									   filterPickList: false,									   
+									   bind: '{books.contributor3}'
+									},
+									{
+									   xtype: 'textfield',
+									   columnWidth: 0.60,
+									   fieldLabel: 'Author 4',
+									   bind: '{books.author4}'
+									},
+									{
+									   xtype: 'tagfield',
+									   columnWidth: 0.40,
+									   displayField: 'label',
+									   valueField: 'id',
+									   store: Ext.create('library.store.Contributors',{autoLoad:true}),
+									   queryMode: 'local',
+									   filterPickList: false,									   
+									   bind: '{books.contributor4}'
+									}
+								]
 							},
 							{
 							   xtype: 'textfield',
@@ -366,18 +433,25 @@ Ext.define('library.view.main.OtherForm', {
 									labelPad: 45
 								},
 								items:[{
-									   xtype: 'textfield',
+									   xtype: 'numberfield',
 									   width: '50%',
 									   id: 'isbn',
 									   fieldLabel: 'ISBN',
 									   allowBlank: true,
+									   maxLength:13,
+									   enforceMaxLength:true,
+									   hideTrigger: true,
+									   allowDecimals: false,
+									   allowExponential: false,
 									   bind: '{books.isbn}'
 									},{
-									   xtype: 'textfield',
-									   margin: '10 0 0 10',
+									   xtype: 'datefield',
+									   margin: '10 0 0 0',
 									   width: '48%',
 									   labelPad: 0,
 									   id: 'copyright',
+									   maxValue: new Date(),
+									   format: 'Y',
 									   fieldLabel: 'Copyright',
 									   allowBlank: true,
 									   bind: '{books.copyright}'
