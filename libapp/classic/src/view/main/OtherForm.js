@@ -190,7 +190,7 @@ Ext.define('library.view.main.OtherForm', {
 			tools: [{
 				itemId: 'refresh',
 				tooltip: 'Reload List',
-				type: 'refresh',
+				type: 'next',
 				handler: function () {
 					// do refresh
 				}
@@ -204,7 +204,7 @@ Ext.define('library.view.main.OtherForm', {
 				{ 
 					text: 'Url', dataIndex: 'source_url', flex: 1,
 					xtype: 'templatecolumn',
-					tpl: '<a href="{source_url}" target="_blank">{source_url}</a>'
+					tpl: '<span>{title}, <a href="{source_url}" target="_blank">{source_url}</a></span>'
 				},
 				{
 					xtype:'actioncolumn',
@@ -236,8 +236,8 @@ Ext.define('library.view.main.OtherForm', {
 			height: '100%',
 			fieldDefaults : {
                 anchor : '100%',
-				labelWidth: 150,
-				labelPad: 45,
+				labelWidth: 140,
+				labelPad: 35,
 				margin: '10 10 0 0'
             },
 			defaults:{
@@ -304,7 +304,7 @@ Ext.define('library.view.main.OtherForm', {
 						},						
 						{ xtype:'panel', layout: { type:'vbox', align: 'stretch'}, margin:0, padding:0, itemId:'book-card', width:'100%', height:'100%',
 						defaults:{
-							labelPad: 45
+							labelPad: 35
 						},
 						  items: [
 							{
@@ -430,7 +430,7 @@ Ext.define('library.view.main.OtherForm', {
 							{
 								layout:{type:'hbox', align: 'stretch'},
 								defaults:{
-									labelPad: 45
+									labelPad: 35
 								},
 								items:[{
 									   xtype: 'numberfield',
@@ -448,7 +448,7 @@ Ext.define('library.view.main.OtherForm', {
 									   xtype: 'datefield',
 									   margin: '10 0 0 0',
 									   width: '48%',
-									   labelPad: 0,
+									   labelPad: 5,
 									   id: 'copyright',
 									   maxValue: new Date(),
 									   format: 'Y',
@@ -472,7 +472,7 @@ Ext.define('library.view.main.OtherForm', {
 							{
 								layout:{type:'hbox', align: 'stretch'},
 								defaults:{
-									labelPad: 45
+									labelPad: 35
 								},
 								items:[
 									{
@@ -501,7 +501,7 @@ Ext.define('library.view.main.OtherForm', {
 						},
 						{ xtype:'panel', layout: {type:'vbox', align: 'stretch'}, margin:0, padding:0, itemId:'manuscript-card', width:'100%', height:'100%',
 						  defaults:{
-							 labelPad: 45
+							 labelPad: 35
 						  },						
 						  items: [
 							{
@@ -608,7 +608,7 @@ Ext.define('library.view.main.OtherForm', {
 							{
 								layout:{type:'hbox', align: 'stretch'},
 								defaults:{
-									labelPad: 45
+									labelPad: 35
 								},
 								items:[
 									{
@@ -695,11 +695,19 @@ Ext.define('library.view.main.OtherForm', {
 				   bind: '{books.source_url}'
 				}
 			],
-			buttons: [{
-                text: 'Save',
-                handler: function() {
-                }
-            }]
+			dockedItems: [{
+				xtype: 'toolbar',
+				style:'background:transparent;',
+				dock: 'bottom',
+				ui: 'footer',
+				fixed: true,
+				items: [
+					{ 	xtype: 'button', text: 'Save', formBind: true, style: 'background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;',
+						handler: function() {
+						}
+					}
+				]
+			}]
 		}
 	]
 });
