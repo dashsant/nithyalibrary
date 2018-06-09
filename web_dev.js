@@ -8,10 +8,23 @@ var bodyParser = require('body-parser');
 var nodeCleanup = require('node-cleanup');
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
-  host: '45.18.12.178:9200',
+  host: '192.168.0.3:9200',
   log: 'error'
 });
 
+var mongoClient = require('mongodb').MongoClient;
+
+var mongoDb = null;
+// Connect to the db
+mongoClient.connect("mongodb://localhost:27017", function(err, db) {
+  if(!err) {
+		mongoDb = db.db("archive_org");
+		console.log("We are connected");
+  }
+  else{
+  console.log(err);
+  }
+});
 
 var path = require('path');
 
@@ -27,8 +40,6 @@ app.use(function(req, res, next) {
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-
 
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
@@ -186,18 +197,6 @@ router.post('/librrary/scripture/by_category', function (req, res) {
   );
 })
 
-app.post('/login', function (req, res) {
-	var username = req.body.username,
-		password = req.body.password,
-		response = {"success":false,"msg":""};
-	
-	if(username == "RajaRajeshwari" && "Sundareshwara"){
-		response.success = true;
-		response.msg = "OK";
-	}
-	res.setHeader('Content-Type', 'application/json');
-    res.send(response);
-});
 router.post('/librrary/book/all', function (req, res) {
 	var sb = 
 	{
@@ -284,4 +283,92 @@ app.listen(3000);
 
 nodeCleanup(function (exitCode, signal) {
     // release resources here before node exits 
+});
+
+app.post('/api/library/review/assign', function (req, res) {
+	// get the first record which is assigned to any user and has not been marked "reviewed"
+	var qry = {
+		reviewer : req.body.reviewer,
+		reviewStatus : "Pending"
+	}
+	mongoDb.collection("arch").findOne(qry, function(err, result){
+		if(!err){
+			if(result != null){
+				res.setHeader('Content-Type', 'application/json');
+				res.send(result);
+			}
+			else{
+				mongoDb.collection("arch").findOne({}, function(err, result){
+					if(!err)
+					{
+						result.reviewer = req.body.reviewer;	
+						result.reviewStatus = 'Pending';
+						var newvalues = { $set:{
+							reviewer:req.body.reviewer,
+							reviewStatus:'Pending'
+						}};
+						mongoDb.collection("arch").updateOne({_id:result._id},newvalues ,null, function(err,r){
+							if(!err){
+								res.setHeader('Content-Type', 'application/json');
+								res.send(result);
+							}
+							else{
+								console.log(err);
+								res.setHeader('Content-Type', 'application/json');
+								res.send({success:false});
+							}
+
+						});
+					}
+					else{
+						res.setHeader('Content-Type', 'application/json');
+						res.send({success:false});
+
+					}
+				});
+			}
+		}
+		else{
+			res.setHeader('Content-Type', 'application/json');
+			res.send({success:false});
+		}
+	});
+});
+
+app.post('/api/library/review/save', function (req, res) {
+	console.log(req.body)
+	var review = req.body
+	review.reviewStatus = "Reviewed";
+	mongoDb.collection("arch_review").insertOne(review ,null, function(err,r){
+		res.setHeader('Content-Type', 'application/json');
+		if(!err){
+			res.send({success:true});
+		}
+		else{
+			res.send({success:false});
+		}
+	});
+	var newvalues = { $set:{
+		reviewStatus:'Reviewed'
+	}};
+	mongoDb.collection("arch").updateOne({_id:review.identifier},newvalues ,null, function(err,r){
+		if(err){
+			console.log(err);
+		}
+	});
+	
+
+});
+
+
+app.post('/login', function (req, res) {
+	var	response = {"success":false,"msg":""};
+	
+	if(req.body.reviewer == "RajaRajeshwari" && req.body.password == "Sundareshwara"){
+		response.success = true;
+		response.msg = "OK";
+	}
+	console.log(response)
+	res.setHeader('Content-Type', 'application/json');
+	res.send(response);
 });
