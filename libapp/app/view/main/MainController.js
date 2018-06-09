@@ -71,5 +71,82 @@ Ext.define('library.view.main.MainController', {
 			 'scriptFilter[]': scriptFil
 		   };
 		this.getSearchResult(p);
- 	}
+ 	},
+	saveHandler:function(){
+		var viewModel = Ext.getCmp('catalogentryformId').getViewModel();
+		var param = {
+			common:viewModel.data
+		}
+		if(viewModel.data.type == 1){
+			var tmp = Ext.getCmp('catalogbookformid').getViewModel();
+			param.book = tmp.data;
+		}
+		else{
+			var tmp = Ext.getCmp('catalogmenuscriptformid').getViewModel();
+			param.manuscript = tmp.data;
+		}
+		
+		Ext.Ajax.request({
+		  url : '/api/library/review/save',
+		  params  : param,
+		  method: 'POST',
+		  scope:this,
+		  success : function(response){			
+			   this.assignForReview();
+			   Ext.getCmp('admincard').getLayout().setActiveItem('card-2'); 
+		  },
+		  failure: function(form, action) {
+			 Ext.Msg.alert('Failed', action.result.msg);
+		  }
+		});
+		
+	},
+	loginHandler: function() {
+		var form = Ext.getCmp('loginFormId').getForm();
+		var viewModel = Ext.getCmp('loginFormId').getViewModel();
+		if (form.isValid()) {
+			Ext.Ajax.request({
+			  url : '/login',
+			  params  : {reviewer: viewModel.data.reviewer, password:viewModel.data.password},
+			  method: 'POST',
+			  scope:this,
+			  success : function(response){	
+				   var jsonObj = Ext.JSON.decode(response.responseText);
+				   if(jsonObj.success){
+						this.assignForReview();
+						Ext.getCmp('admincard').getLayout().setActiveItem('card-2'); 
+				   }
+				   else{
+					   Ext.Msg.alert('Failed', "Invalid Username/Password");
+				   }
+			  },
+			  failure: function(form, action) {
+				 Ext.Msg.alert('Failed', action.result.msg);
+			  }
+			});
+		}		
+	},
+	assignForReview:function()
+	{
+		var form = Ext.getCmp('loginFormId').getForm();
+		var viewModel = Ext.getCmp('loginFormId').getViewModel();
+		var p = {};
+		p.reviewer = viewModel.data.reviewer;
+		console.log("assignForReview");
+		Ext.Ajax.request({
+		  url : '/api/library/review/assign',
+		  params  : p,
+		  method: 'POST',
+		  success : function(response){
+			var jsonObj = Ext.JSON.decode(response.responseText);
+			var viewModel = Ext.getCmp('catalogentryformId').getViewModel();
+			viewModel.set("url","https://archive.org/details/" + jsonObj._id);
+			console.log(jsonObj);
+		  },
+		  failure: function(response , opts) {
+			  console.log(response);
+		  }
+		});		
+	}
+	
 });
