@@ -71,5 +71,39 @@ Ext.define('library.view.main.MainController', {
 			 'scriptFilter[]': scriptFil
 		   };
 		this.getSearchResult(p);
- 	}
+ 	},
+	loginSubmitHandler: function() {
+		var form = Ext.getCmp('loginFormId').getForm();
+		if (form.isValid()) {
+			form.submit({
+				success: function(form, action) {
+				   Ext.getCmp('admincard').getLayout().setActiveItem('card-2'); 
+				},
+				failure: function(form, action) {
+					Ext.Msg.alert('Failed', action.result.msg);
+				}
+			});
+		}
+	},
+	loginResetHandler: function() {
+		Ext.getCmp('loginFormId').getForm().reset();
+	},
+	refreshGridHandler: function(){
+		console.log('Refresh grid');
+	},
+	rejectBookHandler: function(grid, rowIndex, colIndex) {
+		var rec = grid.getStore().getAt(rowIndex);
+		Ext.Msg.confirm(
+			'Delete Book',
+			'Are you sure you want to delete the book <strong>"' + rec.get('roman_script_title') + '"</strong><br> ' + rec.get('source_url') + '?',
+			this.doRemoveBook.bind(this, rec)
+        );
+	},
+    doRemoveBook: function (record, btn) {
+        if (btn === 'yes') {
+			console.log('Reject Book, Yes: ' + record.get('roman_script_title'));
+            //var store = this.getStore('mystore');
+            //store.remove(record);
+        }
+    }
 });

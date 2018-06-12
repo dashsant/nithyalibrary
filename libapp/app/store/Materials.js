@@ -1,7 +1,7 @@
-Ext.define('library.store.Languages', {
+Ext.define('library.store.Materials', {
     extend: 'Ext.data.Store',
 
-    alias: 'store.languages',
+    alias: 'store.materials',
 
     fields: [
         'id', 'label'
@@ -10,15 +10,14 @@ Ext.define('library.store.Languages', {
 	autoSync : true,
     proxy: {
         type: 'ajax',
-		url: 'resources/languages.json',
+		url: 'resources/materials.json',
 		
         reader : {
 			type         : 'json',
 			rootProperty : 'data'
         },
 		headers: { 
-			'Accept' : 'application/json',
-			'Content-Type': 'application/json; charset=utf-8'
+			'Content-Type': 'application/json' 
 		},
 		noCache: false,
 		rootProperty: 'data'

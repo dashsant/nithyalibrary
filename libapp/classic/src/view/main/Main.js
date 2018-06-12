@@ -34,6 +34,59 @@ Ext.define('library.view.main.Main', {
     layout: 'border',
     items: [
 		{
+			xtype: 'container',
+			region: 'north',
+			width: '100%',
+			layout: {
+				type:'table',
+				//align: 'start',
+				//pack: 'start',
+				columns:3
+			},
+			items: [
+				{
+					colspan: 2,
+					tableAttrs: {
+						style: {
+							width: '300px'
+						}
+					},
+					layout: {align: 'start', pack: 'start'},
+					html: '<span class="quoteCls"><q><i>If you want to retain anything in life, renounce the fear of losing it.</i></q><b>-- H. H. Paramahamsa Nithyananda</b></span>'
+				},
+				{
+					colspan: 1,
+					rowspan: 2,
+					//cls: 'positionRelative 50-50',
+					//layout: {type: 'container', align:'center', pack:'center'},
+					html:'<img class="absoluteCenter" src="resources/Nithyananda University only logo.png">'
+				},
+				{
+					colspan: 1,
+					rowspan: 1,
+					tableAttrs: {
+						style: {
+							width: '40%',
+							marginLeft: '40px',
+							height: 250
+						}
+					},
+					layout: {align:'fit', pack:'center'},
+					cls: 'productlogo',
+					html: '<div style="display:block;">&nbsp;</div>'
+				},
+				{
+					tableAttrs: {
+						style: {
+							width: '60%',
+							height: 150
+						}
+					},
+					html: ''
+				}
+			]
+		},
+		{
 			title: 'header',
 			layout: {type:'vbox',align:'start', pack:'center'},
 			xtype: 'component',

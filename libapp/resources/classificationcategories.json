@@ -1,0 +1,2860 @@
+{	
+	"success": true,
+	"data": [
+		  {
+			"id"    : 1,
+			"group" : "Agama",
+			"label" : "Agneya/Analavīra"
+		  },
+		  {
+			"id"    : 2,
+			"group" : "Agama",
+			"label" : "Ajita"
+		  },
+		  {
+			"id"    : 3,
+			"group" : "Agama",
+			"label" : "Amshuman"
+		  },
+		  {
+			"id"    : 4,
+			"group" : "Agama",
+			"label" : "Candrajnāna/ Candrahāsa"
+		  },
+		  {
+			"id"    : 5,
+			"group" : "Agama",
+			"label" : "Cintya"
+		  },
+		  {
+			"id"    : 6,
+			"group" : "Agama",
+			"label" : "Dīpta"
+		  },
+		  {
+			"id"    : 7,
+			"group" : "Agama",
+			"label" : "Kāmika"
+		  },
+		  {
+			"id"    : 8,
+			"group" : "Agama",
+			"label" : "Kāraṇa"
+		  },
+		  {
+			"id"    : 9,
+			"group" : "Agama",
+			"label" : "Kiraṇa"
+		  },
+		  {
+			"id"    : 10,
+			"group" : "Agama",
+			"label" : "Lalita"
+		  },
+		  {
+			"id"    : 11,
+			"group" : "Agama",
+			"label" : "Mākuṭa"
+		  },
+		  {
+			"id"    : 12,
+			"group" : "Agama",
+			"label" : "Mukhabimba"
+		  },
+		  {
+			"id"    : 13,
+			"group" : "Agama",
+			"label" : "Niḥśvāsa"
+		  },
+		  {
+			"id"    : 14,
+			"group" : "Agama",
+			"label" : "Pārameśvara"
+		  },
+		  {
+			"id"    : 15,
+			"group" : "Agama",
+			"label" : "Prodgīta"
+		  },
+		  {
+			"id"    : 16,
+			"group" : "Agama",
+			"label" : "Raurava"
+		  },
+		  {
+			"id"    : 17,
+			"group" : "Agama",
+			"label" : "Sahasra"
+		  },
+		  {
+			"id"    : 18,
+			"group" : "Agama",
+			"label" : "Santāna"
+		  },
+		  {
+			"id"    : 19,
+			"group" : "Agama",
+			"label" : "sharvokta"
+		  },
+		  {
+			"id"    : 20,
+			"group" : "Agama",
+			"label" : "Siddha"
+		  },
+		  {
+			"id"    : 21,
+			"group" : "Agama",
+			"label" : "Sukshma"
+		  },
+		  {
+			"id"    : 22,
+			"group" : "Agama",
+			"label" : "Suprabheda"
+		  },
+		  {
+			"id"    : 23,
+			"group" : "Agama",
+			"label" : "Svāyambhuva"
+		  },
+		  {
+			"id"    : 24,
+			"group" : "Agama",
+			"label" : "Vāṭula"
+		  },
+		  {
+			"id"    : 25,
+			"group" : "Agama",
+			"label" : "Vijaya"
+		  },
+		  {
+			"id"    : 26,
+			"group" : "Agama",
+			"label" : "Vimala"
+		  },
+		  {
+			"id"    : 27,
+			"group" : "Agama",
+			"label" : "Vīram (Vīrabhadram)"
+		  },
+		  {
+			"id"    : 28,
+			"group" : "Agama",
+			"label" : "Yogaja"
+		  },
+		  {
+			"id"    : 29,
+			"group" : "Aranyaka",
+			"label" : "Aitareyaranyaka"
+		  },
+		  {
+			"id"    : 30,
+			"group" : "Aranyaka",
+			"label" : "Brihadaranyaka"
+		  },
+		  {
+			"id"    : 31,
+			"group" : "Aranyaka",
+			"label" : "KathakaAranyaka"
+		  },
+		  {
+			"id"    : 32,
+			"group" : "Aranyaka",
+			"label" : "Maitrayaniya Aranyaka"
+		  },
+		  {
+			"id"    : 33,
+			"group" : "Aranyaka",
+			"label" : "Sankhyayayana Aranyaka"
+		  },
+		  {
+			"id"    : 34,
+			"group" : "Aranyaka",
+			"label" : "Taittiriyaranyaka"
+		  },
+		  {
+			"id"    : 35,
+			"group" : "Aranyaka",
+			"label" : "Talavakaranyaka"
+		  },
+		  {
+			"id"    : 36,
+			"group" : "Brahmana",
+			"label" : "Aitareya Brahmana"
+		  },
+		  {
+			"id"    : 37,
+			"group" : "Brahmana",
+			"label" : "Chhandogya Mantra Brahmana"
+		  },
+		  {
+			"id"    : 38,
+			"group" : "Brahmana",
+			"label" : "Devatadhyaya Brahmana"
+		  },
+		  {
+			"id"    : 39,
+			"group" : "Brahmana",
+			"label" : "Gopatha Brahmana"
+		  },
+		  {
+			"id"    : 40,
+			"group" : "Brahmana",
+			"label" : "Jaiminiya Arsheya Brahmana"
+		  },
+		  {
+			"id"    : 41,
+			"group" : "Brahmana",
+			"label" : "Jaiminiya Brahmana"
+		  },
+		  {
+			"id"    : 42,
+			"group" : "Brahmana",
+			"label" : "Jaiminiya Upanishad Brahmana"
+		  },
+		  {
+			"id"    : 43,
+			"group" : "Brahmana",
+			"label" : "Kanviyam Shatapatha Brahmana"
+		  },
+		  {
+			"id"    : 44,
+			"group" : "Brahmana",
+			"label" : "Kathaka Brahmana"
+		  },
+		  {
+			"id"    : 45,
+			"group" : "Brahmana",
+			"label" : "Kausitaki-Brahmana"
+		  },
+		  {
+			"id"    : 46,
+			"group" : "Brahmana",
+			"label" : "Kauthuma Arsheya Brahmana"
+		  },
+		  {
+			"id"    : 47,
+			"group" : "Brahmana",
+			"label" : "Samavidhana Brahmana"
+		  },
+		  {
+			"id"    : 48,
+			"group" : "Brahmana",
+			"label" : "Samhitopanishad Brahmana"
+		  },
+		  {
+			"id"    : 49,
+			"group" : "Brahmana",
+			"label" : "Satapatha Brahmana"
+		  },
+		  {
+			"id"    : 50,
+			"group" : "Brahmana",
+			"label" : "Satapatha Brahmana"
+		  },
+		  {
+			"id"    : 51,
+			"group" : "Brahmana",
+			"label" : "Shadvimsha Brahmana"
+		  },
+		  {
+			"id"    : 52,
+			"group" : "Brahmana",
+			"label" : "Shankhayana Brahmana"
+		  },
+		  {
+			"id"    : 53,
+			"group" : "Brahmana",
+			"label" : "Taittiriya Brahmana"
+		  },
+		  {
+			"id"    : 54,
+			"group" : "Brahmana",
+			"label" : "Taittiriya Chardi Brahmana"
+		  },
+		  {
+			"id"    : 55,
+			"group" : "Brahmana",
+			"label" : "Tandya Brahmana"
+		  },
+		  {
+			"id"    : 56,
+			"group" : "Brahmana",
+			"label" : "Vadhula Anvaakhyaana Brahmana"
+		  },
+		  {
+			"id"    : 57,
+			"group" : "Brahmana",
+			"label" : "Vamsa brahmana"
+		  },
+		  {
+			"id"    : 58,
+			"group" : "MahaPurana",
+			"label" : "Agni Purana"
+		  },
+		  {
+			"id"    : 59,
+			"group" : "MahaPurana",
+			"label" : "Bhagavata Purana"
+		  },
+		  {
+			"id"    : 60,
+			"group" : "MahaPurana",
+			"label" : "Bhavishya Purana"
+		  },
+		  {
+			"id"    : 61,
+			"group" : "MahaPurana",
+			"label" : "Brahma Purana"
+		  },
+		  {
+			"id"    : 62,
+			"group" : "MahaPurana",
+			"label" : "Brahmanda Purana"
+		  },
+		  {
+			"id"    : 63,
+			"group" : "MahaPurana",
+			"label" : "Brahmavaivarta Purana"
+		  },
+		  {
+			"id"    : 64,
+			"group" : "MahaPurana",
+			"label" : "Garuda/Suparna Purana"
+		  },
+		  {
+			"id"    : 65,
+			"group" : "MahaPurana",
+			"label" : "Kurma Purana"
+		  },
+		  {
+			"id"    : 66,
+			"group" : "MahaPurana",
+			"label" : "Linga Purana"
+		  },
+		  {
+			"id"    : 67,
+			"group" : "MahaPurana",
+			"label" : "Markandeya Purana"
+		  },
+		  {
+			"id"    : 68,
+			"group" : "MahaPurana",
+			"label" : "Matsya Purana"
+		  },
+		  {
+			"id"    : 69,
+			"group" : "MahaPurana",
+			"label" : "Naradiya/Narada Purana"
+		  },
+		  {
+			"id"    : 70,
+			"group" : "MahaPurana",
+			"label" : "Padma Purana"
+		  },
+		  {
+			"id"    : 71,
+			"group" : "MahaPurana",
+			"label" : "Shiva Purana"
+		  },
+		  {
+			"id"    : 72,
+			"group" : "MahaPurana",
+			"label" : "Skanda Purana"
+		  },
+		  {
+			"id"    : 73,
+			"group" : "MahaPurana",
+			"label" : "Vamana Purana"
+		  },
+		  {
+			"id"    : 74,
+			"group" : "MahaPurana",
+			"label" : "Varaha Purana"
+		  },
+		  {
+			"id"    : 75,
+			"group" : "MahaPurana",
+			"label" : "Vishnu Purana"
+		  },
+		  {
+			"id"    : 76,
+			"group" : "Other Upapurana",
+			"label" : "Aunasa (Ausanas) Purana"
+		  },
+		  {
+			"id"    : 77,
+			"group" : "Other Upapurana",
+			"label" : "Basava Purana"
+		  },
+		  {
+			"id"    : 78,
+			"group" : "Other Upapurana",
+			"label" : "Bauddha Purana"
+		  },
+		  {
+			"id"    : 79,
+			"group" : "Other Upapurana",
+			"label" : "Bhanda Purana"
+		  },
+		  {
+			"id"    : 80,
+			"group" : "Other Upapurana",
+			"label" : "Brihaddharma Purana"
+		  },
+		  {
+			"id"    : 81,
+			"group" : "Other Upapurana",
+			"label" : "Ganesh Purana"
+		  },
+		  {
+			"id"    : 82,
+			"group" : "Other Upapurana",
+			"label" : "Hamsa Purana"
+		  },
+		  {
+			"id"    : 83,
+			"group" : "Other Upapurana",
+			"label" : "Harivamsha Purana"
+		  },
+		  {
+			"id"    : 84,
+			"group" : "Other Upapurana",
+			"label" : "Jaina purana"
+		  },
+		  {
+			"id"    : 85,
+			"group" : "Other Upapurana",
+			"label" : "Jati Purana"
+		  },
+		  {
+			"id"    : 86,
+			"group" : "Other Upapurana",
+			"label" : "Kotyaka Purana (Kotyakamahatmaya)"
+		  },
+		  {
+			"id"    : 87,
+			"group" : "Other Upapurana",
+			"label" : "Kuberaka Purana"
+		  },
+		  {
+			"id"    : 88,
+			"group" : "Other Upapurana",
+			"label" : "Kula Purana"
+		  },
+		  {
+			"id"    : 89,
+			"group" : "Other Upapurana",
+			"label" : "Limbaja Purana"
+		  },
+		  {
+			"id"    : 90,
+			"group" : "Other Upapurana",
+			"label" : "Magha Purana"
+		  },
+		  {
+			"id"    : 91,
+			"group" : "Other Upapurana",
+			"label" : "Mahabhagavata Purana"
+		  },
+		  {
+			"id"    : 92,
+			"group" : "Other Upapurana",
+			"label" : "Malla Purana"
+		  },
+		  {
+			"id"    : 93,
+			"group" : "Other Upapurana",
+			"label" : "Manava (Manu) Purana"
+		  },
+		  {
+			"id"    : 94,
+			"group" : "Other Upapurana",
+			"label" : "Marica Purana"
+		  },
+		  {
+			"id"    : 95,
+			"group" : "Other Upapurana",
+			"label" : "Medasani-vari Purana (??)"
+		  },
+		  {
+			"id"    : 96,
+			"group" : "Other Upapurana",
+			"label" : "Mudgala Purana"
+		  },
+		  {
+			"id"    : 97,
+			"group" : "Other Upapurana",
+			"label" : "Nandi Purana"
+		  },
+		  {
+			"id"    : 98,
+			"group" : "Other Upapurana",
+			"label" : "Nilamata Purana"
+		  },
+		  {
+			"id"    : 99,
+			"group" : "Other Upapurana",
+			"label" : "Peria (Periya) Purana"
+		  },
+		  {
+			"id"    : 100,
+			"group" : "Other Upapurana",
+			"label" : "Sabaramati Purana (Sabarmati Mahatmaya)"
+		  },
+		  {
+			"id"    : 101,
+			"group" : "Other Upapurana",
+			"label" : "Samavya Purana"
+		  },
+		  {
+			"id"    : 102,
+			"group" : "Other Upapurana",
+			"label" : "Samba Purana"
+		  },
+		  {
+			"id"    : 103,
+			"group" : "Other Upapurana",
+			"label" : "Sanatkumara Purana"
+		  },
+		  {
+			"id"    : 104,
+			"group" : "Other Upapurana",
+			"label" : "Sarasvati Purana"
+		  },
+		  {
+			"id"    : 105,
+			"group" : "Other Upapurana",
+			"label" : "Saura Purana"
+		  },
+		  {
+			"id"    : 106,
+			"group" : "Other Upapurana",
+			"label" : "Siva Purana"
+		  },
+		  {
+			"id"    : 107,
+			"group" : "Other Upapurana",
+			"label" : "Siva Rahasya Purana"
+		  },
+		  {
+			"id"    : 108,
+			"group" : "Other Upapurana",
+			"label" : "Sthala Puranas"
+		  },
+		  {
+			"id"    : 109,
+			"group" : "Other Upapurana",
+			"label" : "Swayambhuv Purana"
+		  },
+		  {
+			"id"    : 110,
+			"group" : "Other Upapurana",
+			"label" : "Tula Purana"
+		  },
+		  {
+			"id"    : 111,
+			"group" : "Other Upapurana",
+			"label" : "Vaisakha Purana"
+		  },
+		  {
+			"id"    : 112,
+			"group" : "Other Upapurana",
+			"label" : "Vashishtha Lainga’s Mahesvara"
+		  },
+		  {
+			"id"    : 113,
+			"group" : "Other Upapurana",
+			"label" : "Vinayaka Purana"
+		  },
+		  {
+			"id"    : 114,
+			"group" : "Other Upapurana",
+			"label" : "Vishnu-Dharma Purana"
+		  },
+		  {
+			"id"    : 115,
+			"group" : "Smriti",
+			"label" : "Apastamba"
+		  },
+		  {
+			"id"    : 116,
+			"group" : "Smriti",
+			"label" : "Atri"
+		  },
+		  {
+			"id"    : 117,
+			"group" : "Smriti",
+			"label" : "Daksha"
+		  },
+		  {
+			"id"    : 118,
+			"group" : "Smriti",
+			"label" : "Devala"
+		  },
+		  {
+			"id"    : 119,
+			"group" : "Smriti",
+			"label" : "Gautama"
+		  },
+		  {
+			"id"    : 120,
+			"group" : "Smriti",
+			"label" : "Harita"
+		  },
+		  {
+			"id"    : 121,
+			"group" : "Smriti",
+			"label" : "Manu "
+		  },
+		  {
+			"id"    : 122,
+			"group" : "Smriti",
+			"label" : "Parasara"
+		  },
+		  {
+			"id"    : 123,
+			"group" : "Smriti",
+			"label" : "Samvarta"
+		  },
+		  {
+			"id"    : 124,
+			"group" : "Smriti",
+			"label" : "Sankha-likhita"
+		  },
+		  {
+			"id"    : 125,
+			"group" : "Smriti",
+			"label" : "Satatapa"
+		  },
+		  {
+			"id"    : 126,
+			"group" : "Smriti",
+			"label" : "Saunaka"
+		  },
+		  {
+			"id"    : 127,
+			"group" : "Smriti",
+			"label" : "Usana"
+		  },
+		  {
+			"id"    : 128,
+			"group" : "Smriti",
+			"label" : "Vasishtha"
+		  },
+		  {
+			"id"    : 129,
+			"group" : "Smriti",
+			"label" : "Vishnu"
+		  },
+		  {
+			"id"    : 130,
+			"group" : "Smriti",
+			"label" : "Vyasa"
+		  },
+		  {
+			"id"    : 131,
+			"group" : "Smriti",
+			"label" : "Yajnavalkya"
+		  },
+		  {
+			"id"    : 132,
+			"group" : "Smriti",
+			"label" : "Yama"
+		  },
+		  {
+			"id"    : 133,
+			"group" : "Tantra",
+			"label" : "Aja"
+		  },
+		  {
+			"id"    : 134,
+			"group" : "Tantra",
+			"label" : "Andhaka"
+		  },
+		  {
+			"id"    : 135,
+			"group" : "Tantra",
+			"label" : "Asitāṅgabhairava"
+		  },
+		  {
+			"id"    : 136,
+			"group" : "Tantra",
+			"label" : "Atharvaṇa"
+		  },
+		  {
+			"id"    : 137,
+			"group" : "Tantra",
+			"label" : "Atharvaṇayāmala"
+		  },
+		  {
+			"id"    : 138,
+			"group" : "Tantra",
+			"label" : "Bhairava"
+		  },
+		  {
+			"id"    : 139,
+			"group" : "Tantra",
+			"label" : "Bhairavī"
+		  },
+		  {
+			"id"    : 140,
+			"group" : "Tantra",
+			"label" : "Binducakra"
+		  },
+		  {
+			"id"    : 141,
+			"group" : "Tantra",
+			"label" : "Brahmayāmala"
+		  },
+		  {
+			"id"    : 142,
+			"group" : "Tantra",
+			"label" : "Brāhmīkalā"
+		  },
+		  {
+			"id"    : 143,
+			"group" : "Tantra",
+			"label" : "Candralekhā"
+		  },
+		  {
+			"id"    : 144,
+			"group" : "Tantra",
+			"label" : "Candrā"
+		  },
+		  {
+			"id"    : 145,
+			"group" : "Tantra",
+			"label" : "Caṇḍa"
+		  },
+		  {
+			"id"    : 146,
+			"group" : "Tantra",
+			"label" : "Citrikā"
+		  },
+		  {
+			"id"    : 147,
+			"group" : "Tantra",
+			"label" : "Cālikā"
+		  },
+		  {
+			"id"    : 148,
+			"group" : "Tantra",
+			"label" : "Guhyacakra"
+		  },
+		  {
+			"id"    : 149,
+			"group" : "Tantra",
+			"label" : "Haṃsa"
+		  },
+		  {
+			"id"    : 150,
+			"group" : "Tantra",
+			"label" : "Hṛllekhā"
+		  },
+		  {
+			"id"    : 151,
+			"group" : "Tantra",
+			"label" : "Jvālinī"
+		  },
+		  {
+			"id"    : 152,
+			"group" : "Tantra",
+			"label" : "Kabandha"
+		  },
+		  {
+			"id"    : 153,
+			"group" : "Tantra",
+			"label" : "Kadambikā"
+		  },
+		  {
+			"id"    : 154,
+			"group" : "Tantra",
+			"label" : "Kalācakra"
+		  },
+		  {
+			"id"    : 155,
+			"group" : "Tantra",
+			"label" : "Kapālīśa"
+		  },
+		  {
+			"id"    : 156,
+			"group" : "Tantra",
+			"label" : "Khacakra"
+		  },
+		  {
+			"id"    : 157,
+			"group" : "Tantra",
+			"label" : "Krodha"
+		  },
+		  {
+			"id"    : 158,
+			"group" : "Tantra",
+			"label" : "Laṃpaṭa"
+		  },
+		  {
+			"id"    : 159,
+			"group" : "Tantra",
+			"label" : "Mahocchuṣma"
+		  },
+		  {
+			"id"    : 160,
+			"group" : "Tantra",
+			"label" : "Mantracakra"
+		  },
+		  {
+			"id"    : 161,
+			"group" : "Tantra",
+			"label" : "Mata"
+		  },
+		  {
+			"id"    : 162,
+			"group" : "Tantra",
+			"label" : "Maṅgalā"
+		  },
+		  {
+			"id"    : 163,
+			"group" : "Tantra",
+			"label" : "Mātṛkā"
+		  },
+		  {
+			"id"    : 164,
+			"group" : "Tantra",
+			"label" : "Mūla"
+		  },
+		  {
+			"id"    : 165,
+			"group" : "Tantra",
+			"label" : "Naṣṭa"
+		  },
+		  {
+			"id"    : 166,
+			"group" : "Tantra",
+			"label" : "Nādacakra"
+		  },
+		  {
+			"id"    : 167,
+			"group" : "Tantra",
+			"label" : "Picubhairavī"
+		  },
+		  {
+			"id"    : 168,
+			"group" : "Tantra",
+			"label" : "Piṅgalā"
+		  },
+		  {
+			"id"    : 169,
+			"group" : "Tantra",
+			"label" : "Rakta"
+		  },
+		  {
+			"id"    : 170,
+			"group" : "Tantra",
+			"label" : "Raśmimata"
+		  },
+		  {
+			"id"    : 171,
+			"group" : "Tantra",
+			"label" : "Rudrayāmala"
+		  },
+		  {
+			"id"    : 172,
+			"group" : "Tantra",
+			"label" : "Rurubheda"
+		  },
+		  {
+			"id"    : 173,
+			"group" : "Tantra",
+			"label" : "Ruruyāmala"
+		  },
+		  {
+			"id"    : 174,
+			"group" : "Tantra",
+			"label" : "Sammoha"
+		  },
+		  {
+			"id"    : 175,
+			"group" : "Tantra",
+			"label" : "Sarvamaṅgalā"
+		  },
+		  {
+			"id"    : 176,
+			"group" : "Tantra",
+			"label" : "Svacchanda"
+		  },
+		  {
+			"id"    : 177,
+			"group" : "Tantra",
+			"label" : "Svacchandayāmala"
+		  },
+		  {
+			"id"    : 178,
+			"group" : "Tantra",
+			"label" : "Tantrabhairavī"
+		  },
+		  {
+			"id"    : 179,
+			"group" : "Tantra",
+			"label" : "Unmattabhairava"
+		  },
+		  {
+			"id"    : 180,
+			"group" : "Tantra",
+			"label" : "Utphulla"
+		  },
+		  {
+			"id"    : 181,
+			"group" : "Tantra",
+			"label" : "Varṇa"
+		  },
+		  {
+			"id"    : 182,
+			"group" : "Tantra",
+			"label" : "Varṇacakra"
+		  },
+		  {
+			"id"    : 183,
+			"group" : "Tantra",
+			"label" : "Vetālayāmala"
+		  },
+		  {
+			"id"    : 184,
+			"group" : "Tantra",
+			"label" : "Vidyullekhā"
+		  },
+		  {
+			"id"    : 185,
+			"group" : "Tantra",
+			"label" : "Vidyunmata"
+		  },
+		  {
+			"id"    : 186,
+			"group" : "Tantra",
+			"label" : "Vijayā"
+		  },
+		  {
+			"id"    : 187,
+			"group" : "Tantra",
+			"label" : "Viśvavandya"
+		  },
+		  {
+			"id"    : 188,
+			"group" : "Tantra",
+			"label" : "Viṣṇuyāmala"
+		  },
+		  {
+			"id"    : 189,
+			"group" : "Tantra",
+			"label" : "Vīṇā"
+		  },
+		  {
+			"id"    : 190,
+			"group" : "Tantra",
+			"label" : "Vīṇāmaṇi"
+		  },
+		  {
+			"id"    : 191,
+			"group" : "Tantra",
+			"label" : "śakticakra"
+		  },
+		  {
+			"id"    : 192,
+			"group" : "Tantra",
+			"label" : "śiraccheda"
+		  },
+		  {
+			"id"    : 193,
+			"group" : "Tantra",
+			"label" : "ḍāmara"
+		  },
+		  {
+			"id"    : 194,
+			"group" : "Upa-Agama",
+			"label" : "Achchādyam"
+		  },
+		  {
+			"id"    : 195,
+			"group" : "Upa-Agama",
+			"label" : "Adodyam"
+		  },
+		  {
+			"id"    : 196,
+			"group" : "Upa-Agama",
+			"label" : "Agoram"
+		  },
+		  {
+			"id"    : 197,
+			"group" : "Upa-Agama",
+			"label" : "Agrāntam"
+		  },
+		  {
+			"id"    : 198,
+			"group" : "Upa-Agama",
+			"label" : "Aindram"
+		  },
+		  {
+			"id"    : 199,
+			"group" : "Upa-Agama",
+			"label" : "Aindram"
+		  },
+		  {
+			"id"    : 200,
+			"group" : "Upa-Agama",
+			"label" : "Akshatam"
+		  },
+		  {
+			"id"    : 201,
+			"group" : "Upa-Agama",
+			"label" : "Alankāram"
+		  },
+		  {
+			"id"    : 202,
+			"group" : "Upa-Agama",
+			"label" : "Alankṛitam"
+		  },
+		  {
+			"id"    : 203,
+			"group" : "Upa-Agama",
+			"label" : "Amaleshvaram"
+		  },
+		  {
+			"id"    : 204,
+			"group" : "Upa-Agama",
+			"label" : "Ameyam"
+		  },
+		  {
+			"id"    : 205,
+			"group" : "Upa-Agama",
+			"label" : "Amidaujasam"
+		  },
+		  {
+			"id"    : 206,
+			"group" : "Upa-Agama",
+			"label" : "Amoham"
+		  },
+		  {
+			"id"    : 207,
+			"group" : "Upa-Agama",
+			"label" : "Amṛitam"
+		  },
+		  {
+			"id"    : 208,
+			"group" : "Upa-Agama",
+			"label" : "Anandam"
+		  },
+		  {
+			"id"    : 209,
+			"group" : "Upa-Agama",
+			"label" : "Anantam"
+		  },
+		  {
+			"id"    : 210,
+			"group" : "Upa-Agama",
+			"label" : "Anilam"
+		  },
+		  {
+			"id"    : 211,
+			"group" : "Upa-Agama",
+			"label" : "Ankusham"
+		  },
+		  {
+			"id"    : 212,
+			"group" : "Upa-Agama",
+			"label" : "Aprameyam"
+		  },
+		  {
+			"id"    : 213,
+			"group" : "Upa-Agama",
+			"label" : "Archchitam"
+		  },
+		  {
+			"id"    : 214,
+			"group" : "Upa-Agama",
+			"label" : "Arevatam"
+		  },
+		  {
+			"id"    : 215,
+			"group" : "Upa-Agama",
+			"label" : "Asankyam"
+		  },
+		  {
+			"id"    : 216,
+			"group" : "Upa-Agama",
+			"label" : "Ashankyam"
+		  },
+		  {
+			"id"    : 217,
+			"group" : "Upa-Agama",
+			"label" : "Atbhutam"
+		  },
+		  {
+			"id"    : 218,
+			"group" : "Upa-Agama",
+			"label" : "Atigrāntam"
+		  },
+		  {
+			"id"    : 219,
+			"group" : "Upa-Agama",
+			"label" : "Atītam"
+		  },
+		  {
+			"id"    : 220,
+			"group" : "Upa-Agama",
+			"label" : "Ātmālankāram"
+		  },
+		  {
+			"id"    : 221,
+			"group" : "Upa-Agama",
+			"label" : "Ātmālankāram"
+		  },
+		  {
+			"id"    : 222,
+			"group" : "Upa-Agama",
+			"label" : "Atmayogam"
+		  },
+		  {
+			"id"    : 223,
+			"group" : "Upa-Agama",
+			"label" : "Aṭṭahāsam"
+		  },
+		  {
+			"id"    : 224,
+			"group" : "Upa-Agama",
+			"label" : "Ausanoṭṭaram"
+		  },
+		  {
+			"id"    : 225,
+			"group" : "Upa-Agama",
+			"label" : "Ayokam"
+		  },
+		  {
+			"id"    : 226,
+			"group" : "Upa-Agama",
+			"label" : "Āyurvedam"
+		  },
+		  {
+			"id"    : 227,
+			"group" : "Upa-Agama",
+			"label" : "Bhadram"
+		  },
+		  {
+			"id"    : 228,
+			"group" : "Upa-Agama",
+			"label" : "Bhadravitam"
+		  },
+		  {
+			"id"    : 229,
+			"group" : "Upa-Agama",
+			"label" : "Bhairavoṭṭaram"
+		  },
+		  {
+			"id"    : 230,
+			"group" : "Upa-Agama",
+			"label" : "Bharatam"
+		  },
+		  {
+			"id"    : 231,
+			"group" : "Upa-Agama",
+			"label" : "Bhaṭṭashekharam"
+		  },
+		  {
+			"id"    : 232,
+			"group" : "Upa-Agama",
+			"label" : "Bhimam"
+		  },
+		  {
+			"id"    : 233,
+			"group" : "Upa-Agama",
+			"label" : "Bhodam"
+		  },
+		  {
+			"id"    : 234,
+			"group" : "Upa-Agama",
+			"label" : "Bhodhakam"
+		  },
+		  {
+			"id"    : 235,
+			"group" : "Upa-Agama",
+			"label" : "Bhogam"
+		  },
+		  {
+			"id"    : 236,
+			"group" : "Upa-Agama",
+			"label" : "Bhūta Tantram"
+		  },
+		  {
+			"id"    : 237,
+			"group" : "Upa-Agama",
+			"label" : "Brāmhyam"
+		  },
+		  {
+			"id"    : 238,
+			"group" : "Upa-Agama",
+			"label" : "Buddam"
+		  },
+		  {
+			"id"    : 239,
+			"group" : "Upa-Agama",
+			"label" : "Cāroṭṭaram"
+		  },
+		  {
+			"id"    : 240,
+			"group" : "Upa-Agama",
+			"label" : "Chantam"
+		  },
+		  {
+			"id"    : 241,
+			"group" : "Upa-Agama",
+			"label" : "Chaturmukham"
+		  },
+		  {
+			"id"    : 242,
+			"group" : "Upa-Agama",
+			"label" : "Daṇḍadaram"
+		  },
+		  {
+			"id"    : 243,
+			"group" : "Upa-Agama",
+			"label" : "Daurgam"
+		  },
+		  {
+			"id"    : 244,
+			"group" : "Upa-Agama",
+			"label" : "Dauṭikam"
+		  },
+		  {
+			"id"    : 245,
+			"group" : "Upa-Agama",
+			"label" : "Denukam"
+		  },
+		  {
+			"id"    : 246,
+			"group" : "Upa-Agama",
+			"label" : "Devīmatam"
+		  },
+		  {
+			"id"    : 247,
+			"group" : "Upa-Agama",
+			"label" : "Dhanurdharam"
+		  },
+		  {
+			"id"    : 248,
+			"group" : "Upa-Agama",
+			"label" : "Dhanurvedham"
+		  },
+		  {
+			"id"    : 249,
+			"group" : "Upa-Agama",
+			"label" : "Dhāraṇam"
+		  },
+		  {
+			"id"    : 250,
+			"group" : "Upa-Agama",
+			"label" : "Dharmātmakam"
+		  },
+		  {
+			"id"    : 251,
+			"group" : "Upa-Agama",
+			"label" : "Divyaproktam"
+		  },
+		  {
+			"id"    : 252,
+			"group" : "Upa-Agama",
+			"label" : "Duvanduvam"
+		  },
+		  {
+			"id"    : 253,
+			"group" : "Upa-Agama",
+			"label" : "Dveshtam"
+		  },
+		  {
+			"id"    : 254,
+			"group" : "Upa-Agama",
+			"label" : "Ekapādam"
+		  },
+		  {
+			"id"    : 255,
+			"group" : "Upa-Agama",
+			"label" : "Gāruḍam"
+		  },
+		  {
+			"id"    : 256,
+			"group" : "Upa-Agama",
+			"label" : "Gautamam"
+		  },
+		  {
+			"id"    : 257,
+			"group" : "Upa-Agama",
+			"label" : "Gīdam"
+		  },
+		  {
+			"id"    : 258,
+			"group" : "Upa-Agama",
+			"label" : "Gorasamjñam"
+		  },
+		  {
+			"id"    : 259,
+			"group" : "Upa-Agama",
+			"label" : "Guhyam"
+		  },
+		  {
+			"id"    : 260,
+			"group" : "Upa-Agama",
+			"label" : "Hākaṭam"
+		  },
+		  {
+			"id"    : 261,
+			"group" : "Upa-Agama",
+			"label" : "Halam"
+		  },
+		  {
+			"id"    : 262,
+			"group" : "Upa-Agama",
+			"label" : "Hamsam"
+		  },
+		  {
+			"id"    : 263,
+			"group" : "Upa-Agama",
+			"label" : "Hastam"
+		  },
+		  {
+			"id"    : 264,
+			"group" : "Upa-Agama",
+			"label" : "Ishānam"
+		  },
+		  {
+			"id"    : 265,
+			"group" : "Upa-Agama",
+			"label" : "Ishānam"
+		  },
+		  {
+			"id"    : 266,
+			"group" : "Upa-Agama",
+			"label" : "Jātibāk"
+		  },
+		  {
+			"id"    : 267,
+			"group" : "Upa-Agama",
+			"label" : "Kādītam"
+		  },
+		  {
+			"id"    : 268,
+			"group" : "Upa-Agama",
+			"label" : "Kālābedam"
+		  },
+		  {
+			"id"    : 269,
+			"group" : "Upa-Agama",
+			"label" : "Kalādyayam"
+		  },
+		  {
+			"id"    : 270,
+			"group" : "Upa-Agama",
+			"label" : "Kālāgnam"
+		  },
+		  {
+			"id"    : 271,
+			"group" : "Upa-Agama",
+			"label" : "Kālajñānam"
+		  },
+		  {
+			"id"    : 272,
+			"group" : "Upa-Agama",
+			"label" : "Kālam"
+		  },
+		  {
+			"id"    : 273,
+			"group" : "Upa-Agama",
+			"label" : "Kalpabedam"
+		  },
+		  {
+			"id"    : 274,
+			"group" : "Upa-Agama",
+			"label" : "Karanam"
+		  },
+		  {
+			"id"    : 275,
+			"group" : "Upa-Agama",
+			"label" : "Kāshyapam"
+		  },
+		  {
+			"id"    : 276,
+			"group" : "Upa-Agama",
+			"label" : "Kaumāram"
+		  },
+		  {
+			"id"    : 277,
+			"group" : "Upa-Agama",
+			"label" : "Kavacham"
+		  },
+		  {
+			"id"    : 278,
+			"group" : "Upa-Agama",
+			"label" : "Kuberam"
+		  },
+		  {
+			"id"    : 279,
+			"group" : "Upa-Agama",
+			"label" : "Kuṭṭimam"
+		  },
+		  {
+			"id"    : 280,
+			"group" : "Upa-Agama",
+			"label" : "Lalitam"
+		  },
+		  {
+			"id"    : 281,
+			"group" : "Upa-Agama",
+			"label" : "LaLitoṭṭaram"
+		  },
+		  {
+			"id"    : 282,
+			"group" : "Upa-Agama",
+			"label" : "Lingādyaksham"
+		  },
+		  {
+			"id"    : 283,
+			"group" : "Upa-Agama",
+			"label" : "Mādavotbhūdam"
+		  },
+		  {
+			"id"    : 284,
+			"group" : "Upa-Agama",
+			"label" : "Mahāgoram"
+		  },
+		  {
+			"id"    : 285,
+			"group" : "Upa-Agama",
+			"label" : "Mahākālamatam"
+		  },
+		  {
+			"id"    : 286,
+			"group" : "Upa-Agama",
+			"label" : "Mahānanam"
+		  },
+		  {
+			"id"    : 287,
+			"group" : "Upa-Agama",
+			"label" : "Mahāntam"
+		  },
+		  {
+			"id"    : 288,
+			"group" : "Upa-Agama",
+			"label" : "Mahāsauram"
+		  },
+		  {
+			"id"    : 289,
+			"group" : "Upa-Agama",
+			"label" : "Mahāvidyai"
+		  },
+		  {
+			"id"    : 290,
+			"group" : "Upa-Agama",
+			"label" : "Mahendram"
+		  },
+		  {
+			"id"    : 291,
+			"group" : "Upa-Agama",
+			"label" : "Makuṭam"
+		  },
+		  {
+			"id"    : 292,
+			"group" : "Upa-Agama",
+			"label" : "Makuṭoṭṭaram"
+		  },
+		  {
+			"id"    : 293,
+			"group" : "Upa-Agama",
+			"label" : "Malayam"
+		  },
+		  {
+			"id"    : 294,
+			"group" : "Upa-Agama",
+			"label" : "Mangalam"
+		  },
+		  {
+			"id"    : 295,
+			"group" : "Upa-Agama",
+			"label" : "Maranam"
+		  },
+		  {
+			"id"    : 296,
+			"group" : "Upa-Agama",
+			"label" : "Matangam"
+		  },
+		  {
+			"id"    : 297,
+			"group" : "Upa-Agama",
+			"label" : "Mohasamayam"
+		  },
+		  {
+			"id"    : 298,
+			"group" : "Upa-Agama",
+			"label" : "Mṛityunāsanam"
+		  },
+		  {
+			"id"    : 299,
+			"group" : "Upa-Agama",
+			"label" : "Nairudham"
+		  },
+		  {
+			"id"    : 300,
+			"group" : "Upa-Agama",
+			"label" : "Nandikeshvaram"
+		  },
+		  {
+			"id"    : 301,
+			"group" : "Upa-Agama",
+			"label" : "Nārasimham (Mṛigendram)"
+		  },
+		  {
+			"id"    : 302,
+			"group" : "Upa-Agama",
+			"label" : "Nīlalohitam"
+		  },
+		  {
+			"id"    : 303,
+			"group" : "Upa-Agama",
+			"label" : "Nīlam"
+		  },
+		  {
+			"id"    : 304,
+			"group" : "Upa-Agama",
+			"label" : "Nīlarudrakam"
+		  },
+		  {
+			"id"    : 305,
+			"group" : "Upa-Agama",
+			"label" : "Nishvāsa kārikai"
+		  },
+		  {
+			"id"    : 306,
+			"group" : "Upa-Agama",
+			"label" : "Nishvāsa Nayanam"
+		  },
+		  {
+			"id"    : 307,
+			"group" : "Upa-Agama",
+			"label" : "Nishvāsamugodhayam"
+		  },
+		  {
+			"id"    : 308,
+			"group" : "Upa-Agama",
+			"label" : "Nishvāsham"
+		  },
+		  {
+			"id"    : 309,
+			"group" : "Upa-Agama",
+			"label" : "Nityam"
+		  },
+		  {
+			"id"    : 310,
+			"group" : "Upa-Agama",
+			"label" : "Padma samhitai"
+		  },
+		  {
+			"id"    : 311,
+			"group" : "Upa-Agama",
+			"label" : "Padmam"
+		  },
+		  {
+			"id"    : 312,
+			"group" : "Upa-Agama",
+			"label" : "Pānukam"
+		  },
+		  {
+			"id"    : 313,
+			"group" : "Upa-Agama",
+			"label" : "Pāpanāsam"
+		  },
+		  {
+			"id"    : 314,
+			"group" : "Upa-Agama",
+			"label" : "Pārameshvaram"
+		  },
+		  {
+			"id"    : 315,
+			"group" : "Upa-Agama",
+			"label" : "Parodbhavam"
+		  },
+		  {
+			"id"    : 316,
+			"group" : "Upa-Agama",
+			"label" : "Parotbhūtam"
+		  },
+		  {
+			"id"    : 317,
+			"group" : "Upa-Agama",
+			"label" : "Pārvatīsha Samhitai"
+		  },
+		  {
+			"id"    : 318,
+			"group" : "Upa-Agama",
+			"label" : "Pāshabandham"
+		  },
+		  {
+			"id"    : 319,
+			"group" : "Upa-Agama",
+			"label" : "Pavanam"
+		  },
+		  {
+			"id"    : 320,
+			"group" : "Upa-Agama",
+			"label" : "Pingalamatam"
+		  },
+		  {
+			"id"    : 321,
+			"group" : "Upa-Agama",
+			"label" : "Prabhūtam"
+		  },
+		  {
+			"id"    : 322,
+			"group" : "Upa-Agama",
+			"label" : "Prabodham"
+		  },
+		  {
+			"id"    : 323,
+			"group" : "Upa-Agama",
+			"label" : "Prabuddam"
+		  },
+		  {
+			"id"    : 324,
+			"group" : "Upa-Agama",
+			"label" : "Prabuṭṭam"
+		  },
+		  {
+			"id"    : 325,
+			"group" : "Upa-Agama",
+			"label" : "Prajāpatimatam"
+		  },
+		  {
+			"id"    : 326,
+			"group" : "Upa-Agama",
+			"label" : "Prakāraṇam"
+		  },
+		  {
+			"id"    : 327,
+			"group" : "Upa-Agama",
+			"label" : "Prarohitam"
+		  },
+		  {
+			"id"    : 328,
+			"group" : "Upa-Agama",
+			"label" : "prastAram"
+		  },
+		  {
+			"id"    : 329,
+			"group" : "Upa-Agama",
+			"label" : "Pratibimbakam"
+		  },
+		  {
+			"id"    : 330,
+			"group" : "Upa-Agama",
+			"label" : "Pullamallam"
+		  },
+		  {
+			"id"    : 331,
+			"group" : "Upa-Agama",
+			"label" : "Puśkaram (Pauśkaram)"
+		  },
+		  {
+			"id"    : 332,
+			"group" : "Upa-Agama",
+			"label" : "Raudram"
+		  },
+		  {
+			"id"    : 333,
+			"group" : "Upa-Agama",
+			"label" : "Rauravam"
+		  },
+		  {
+			"id"    : 334,
+			"group" : "Upa-Agama",
+			"label" : "Rauravoṭṭam"
+		  },
+		  {
+			"id"    : 335,
+			"group" : "Upa-Agama",
+			"label" : "Rūksham"
+		  },
+		  {
+			"id"    : 336,
+			"group" : "Upa-Agama",
+			"label" : "Sakaṭadikam"
+		  },
+		  {
+			"id"    : 337,
+			"group" : "Upa-Agama",
+			"label" : "Sāmānyam"
+		  },
+		  {
+			"id"    : 338,
+			"group" : "Upa-Agama",
+			"label" : "Samstopam"
+		  },
+		  {
+			"id"    : 339,
+			"group" : "Upa-Agama",
+			"label" : "Santati"
+		  },
+		  {
+			"id"    : 340,
+			"group" : "Upa-Agama",
+			"label" : "Saptam"
+		  },
+		  {
+			"id"    : 341,
+			"group" : "Upa-Agama",
+			"label" : "Sarpa damśtrī Vibedhanam"
+		  },
+		  {
+			"id"    : 342,
+			"group" : "Upa-Agama",
+			"label" : "Sarvotgītam"
+		  },
+		  {
+			"id"    : 343,
+			"group" : "Upa-Agama",
+			"label" : "Saumyam"
+		  },
+		  {
+			"id"    : 344,
+			"group" : "Upa-Agama",
+			"label" : "Shankaram"
+		  },
+		  {
+			"id"    : 345,
+			"group" : "Upa-Agama",
+			"label" : "Shankaram"
+		  },
+		  {
+			"id"    : 346,
+			"group" : "Upa-Agama",
+			"label" : "Sharvam"
+		  },
+		  {
+			"id"    : 347,
+			"group" : "Upa-Agama",
+			"label" : "Shashikaṇṭam"
+		  },
+		  {
+			"id"    : 348,
+			"group" : "Upa-Agama",
+			"label" : "Shivabhadram"
+		  },
+		  {
+			"id"    : 349,
+			"group" : "Upa-Agama",
+			"label" : "Shivadharmoṭṭaram"
+		  },
+		  {
+			"id"    : 350,
+			"group" : "Upa-Agama",
+			"label" : "Shivajñānam"
+		  },
+		  {
+			"id"    : 351,
+			"group" : "Upa-Agama",
+			"label" : "Shivashāshanam"
+		  },
+		  {
+			"id"    : 352,
+			"group" : "Upa-Agama",
+			"label" : "Shivashekharam"
+		  },
+		  {
+			"id"    : 353,
+			"group" : "Upa-Agama",
+			"label" : "Shreśṭam"
+		  },
+		  {
+			"id"    : 354,
+			"group" : "Upa-Agama",
+			"label" : "Shri Kālajñānam"
+		  },
+		  {
+			"id"    : 355,
+			"group" : "Upa-Agama",
+			"label" : "Shrīmukham"
+		  },
+		  {
+			"id"    : 356,
+			"group" : "Upa-Agama",
+			"label" : "Shuddam"
+		  },
+		  {
+			"id"    : 357,
+			"group" : "Upa-Agama",
+			"label" : "Shuddam"
+		  },
+		  {
+			"id"    : 358,
+			"group" : "Upa-Agama",
+			"label" : "Sthānu"
+		  },
+		  {
+			"id"    : 359,
+			"group" : "Upa-Agama",
+			"label" : "Stiram"
+		  },
+		  {
+			"id"    : 360,
+			"group" : "Upa-Agama",
+			"label" : "Subhakam"
+		  },
+		  {
+			"id"    : 361,
+			"group" : "Upa-Agama",
+			"label" : "Subodakam"
+		  },
+		  {
+			"id"    : 362,
+			"group" : "Upa-Agama",
+			"label" : "Suchintyam"
+		  },
+		  {
+			"id"    : 363,
+			"group" : "Upa-Agama",
+			"label" : "Sudandam"
+		  },
+		  {
+			"id"    : 364,
+			"group" : "Upa-Agama",
+			"label" : "Sukshma Samhitai"
+		  },
+		  {
+			"id"    : 365,
+			"group" : "Upa-Agama",
+			"label" : "suprabhedam"
+		  },
+		  {
+			"id"    : 366,
+			"group" : "Upa-Agama",
+			"label" : "Suprayogam"
+		  },
+		  {
+			"id"    : 367,
+			"group" : "Upa-Agama",
+			"label" : "Surādyaksham"
+		  },
+		  {
+			"id"    : 368,
+			"group" : "Upa-Agama",
+			"label" : "Svāyambuvam Analam"
+		  },
+		  {
+			"id"    : 369,
+			"group" : "Upa-Agama",
+			"label" : "Tantram"
+		  },
+		  {
+			"id"    : 370,
+			"group" : "Upa-Agama",
+			"label" : "Tāram"
+		  },
+		  {
+			"id"    : 371,
+			"group" : "Upa-Agama",
+			"label" : "Tulāyogam"
+		  },
+		  {
+			"id"    : 372,
+			"group" : "Upa-Agama",
+			"label" : "Tuṭinīrakam"
+		  },
+		  {
+			"id"    : 373,
+			"group" : "Upa-Agama",
+			"label" : "Utbhavam"
+		  },
+		  {
+			"id"    : 374,
+			"group" : "Upa-Agama",
+			"label" : "Uṭṭara Nishvāsam"
+		  },
+		  {
+			"id"    : 375,
+			"group" : "Upa-Agama",
+			"label" : "Uṭṭaravāṭulam"
+		  },
+		  {
+			"id"    : 376,
+			"group" : "Upa-Agama",
+			"label" : "Vaktrāram"
+		  },
+		  {
+			"id"    : 377,
+			"group" : "Upa-Agama",
+			"label" : "Vāmam"
+		  },
+		  {
+			"id"    : 378,
+			"group" : "Upa-Agama",
+			"label" : "Varāham"
+		  },
+		  {
+			"id"    : 379,
+			"group" : "Upa-Agama",
+			"label" : "Vāruṇam"
+		  },
+		  {
+			"id"    : 380,
+			"group" : "Upa-Agama",
+			"label" : "Vāsavam"
+		  },
+		  {
+			"id"    : 381,
+			"group" : "Upa-Agama",
+			"label" : "Vāśhiśhṭam"
+		  },
+		  {
+			"id"    : 382,
+			"group" : "Upa-Agama",
+			"label" : "Vāṭulam"
+		  },
+		  {
+			"id"    : 383,
+			"group" : "Upa-Agama",
+			"label" : "Vāyavyam"
+		  },
+		  {
+			"id"    : 384,
+			"group" : "Upa-Agama",
+			"label" : "Vāyuproktam"
+		  },
+		  {
+			"id"    : 385,
+			"group" : "Upa-Agama",
+			"label" : "Vibhutam"
+		  },
+		  {
+			"id"    : 386,
+			"group" : "Upa-Agama",
+			"label" : "Vidyāpurāṇa Tantram"
+		  },
+		  {
+			"id"    : 387,
+			"group" : "Upa-Agama",
+			"label" : "Vijayam"
+		  },
+		  {
+			"id"    : 388,
+			"group" : "Upa-Agama",
+			"label" : "Vijñjñānam"
+		  },
+		  {
+			"id"    : 389,
+			"group" : "Upa-Agama",
+			"label" : "Vilekanam"
+		  },
+		  {
+			"id"    : 390,
+			"group" : "Upa-Agama",
+			"label" : "Vimalam"
+		  },
+		  {
+			"id"    : 391,
+			"group" : "Upa-Agama",
+			"label" : "Vinashikoṭṭaram"
+		  },
+		  {
+			"id"    : 392,
+			"group" : "Upa-Agama",
+			"label" : "Vīram"
+		  },
+		  {
+			"id"    : 393,
+			"group" : "Upa-Agama",
+			"label" : "Vishvam"
+		  },
+		  {
+			"id"    : 394,
+			"group" : "Upa-Agama",
+			"label" : "Vishvātmakam"
+		  },
+		  {
+			"id"    : 395,
+			"group" : "Upa-Agama",
+			"label" : "Vṛiśabingam"
+		  },
+		  {
+			"id"    : 396,
+			"group" : "Upa-Agama",
+			"label" : "Vṛiśādbhudam"
+		  },
+		  {
+			"id"    : 397,
+			"group" : "Upa-Agama",
+			"label" : "Vṛiśodaram"
+		  },
+		  {
+			"id"    : 398,
+			"group" : "Upa-Agama",
+			"label" : "Yakshaṇipadmam"
+		  },
+		  {
+			"id"    : 399,
+			"group" : "Upa-Agama",
+			"label" : "Yamākyam"
+		  },
+		  {
+			"id"    : 400,
+			"group" : "Upanishads",
+			"label" : "Adhyatma"
+		  },
+		  {
+			"id"    : 401,
+			"group" : "Upanishads",
+			"label" : "Advayataraka"
+		  },
+		  {
+			"id"    : 402,
+			"group" : "Upanishads",
+			"label" : "Aitareya"
+		  },
+		  {
+			"id"    : 403,
+			"group" : "Upanishads",
+			"label" : "Akshamalika"
+		  },
+		  {
+			"id"    : 404,
+			"group" : "Upanishads",
+			"label" : "Akshi"
+		  },
+		  {
+			"id"    : 405,
+			"group" : "Upanishads",
+			"label" : "Amritabindu"
+		  },
+		  {
+			"id"    : 406,
+			"group" : "Upanishads",
+			"label" : "Amritanada"
+		  },
+		  {
+			"id"    : 407,
+			"group" : "Upanishads",
+			"label" : "Annapurna"
+		  },
+		  {
+			"id"    : 408,
+			"group" : "Upanishads",
+			"label" : "Aruneya"
+		  },
+		  {
+			"id"    : 409,
+			"group" : "Upanishads",
+			"label" : "Atharvashikha"
+		  },
+		  {
+			"id"    : 410,
+			"group" : "Upanishads",
+			"label" : "Atharvashiras"
+		  },
+		  {
+			"id"    : 411,
+			"group" : "Upanishads",
+			"label" : "Atma"
+		  },
+		  {
+			"id"    : 412,
+			"group" : "Upanishads",
+			"label" : "Atmabodha"
+		  },
+		  {
+			"id"    : 413,
+			"group" : "Upanishads",
+			"label" : "Avadhuta"
+		  },
+		  {
+			"id"    : 414,
+			"group" : "Upanishads",
+			"label" : "Avyakta"
+		  },
+		  {
+			"id"    : 415,
+			"group" : "Upanishads",
+			"label" : "Bahvricha"
+		  },
+		  {
+			"id"    : 416,
+			"group" : "Upanishads",
+			"label" : "Bhasma"
+		  },
+		  {
+			"id"    : 417,
+			"group" : "Upanishads",
+			"label" : "Bhavana"
+		  },
+		  {
+			"id"    : 418,
+			"group" : "Upanishads",
+			"label" : "Bhikshuka"
+		  },
+		  {
+			"id"    : 419,
+			"group" : "Upanishads",
+			"label" : "Brahma"
+		  },
+		  {
+			"id"    : 420,
+			"group" : "Upanishads",
+			"label" : "Brahmavidya"
+		  },
+		  {
+			"id"    : 421,
+			"group" : "Upanishads",
+			"label" : "Brihadaranyaka"
+		  },
+		  {
+			"id"    : 422,
+			"group" : "Upanishads",
+			"label" : "Brihajjabala"
+		  },
+		  {
+			"id"    : 423,
+			"group" : "Upanishads",
+			"label" : "Chandogya"
+		  },
+		  {
+			"id"    : 424,
+			"group" : "Upanishads",
+			"label" : "Dakshinamurti"
+		  },
+		  {
+			"id"    : 425,
+			"group" : "Upanishads",
+			"label" : "Darshana"
+		  },
+		  {
+			"id"    : 426,
+			"group" : "Upanishads",
+			"label" : "Dattatreya"
+		  },
+		  {
+			"id"    : 427,
+			"group" : "Upanishads",
+			"label" : "Devi"
+		  },
+		  {
+			"id"    : 428,
+			"group" : "Upanishads",
+			"label" : "Dhyanabindu"
+		  },
+		  {
+			"id"    : 429,
+			"group" : "Upanishads",
+			"label" : "Ekakshara"
+		  },
+		  {
+			"id"    : 430,
+			"group" : "Upanishads",
+			"label" : "Ganapati"
+		  },
+		  {
+			"id"    : 431,
+			"group" : "Upanishads",
+			"label" : "Garbha"
+		  },
+		  {
+			"id"    : 432,
+			"group" : "Upanishads",
+			"label" : "Garuda"
+		  },
+		  {
+			"id"    : 433,
+			"group" : "Upanishads",
+			"label" : "Gopala-Tapani"
+		  },
+		  {
+			"id"    : 434,
+			"group" : "Upanishads",
+			"label" : "Hamsa"
+		  },
+		  {
+			"id"    : 435,
+			"group" : "Upanishads",
+			"label" : "Hayagriva"
+		  },
+		  {
+			"id"    : 436,
+			"group" : "Upanishads",
+			"label" : "Isha"
+		  },
+		  {
+			"id"    : 437,
+			"group" : "Upanishads",
+			"label" : "Jabala"
+		  },
+		  {
+			"id"    : 438,
+			"group" : "Upanishads",
+			"label" : "Jabali"
+		  },
+		  {
+			"id"    : 439,
+			"group" : "Upanishads",
+			"label" : "Kaivalya"
+		  },
+		  {
+			"id"    : 440,
+			"group" : "Upanishads",
+			"label" : "Kalagni Rudra"
+		  },
+		  {
+			"id"    : 441,
+			"group" : "Upanishads",
+			"label" : "Kali-Santarana"
+		  },
+		  {
+			"id"    : 442,
+			"group" : "Upanishads",
+			"label" : "Katha"
+		  },
+		  {
+			"id"    : 443,
+			"group" : "Upanishads",
+			"label" : "Kathashruti"
+		  },
+		  {
+			"id"    : 444,
+			"group" : "Upanishads",
+			"label" : "Kaushitaki"
+		  },
+		  {
+			"id"    : 445,
+			"group" : "Upanishads",
+			"label" : "Kena"
+		  },
+		  {
+			"id"    : 446,
+			"group" : "Upanishads",
+			"label" : "Krishna"
+		  },
+		  {
+			"id"    : 447,
+			"group" : "Upanishads",
+			"label" : "Kshurika"
+		  },
+		  {
+			"id"    : 448,
+			"group" : "Upanishads",
+			"label" : "Kundika"
+		  },
+		  {
+			"id"    : 449,
+			"group" : "Upanishads",
+			"label" : "Maha"
+		  },
+		  {
+			"id"    : 450,
+			"group" : "Upanishads",
+			"label" : "Mahanarayana"
+		  },
+		  {
+			"id"    : 451,
+			"group" : "Upanishads",
+			"label" : "Mahavakya"
+		  },
+		  {
+			"id"    : 452,
+			"group" : "Upanishads",
+			"label" : "Maitrayaniya"
+		  },
+		  {
+			"id"    : 453,
+			"group" : "Upanishads",
+			"label" : "Maitreya"
+		  },
+		  {
+			"id"    : 454,
+			"group" : "Upanishads",
+			"label" : "Mandala-brahmana"
+		  },
+		  {
+			"id"    : 455,
+			"group" : "Upanishads",
+			"label" : "Mandukya"
+		  },
+		  {
+			"id"    : 456,
+			"group" : "Upanishads",
+			"label" : "Mantrika"
+		  },
+		  {
+			"id"    : 457,
+			"group" : "Upanishads",
+			"label" : "Mudgala"
+		  },
+		  {
+			"id"    : 458,
+			"group" : "Upanishads",
+			"label" : "Muktikā"
+		  },
+		  {
+			"id"    : 459,
+			"group" : "Upanishads",
+			"label" : "Mundaka"
+		  },
+		  {
+			"id"    : 460,
+			"group" : "Upanishads",
+			"label" : "Nadabindu"
+		  },
+		  {
+			"id"    : 461,
+			"group" : "Upanishads",
+			"label" : "Naradaparivrajaka"
+		  },
+		  {
+			"id"    : 462,
+			"group" : "Upanishads",
+			"label" : "Narayana"
+		  },
+		  {
+			"id"    : 463,
+			"group" : "Upanishads",
+			"label" : "Niralamba"
+		  },
+		  {
+			"id"    : 464,
+			"group" : "Upanishads",
+			"label" : "Nirvana"
+		  },
+		  {
+			"id"    : 465,
+			"group" : "Upanishads",
+			"label" : "Nrisimha Tapaniya"
+		  },
+		  {
+			"id"    : 466,
+			"group" : "Upanishads",
+			"label" : "Paingala"
+		  },
+		  {
+			"id"    : 467,
+			"group" : "Upanishads",
+			"label" : "Pancabrahma"
+		  },
+		  {
+			"id"    : 468,
+			"group" : "Upanishads",
+			"label" : "Parabrahma"
+		  },
+		  {
+			"id"    : 469,
+			"group" : "Upanishads",
+			"label" : "Paramahamsa"
+		  },
+		  {
+			"id"    : 470,
+			"group" : "Upanishads",
+			"label" : "Paramahamsaparivrajaka"
+		  },
+		  {
+			"id"    : 471,
+			"group" : "Upanishads",
+			"label" : "Pashupatabrahma"
+		  },
+		  {
+			"id"    : 472,
+			"group" : "Upanishads",
+			"label" : "Pranagnihotra"
+		  },
+		  {
+			"id"    : 473,
+			"group" : "Upanishads",
+			"label" : "Prashna"
+		  },
+		  {
+			"id"    : 474,
+			"group" : "Upanishads",
+			"label" : "Rama Rahasya"
+		  },
+		  {
+			"id"    : 475,
+			"group" : "Upanishads",
+			"label" : "Ramatapaniya"
+		  },
+		  {
+			"id"    : 476,
+			"group" : "Upanishads",
+			"label" : "Rudrahridaya"
+		  },
+		  {
+			"id"    : 477,
+			"group" : "Upanishads",
+			"label" : "Rudraksha"
+		  },
+		  {
+			"id"    : 478,
+			"group" : "Upanishads",
+			"label" : "Sannyasa"
+		  },
+		  {
+			"id"    : 479,
+			"group" : "Upanishads",
+			"label" : "Sarasvati-rahasya"
+		  },
+		  {
+			"id"    : 480,
+			"group" : "Upanishads",
+			"label" : "Sariraka"
+		  },
+		  {
+			"id"    : 481,
+			"group" : "Upanishads",
+			"label" : "Sarvasara"
+		  },
+		  {
+			"id"    : 482,
+			"group" : "Upanishads",
+			"label" : "Saubhagyalakshmi"
+		  },
+		  {
+			"id"    : 483,
+			"group" : "Upanishads",
+			"label" : "Savitri"
+		  },
+		  {
+			"id"    : 484,
+			"group" : "Upanishads",
+			"label" : "Shandilya"
+		  },
+		  {
+			"id"    : 485,
+			"group" : "Upanishads",
+			"label" : "Sharabha"
+		  },
+		  {
+			"id"    : 486,
+			"group" : "Upanishads",
+			"label" : "Shatyayaniya"
+		  },
+		  {
+			"id"    : 487,
+			"group" : "Upanishads",
+			"label" : "Shukarahasya"
+		  },
+		  {
+			"id"    : 488,
+			"group" : "Upanishads",
+			"label" : "Shvetashvatara"
+		  },
+		  {
+			"id"    : 489,
+			"group" : "Upanishads",
+			"label" : "Sita"
+		  },
+		  {
+			"id"    : 490,
+			"group" : "Upanishads",
+			"label" : "Skanda"
+		  },
+		  {
+			"id"    : 491,
+			"group" : "Upanishads",
+			"label" : "Subala"
+		  },
+		  {
+			"id"    : 492,
+			"group" : "Upanishads",
+			"label" : "Surya"
+		  },
+		  {
+			"id"    : 493,
+			"group" : "Upanishads",
+			"label" : "Taittiriya"
+		  },
+		  {
+			"id"    : 494,
+			"group" : "Upanishads",
+			"label" : "Tarasara"
+		  },
+		  {
+			"id"    : 495,
+			"group" : "Upanishads",
+			"label" : "Tejobindu"
+		  },
+		  {
+			"id"    : 496,
+			"group" : "Upanishads",
+			"label" : "Tripura"
+		  },
+		  {
+			"id"    : 497,
+			"group" : "Upanishads",
+			"label" : "Tripuratapini"
+		  },
+		  {
+			"id"    : 498,
+			"group" : "Upanishads",
+			"label" : "Trishikhi-brahmana"
+		  },
+		  {
+			"id"    : 499,
+			"group" : "Upanishads",
+			"label" : "Turiyatita"
+		  },
+		  {
+			"id"    : 500,
+			"group" : "Upanishads",
+			"label" : "Vajrasuchi"
+		  },
+		  {
+			"id"    : 501,
+			"group" : "Upanishads",
+			"label" : "Varaha"
+		  },
+		  {
+			"id"    : 502,
+			"group" : "Upanishads",
+			"label" : "Vasudeva"
+		  },
+		  {
+			"id"    : 503,
+			"group" : "Upanishads",
+			"label" : "Yajnavalkya"
+		  },
+		  {
+			"id"    : 504,
+			"group" : "Upanishads",
+			"label" : "Yogachudamani"
+		  },
+		  {
+			"id"    : 505,
+			"group" : "Upanishads",
+			"label" : "Yoga-Kundalini"
+		  },
+		  {
+			"id"    : 506,
+			"group" : "Upanishads",
+			"label" : "Yogashikha"
+		  },
+		  {
+			"id"    : 507,
+			"group" : "Upanishads",
+			"label" : "Yogatattva"
+		  },
+		  {
+			"id"    : 508,
+			"group" : "Upapurana",
+			"label" : "Adi/Aditya Purana"
+		  },
+		  {
+			"id"    : 509,
+			"group" : "Upapurana",
+			"label" : "Bhargava Purana"
+		  },
+		  {
+			"id"    : 510,
+			"group" : "Upapurana",
+			"label" : "Brihannaradiya/Brihan-Narada Purana"
+		  },
+		  {
+			"id"    : 511,
+			"group" : "Upapurana",
+			"label" : "Devi Bhagavatam"
+		  },
+		  {
+			"id"    : 512,
+			"group" : "Upapurana",
+			"label" : "Durvasa Purana"
+		  },
+		  {
+			"id"    : 513,
+			"group" : "Upapurana",
+			"label" : "Kalika Purana"
+		  },
+		  {
+			"id"    : 514,
+			"group" : "Upapurana",
+			"label" : "Kapila Purana"
+		  },
+		  {
+			"id"    : 515,
+			"group" : "Upapurana",
+			"label" : "Maheshvara Purana"
+		  },
+		  {
+			"id"    : 516,
+			"group" : "Upapurana",
+			"label" : "Nandikeshvara Purana"
+		  },
+		  {
+			"id"    : 517,
+			"group" : "Upapurana",
+			"label" : "Narasimha Purana"
+		  },
+		  {
+			"id"    : 518,
+			"group" : "Upapurana",
+			"label" : "Parasara Purana"
+		  },
+		  {
+			"id"    : 519,
+			"group" : "Upapurana",
+			"label" : "Samba Purana"
+		  },
+		  {
+			"id"    : 520,
+			"group" : "Upapurana",
+			"label" : "Siva-Dharma Purana"
+		  },
+		  {
+			"id"    : 521,
+			"group" : "Upapurana",
+			"label" : "Surya Purana"
+		  },
+		  {
+			"id"    : 522,
+			"group" : "Upapurana",
+			"label" : "Ushanah (Usanas) Purana"
+		  },
+		  {
+			"id"    : 523,
+			"group" : "Upapurana",
+			"label" : "Varuna Purana"
+		  },
+		  {
+			"id"    : 524,
+			"group" : "Upapurana",
+			"label" : "Vashishta Purana"
+		  },
+		  {
+			"id"    : 525,
+			"group" : "Upapurana",
+			"label" : "Vayu Purana"
+		  },
+		  {
+			"id"    : 526,
+			"group" : "Vaishnava Agma",
+			"label" : "Agastya-Samhita"
+		  },
+		  {
+			"id"    : 527,
+			"group" : "Vaishnava Agma",
+			"label" : "Ahirbudhnya Samhita"
+		  },
+		  {
+			"id"    : 528,
+			"group" : "Vaishnava Agma",
+			"label" : "Aniruddha-Samhita"
+		  },
+		  {
+			"id"    : 529,
+			"group" : "Vaishnava Agma",
+			"label" : "Bharadvaja-Samhita"
+		  },
+		  {
+			"id"    : 530,
+			"group" : "Vaishnava Agma",
+			"label" : "Bhargava-Tantra"
+		  },
+		  {
+			"id"    : 531,
+			"group" : "Vaishnava Agma",
+			"label" : "Brahma Samhita"
+		  },
+		  {
+			"id"    : 532,
+			"group" : "Vaishnava Agma",
+			"label" : "Brihat-Brahma-Samhitabrihat brahma samhitha"
+		  },
+		  {
+			"id"    : 533,
+			"group" : "Vaishnava Agma",
+			"label" : "Citrasikhandi-Samhita"
+		  },
+		  {
+			"id"    : 534,
+			"group" : "Vaishnava Agma",
+			"label" : "Garga Samhita"
+		  },
+		  {
+			"id"    : 535,
+			"group" : "Vaishnava Agma",
+			"label" : "Gautama-Samhita"
+		  },
+		  {
+			"id"    : 536,
+			"group" : "Vaishnava Agma",
+			"label" : "Hayasirsa-Samhita"
+		  },
+		  {
+			"id"    : 537,
+			"group" : "Vaishnava Agma",
+			"label" : "Isvara-Samhita"
+		  },
+		  {
+			"id"    : 538,
+			"group" : "Vaishnava Agma",
+			"label" : "Jayakhya-Samhita"
+		  },
+		  {
+			"id"    : 539,
+			"group" : "Vaishnava Agma",
+			"label" : "Jayottara-Samhita"
+		  },
+		  {
+			"id"    : 540,
+			"group" : "Vaishnava Agma",
+			"label" : "Kapinjala-Samhita"
+		  },
+		  {
+			"id"    : 541,
+			"group" : "Vaishnava Agma",
+			"label" : "Laksmi Tantra"
+		  },
+		  {
+			"id"    : 542,
+			"group" : "Vaishnava Agma",
+			"label" : "Markandeya-Samhita"
+		  },
+		  {
+			"id"    : 543,
+			"group" : "Vaishnava Agma",
+			"label" : "Mayavaibhava-Samhita"
+		  },
+		  {
+			"id"    : 544,
+			"group" : "Vaishnava Agma",
+			"label" : "Nalakubara-Samhita"
+		  },
+		  {
+			"id"    : 545,
+			"group" : "Vaishnava Agma",
+			"label" : "Naradiya-Samhita"
+		  },
+		  {
+			"id"    : 546,
+			"group" : "Vaishnava Agma",
+			"label" : "Padma-Samhita"
+		  },
+		  {
+			"id"    : 547,
+			"group" : "Vaishnava Agma",
+			"label" : "Pancaprasna-Samhita"
+		  },
+		  {
+			"id"    : 548,
+			"group" : "Vaishnava Agma",
+			"label" : "Paramapurusa-Samhita"
+		  },
+		  {
+			"id"    : 549,
+			"group" : "Vaishnava Agma",
+			"label" : "Parama-Samhita"
+		  },
+		  {
+			"id"    : 550,
+			"group" : "Vaishnava Agma",
+			"label" : "Paramesvara-Samhita"
+		  },
+		  {
+			"id"    : 551,
+			"group" : "Vaishnava Agma",
+			"label" : "Parasara-Samhita"
+		  },
+		  {
+			"id"    : 552,
+			"group" : "Vaishnava Agma",
+			"label" : "Pauskara-Samhita"
+		  },
+		  {
+			"id"    : 553,
+			"group" : "Vaishnava Agma",
+			"label" : "Purusottama-Samhita"
+		  },
+		  {
+			"id"    : 554,
+			"group" : "Vaishnava Agma",
+			"label" : "Sanatkumara-Samhita"
+		  },
+		  {
+			"id"    : 555,
+			"group" : "Vaishnava Agma",
+			"label" : "SattvatSamhita"
+		  },
+		  {
+			"id"    : 556,
+			"group" : "Vaishnava Agma",
+			"label" : "Shesha-SamhitaShesha_Samhita."
+		  },
+		  {
+			"id"    : 557,
+			"group" : "Vaishnava Agma",
+			"label" : "Sriprasna-Samhita"
+		  },
+		  {
+			"id"    : 558,
+			"group" : "Vaishnava Agma",
+			"label" : "Varaha-Samhita"
+		  },
+		  {
+			"id"    : 559,
+			"group" : "Vaishnava Agma",
+			"label" : "Vasistha-Samhita"
+		  },
+		  {
+			"id"    : 560,
+			"group" : "Vaishnava Agma",
+			"label" : "Vihagendra-Samhita"
+		  },
+		  {
+			"id"    : 561,
+			"group" : "Vaishnava Agma",
+			"label" : "Visnu Tantra"
+		  },
+		  {
+			"id"    : 562,
+			"group" : "Vaishnava Agma",
+			"label" : "Visnu-Samhita"
+		  },
+		  {
+			"id"    : 563,
+			"group" : "Vaishnava Agma",
+			"label" : "Visnutattva-Samhita"
+		  },
+		  {
+			"id"    : 564,
+			"group" : "Vaishnava Agma",
+			"label" : "Visvaksena-Samhita"
+		  },
+		  {
+			"id"    : 565,
+			"group" : "Vaishnava Agma",
+			"label" : "Visvamitra-Samhita"
+		  },
+		  {
+			"id"    : 566,
+			"group" : "Vaishnava Agma",
+			"label" : "Visva-Samhita"
+		  },
+		  {
+			"id"    : 567,
+			"group" : "Vaishnava Agma",
+			"label" : "Vrddha-Padma-Samhita"
+		  },
+		  {
+			"id"    : 568,
+			"group" : "Veda",
+			"label" : "Atharva"
+		  },
+		  {
+			"id"    : 569,
+			"group" : "Veda",
+			"label" : "Rig"
+		  },
+		  {
+			"id"    : 570,
+			"group" : "Veda",
+			"label" : "Sam"
+		  },
+		  {
+			"id"    : 571,
+			"group" : "Veda",
+			"label" : "Yajur"
+		  }
+	]
+}

@@ -3,7 +3,15 @@ Ext.define('library.view.main.LibraryHome', {
     xtype: 'libraryhome',
 	height: '97%',
 	layout:{type:'hbox', align:'fit'},
-	tabPosition:'left',
+	plugins: 'responsive',
+	responsiveConfig: {
+		'width >= 700': {
+			tabPosition:'left'
+		},
+		'width < 700': {
+			tabPosition:'top'
+		}
+	},
 	tabRotation:0,
 	ui: 'navigation',
 	border: false,
@@ -24,21 +32,37 @@ Ext.define('library.view.main.LibraryHome', {
 			title: "Who is the Avatar",
 			items:[{
 				xtype:'container',
-				layout:{type:'hbox',align:'fit'},
+				layout: { align: 'fit'},
 				shrinkWrap:false,
 				flex:1,
+				autoScroll: true,
+				scrollable: true,
 				width:'100%',
-				height:'83%',
+				height:'100%',
 				items: [
-					{xtype: 'container',width:'75%',margin:'0',padding:'0 12 0 12',
-					 scrollable:true,
-					 autoScroll: true,
-					 html:'<div style="line-height:1.4;text-align:justify;font-size:14px"><p>Paramahamsa Nithyananda is revered, regarded, respected and worshipped as The Avatar (living incarnation as per Hinduism) of super-consciousness by millions across the globe. He is the spiritual head of the Mahanirvani Peetha, oldest and largest apex body of Hinduism, and three time Guinness World Records® record holder. '+
-					 '<br><br>He and his <i>Sangha</i> (spiritual community) around the globe are serving humanity by reviving the Science of Completion℠, Science of Enlightenment℠ and manifesting various extraordinary spiritual powers as per the Vedic Agamic tradition of Sanatana Hindu Dharma. He is the author of 300 books, which are translated and published in 500 titles and various international languages. <br><br>His Sangha has a strong presence worldwide through numerous Temples, <i>Adheenams</i> (Temple monastery complex), <i>Gurukuls</i> (Vedic schools), universities, goshalas (cow shelters). His live <i>Satsangs</i> (spiritual discourses) are viewed every morning (8pm IST) by people from all countries around the world.'+
-					 '</p></div>'
+					{ xtype: 'container', margin:'0', padding:'0 10 0 12',width: '75%', region: 'center',
+					  responsiveConfig: {
+						'width > 700': {
+							width: '75%'
+						},
+						'width < 700': {
+							width: '95%'
+						}
+					  },
+					  html:'<div style="padding:0 10px 0 12px;line-height:1.4;text-align:justify;font-size:14px"><p>Paramahamsa Nithyananda is revered, regarded, respected and worshipped as The Avatar (living incarnation as per Hinduism) of super-consciousness by millions across the globe. He is the spiritual head of the Mahanirvani Peetha, oldest and largest apex body of Hinduism, and three time Guinness World Records® record holder. '+
+					  '<br><br>He and his <i>Sangha</i> (spiritual community) around the globe are serving humanity by reviving the Science of Completion℠, Science of Enlightenment℠ and manifesting various extraordinary spiritual powers as per the Vedic Agamic tradition of Sanatana Hindu Dharma. He is the author of 300 books, which are translated and published in 500 titles and various international languages. <br><br>His Sangha has a strong presence worldwide through numerous Temples, <i>Adheenams</i> (Temple monastery complex), <i>Gurukuls</i> (Vedic schools), universities, goshalas (cow shelters). His live <i>Satsangs</i> (spiritual discourses) are viewed every morning (8pm IST) by people from all countries around the world.'+
+					  '</p></div>'
 					},
-					{xtype: 'container',width:'25%',margin:'0 0 0 15',
-					html:'<div><h3>Swamiji\'s Vision Videos</h3><br><iframe width="100%" height="200" src="https://www.youtube.com/embed/Ul77nnoqSpY" frameborder="0" allowfullscreen></iframe></div>'
+					{ xtype: 'container', margin:'0 0 0 15', region: 'east',
+					  responsiveConfig: {
+						'width >= 700': {
+							region: 'east'
+						},
+						'width < 700': {
+							region: 'south'
+						}
+					  },
+					  html:'<div><h3>Swamiji\'s Vision Videos</h3><br><iframe width="100%" height="200" src="https://www.youtube.com/embed/Ul77nnoqSpY" frameborder="0" allowfullscreen></iframe></div>'
 					}
 				]
 			}]

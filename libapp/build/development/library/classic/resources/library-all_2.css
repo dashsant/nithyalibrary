@@ -8165,6 +8165,41 @@ $font-weight-bold: dynamic(800);*/
     z-index: 1000000 !important;
 }
 /* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:20 */
+.swamijilogo-table-cell {
+    background: url('/resources/Nithyananda University only logo.png') center center no-repeat !important;
+    background-size: contain !important;
+    z-index: 1000001 !important;
+    width: 100% !important;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:27 */
+.positionRelative {
+    position: relative;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:31 */
+0.5-50 {
+    width: 50%;
+    height: 50%;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:36 */
+.absoluteCenter {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    z-index: 1000001 !important;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:49 */
+img.absoluteCenter {
+    /* Sizing */
+    /* Sizing */
+    max-height: 100%;
+    max-width: 100%;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:54 */
 .productlogo {
     background: url('/resources/Hinduism now scriptures.png') !important;
     background-repeat: no-repeat !important;
@@ -8173,34 +8208,37 @@ $font-weight-bold: dynamic(800);*/
     margin-left: 30px !important;
     margin-top: 5px !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:29 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:63 */
 .x-viewport {
     background: url('/resources/Background-big.jpg') !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-position: top left !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:36 */
-.topWide {
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:70 */
+.quoteCls {
     background: transparent;
     color: #fff;
     font-weight: 400;
     font-size: 1.1em;
     letter-spacing: 2px;
     width: 100% !important;
+    position: relative;
+    margin-left: 40px;
+    line-height: 1.6;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:43 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:81 */
 .big-50 {
     font-size: 1.2em;
     letter-spacing: 2px;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:49 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:87 */
 .x-panel-body-default,
 .x-panel-body-navigation,
 .bodyclass {
     background: transparent !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:54 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:92 */
 .bodyclass {
     background: transparent !important;
 }
@@ -10247,90 +10285,106 @@ $font-weight-bold: dynamic(800);*/
     border-color: transparent !important;
     border-width: 0 !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:118 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:156 */
 .x-title-icon-navigation {
     font-family: FontAwesome;
     color: #fff;
     font-size: 24px;
     line-height: 24px;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:125 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:163 */
 .x-tab-icon-el-navigation {
     font-family: FontAwesome;
     color: #acacac;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:129 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:167 */
 .x-tab-over .x-tab-icon-el-navigation {
     color: #c4c4c4;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:133 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:171 */
 .x-tab-active .x-tab-icon-el-navigation {
     color: #fff;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:138 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:176 */
 .x-grid-item {
     background: transparent !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:143 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:181 */
 .x-grid-cell > b {
     font-weight: bold;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:147 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:185 */
 .x-tab-inner-navigation {
     word-wrap: break-all;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:151 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:189 */
 .x-tab-navigation {
     border: 1px solid gray;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:155 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:193 */
 .x-panel-header-title-navigation > .x-title-text-navigation:after {
     top: 30px;
     right: -24px;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:160 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:198 */
 .hovercls {
     background-color: #505050 !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:164 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:202 */
 .treecls {
     color: white !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:168 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:206 */
 .form-class-title {
     color: #fff;
     font-size: 14px;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:174 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:212 */
 .form-class .x-form-item-label {
     color: #000;
     font-size: 14px;
     font-weight: bold;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:179 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:217 */
 .form-class .x-form-display-field {
     color: #fff;
     font-size: 14px;
     font-weight: bold;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:185 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:223 */
 .x-ux-plugin-afterlabelinfo {
     margin-left: 5px;
     width: 20px;
     diplay: inline-block;
     vertical-align: middle;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:192 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:230 */
 label.x-form-required-field > span:after {
     color: #b12029;
     content: ' *';
     font-weight: bold;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:198 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:236 */
 .form-class .x-toolbar-footer {
     background-color: transparent !important;
 }
-/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:202 */
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:240 */
 .redIcon {
     color: red !important;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:244 */
+.grouped-list .x-boundlist-item,
+.x-boundlist-item {
+    padding: 1px 3px 0 10px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:247 */
+.grouped-list .group-header,
+.group-header {
+    padding: 4px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/classic/sass/src/view/main/Main.scss:253 */
+.x-tagfield-item-text strong {
+    font-weight: bold;
 }

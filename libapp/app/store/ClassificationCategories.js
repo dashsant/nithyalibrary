@@ -1,24 +1,23 @@
-Ext.define('library.store.Languages', {
+Ext.define('library.store.ClassificationCategories', {
     extend: 'Ext.data.Store',
 
-    alias: 'store.languages',
+    alias: 'store.classificationcategories',
 
     fields: [
-        'id', 'label'
+        'id', 'group', 'label'
     ],
 	autoLoad : true,
 	autoSync : true,
     proxy: {
         type: 'ajax',
-		url: 'resources/languages.json',
+		url: 'resources/classificationcategories.json',
 		
         reader : {
 			type         : 'json',
 			rootProperty : 'data'
         },
 		headers: { 
-			'Accept' : 'application/json',
-			'Content-Type': 'application/json; charset=utf-8'
+			'Content-Type': 'application/json' 
 		},
 		noCache: false,
 		rootProperty: 'data'

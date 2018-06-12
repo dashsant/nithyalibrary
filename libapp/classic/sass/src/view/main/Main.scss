@@ -17,6 +17,40 @@ $font-weight-bold: dynamic(800);*/
     z-index: 1000000 !important;
 }
 
+ .swamijilogo-table-cell{
+	background:url('/resources/Nithyananda University only logo.png') center center no-repeat !important;
+    background-size: contain !important;
+	z-index: 1000001 !important;
+	width: 100% !important;
+}
+
+.positionRelative {
+	position: relative;
+}
+
+.50-50 {
+	width: 50%;
+	height: 50%;
+}
+
+.absoluteCenter {
+	width: 50%;
+	height: 50%;
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	bottom: 0;
+	left: 50%;
+	right: 0;
+	z-index: 1000001 !important;
+}
+
+/* Sizing */
+img.absoluteCenter {
+	max-height:100%;
+	max-width:100%;
+}
+
 .productlogo{
     background: url('/resources/Hinduism now scriptures.png') !important;
     background-repeat: no-repeat !important;
@@ -33,12 +67,16 @@ $font-weight-bold: dynamic(800);*/
     background-position: top left !important;
 }
 
-.topWide {
+.quoteCls {
     background: transparent;
-    color:#fff;font-weight: 400;
+    color: #fff;
+	font-weight: 400;
     font-size: 1.1em;
     letter-spacing: 2px;
     width: 100% !important;
+	position: relative;
+	margin-left: 40px;
+	line-height: 1.6;
 }
 .big-50 {
     font-size: 1.2em;
@@ -201,4 +239,17 @@ label.x-form-required-field > span:after {
 
 .redIcon {
 	color:#F00 !important;
+}
+
+.grouped-list .x-boundlist-item, .x-boundlist-item {
+    padding: 1px 3px 0 10px
+}
+.grouped-list .group-header, .group-header {
+    padding: 4px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.x-tagfield-item-text strong {
+	font-weight: bold;
 }

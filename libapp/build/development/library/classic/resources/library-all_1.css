@@ -1804,6 +1804,15 @@ div.x-form-text-grow .x-form-textarea {
 .x-message-box .x-form-display-field {
     height: auto;
 }
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/view/View.scss:1 */
+.x-view-item-focused {
+    outline: 1px dashed #5fa2dd!important;
+    outline-offset: -1px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/view/BoundList.scss:8 */
+.x-ie9 .x-boundlist-list-ct {
+    min-height: 0%;
+}
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/tip/Tip.scss:1 */
 .x-tip {
     position: absolute;
@@ -1994,102 +2003,6 @@ div.x-form-text-grow .x-form-textarea {
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/column/Column.scss:119 */
 .x-column-header-align-center {
     text-align: center;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/view/View.scss:1 */
-.x-view-item-focused {
-    outline: 1px dashed #5fa2dd!important;
-    outline-offset: -1px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/view/Table.scss:3 */
-.x-grid-item-container {
-    min-height: 1px;
-    position: relative;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:7 */
-.x-grid-editor .x-form-cb-wrap {
-    /*
- * Rules for fields which are rendered to fit inside grid cells.
- * This includes cell and row editor fields and fields in widget columns.
- */
-    text-align: center;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:12 */
-.x-grid-editor .x-form-cb {
-    position: static;
-    display: inline-block;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:20 */
-.x-grid-editor .x-form-display-field {
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:28 */
-.x-grid-editor div.x-form-action-col-field {
-    line-height: 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/view/BoundList.scss:8 */
-.x-ie9 .x-boundlist-list-ct {
-    min-height: 0%;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:1 */
-.x-tagfield-body {
-    vertical-align: top;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:5 */
-.x-tagfield {
-    height: auto!important;
-    /* The wrap has to accommodate the list, so override the .x-form-text height rule */
-    cursor: text;
-    overflow-y: auto;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:11 */
-.x-tagfield .x-tagfield-list {
-    padding: 0;
-    margin: 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:16 */
-.x-tagfield-list.x-tagfield-singleselect {
-    white-space: nowrap;
-    overflow: hidden;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:21 */
-.x-tagfield-input,
-.x-tagfield-item {
-    vertical-align: top;
-    display: inline-block;
-    position: relative;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:27 */
-.x-tagfield-input-field {
-    font: inherit;
-    border: 0;
-    margin: 0;
-    background: none;
-    width: 100%;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:35 */
-.x-tagfield-stacked .x-tagfield-item {
-    display: block;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:39 */
-.x-tagfield-item {
-    cursor: default;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:43 */
-.x-tagfield-item-close {
-    cursor: pointer;
-    position: absolute;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:48 */
-.x-tagfield-arialist {
-    list-style-type: none;
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:54 */
-.x-tagfield-arialist-item {
-    list-style-type: none;
 }
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/column/Action.scss:1 */
 .x-grid-cell-inner-action-col {
@@ -2396,6 +2309,70 @@ the height of a multi-line element */
     height: 100%;
     border: 0;
 }
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:1 */
+.x-tagfield-body {
+    vertical-align: top;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:5 */
+.x-tagfield {
+    height: auto!important;
+    /* The wrap has to accommodate the list, so override the .x-form-text height rule */
+    cursor: text;
+    overflow-y: auto;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:11 */
+.x-tagfield .x-tagfield-list {
+    padding: 0;
+    margin: 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:16 */
+.x-tagfield-list.x-tagfield-singleselect {
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:21 */
+.x-tagfield-input,
+.x-tagfield-item {
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:27 */
+.x-tagfield-input-field {
+    font: inherit;
+    border: 0;
+    margin: 0;
+    background: none;
+    width: 100%;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:35 */
+.x-tagfield-stacked .x-tagfield-item {
+    display: block;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:39 */
+.x-tagfield-item {
+    cursor: default;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:43 */
+.x-tagfield-item-close {
+    cursor: pointer;
+    position: absolute;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:48 */
+.x-tagfield-arialist {
+    list-style-type: none;
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/form/field/Tag.scss:54 */
+.x-tagfield-arialist-item {
+    list-style-type: none;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/view/Table.scss:3 */
+.x-grid-item-container {
+    min-height: 1px;
+    position: relative;
+}
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/column/Check.scss:4 */
 .x-column-header-checkbox .x-column-header-text {
     margin-bottom: 0.4em;
@@ -2592,6 +2569,29 @@ the height of a multi-line element */
 .x-grid-inner-locked.x-border-region-slide-in > .x-panel-bodyWrap > .x-grid-body > .x-grid-view,
 .x-grid-inner-locked.x-border-region-slide-in > .x-panel-bodyWrap > .x-grid-body > .x-tree-view {
     overflow-y: hidden !important;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:7 */
+.x-grid-editor .x-form-cb-wrap {
+    /*
+ * Rules for fields which are rendered to fit inside grid cells.
+ * This includes cell and row editor fields and fields in widget columns.
+ */
+    text-align: center;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:12 */
+.x-grid-editor .x-form-cb {
+    position: static;
+    display: inline-block;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:20 */
+.x-grid-editor .x-form-display-field {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/Editing.scss:28 */
+.x-grid-editor div.x-form-action-col-field {
+    line-height: 0;
 }
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/src/grid/plugin/RowEditing.scss:1 */
 .x-grid-row-editor-wrap {
@@ -11511,6 +11511,200 @@ body > .x-mask {
 .x-message-box-error:before {
     content: "\f057";
 }
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:71 */
+.x-form-trigger-spinner-default {
+    width: 32px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:79 */
+.x-form-trigger-spinner-default:before {
+    content: '';
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:85 */
+.x-form-spinner-default {
+    background-color: #fff;
+    width: 32px;
+    height: 15px;
+    color: #919191;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:131 */
+.x-form-spinner-up-default {
+    font: 16px/1 ExtJS;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-form-spinner-up-default:before {
+    content: "\e61c";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:137 */
+.x-form-spinner-down-default {
+    font: 16px/1 ExtJS;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-form-spinner-down-default:before {
+    content: "\e61b";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:143 */
+.x-form-spinner-up-default {
+    background-position: 0 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:146 */
+.x-form-spinner-up-default.x-form-spinner-over {
+    background-position: -32px 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:148 */
+.x-form-spinner-up-default.x-form-spinner-over.x-form-spinner-focus {
+    background-position: -128px 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:153 */
+.x-form-spinner-up-default.x-form-spinner-focus {
+    background-position: -96px 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:158 */
+.x-form-spinner-up-default.x-form-spinner.x-form-spinner-click {
+    background-position: -64px 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:163 */
+.x-form-spinner-down-default {
+    background-position: 0 -15px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:166 */
+.x-form-spinner-down-default.x-form-spinner-over {
+    background-position: -32px -15px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:168 */
+.x-form-spinner-down-default.x-form-spinner-over.x-form-spinner-focus {
+    background-position: -128px -15px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:173 */
+.x-form-spinner-down-default.x-form-spinner-focus {
+    background-position: -96px -15px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:178 */
+.x-form-spinner-down-default.x-form-spinner.x-form-spinner-click {
+    background-position: -64px -15px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:1 */
+.x-tbar-page-number {
+    width: 30px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:10 */
+.x-btn-icon-el.x-tbar-page-first {
+    font: 16px/16px ExtJS;
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-btn-icon-el.x-tbar-page-first:before {
+    content: "\e617";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:19 */
+.x-btn-icon-el.x-tbar-page-prev {
+    font: 16px/16px ExtJS;
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-btn-icon-el.x-tbar-page-prev:before {
+    content: "\e615";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:28 */
+.x-btn-icon-el.x-tbar-page-next {
+    font: 16px/16px ExtJS;
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-btn-icon-el.x-tbar-page-next:before {
+    content: "\e616";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:37 */
+.x-btn-icon-el.x-tbar-page-last {
+    font: 16px/16px ExtJS;
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-btn-icon-el.x-tbar-page-last:before {
+    content: "\e618";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:46 */
+.x-btn-icon-el.x-tbar-loading {
+    font: 16px/16px FontAwesome;
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-btn-icon-el.x-tbar-loading:before {
+    content: "\f021";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:92 */
+.x-rtl.x-tbar-page-first {
+    font: 16px/16px ExtJS;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-rtl.x-tbar-page-first:before {
+    content: "\e618";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:100 */
+.x-rtl.x-tbar-page-prev {
+    font: 16px/16px ExtJS;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-rtl.x-tbar-page-prev:before {
+    content: "\e616";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:108 */
+.x-rtl.x-tbar-page-next {
+    font: 16px/16px ExtJS;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-rtl.x-tbar-page-next:before {
+    content: "\e615";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:116 */
+.x-rtl.x-tbar-page-last {
+    font: 16px/16px ExtJS;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-rtl.x-tbar-page-last:before {
+    content: "\e617";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:1 */
+.x-boundlist {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d0d0d0;
+    background: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:8 */
+.x-boundlist-item {
+    padding: 0 10px;
+    font: normal 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    line-height: 30px;
+    cursor: pointer;
+    cursor: hand;
+    position: relative;
+    /*allow hover in IE on empty items*/
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #fff;
+    color: #404040;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:25 */
+.x-boundlist-selected {
+    color: #fff;
+    background: #5fa2dd;
+    border-color: #5fa2dd;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:33 */
+.x-boundlist-item-over {
+    color: #fff;
+    background: #7fb5e4;
+    border-color: #7fb5e4;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:42 */
+.x-boundlist-floating {
+    border-top-width: 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:46 */
+.x-boundlist-above {
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-base/sass/etc/mixins/frame.scss:187 */
 .x-tip-default {
     -webkit-border-radius: 2px;
@@ -12116,466 +12310,6 @@ body > .x-mask {
     /*<if slicer>*/
     display: none;
     content: "x-slicer:" !important;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:5 */
-.x-grid-view,
-.x-tree-view {
-    z-index: 1;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:10 */
-.x-grid-body {
-    background: #843f33;
-    border-width: 0;
-    border-style: solid;
-    border-color: #d0d0d0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:17 */
-.x-grid-empty {
-    padding: 10px;
-    color: grey;
-    background-color: #843f33;
-    font: 300 14px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:25 */
-.x-grid-item {
-    color: #000;
-    font: 400 14px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
-    background-color: #1f2933;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:31 */
-.x-grid-item-alt {
-    background-color: #1a232b;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:35 */
-.x-grid-item-over {
-    color: #000;
-    background-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:42 */
-.x-grid-item-focused {
-    outline: 0;
-    color: #fff;
-    background-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:46 */
-.x-grid-item-focused .x-grid-cell-inner {
-    z-index: 1;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:54 */
-.x-grid-item-focused .x-grid-cell-inner:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    pointer-events: none;
-    border: 0px solid #5fa2dd;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:76 */
-.x-grid-item-selected {
-    color: #fff;
-    background-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:82 */
-.x-grid-with-row-lines .x-grid-item {
-    border-style: solid;
-    border-width: 1px 0 0;
-    border-color: #e9e9e9;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:88 */
-.x-grid-with-row-lines .x-grid-item:first-child {
-    border-top-color: #1f2933;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:94 */
-.x-grid-with-row-lines .x-grid-item.x-grid-item-over {
-    border-style: solid;
-    border-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:99 */
-.x-grid-with-row-lines .x-grid-item-over + .x-grid-item {
-    border-top-style: solid;
-    border-top-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:104 */
-.x-grid-with-row-lines .x-grid-item.x-grid-item-selected {
-    border-style: solid;
-    border-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:109 */
-.x-grid-with-row-lines .x-grid-item-selected + .x-grid-item {
-    border-top-style: solid;
-    border-top-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:114 */
-.x-grid-with-row-lines .x-grid-item:last-child {
-    border-bottom-width: 1px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:124 */
-.x-ie8 .x-grid-with-row-lines .x-grid-item {
-    border-width: 1px 0;
-    margin-top: -1px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:129 */
-.x-ie8 .x-grid-with-row-lines .x-grid-item:first-child {
-    margin-top: 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:135 */
-.x-grid-cell-inner {
-    position: relative;
-    text-overflow: ellipsis;
-    padding: 7px 10px 6px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:151 */
-.x-grid-cell-special {
-    border-color: #e9e9e9;
-    border-style: solid;
-    border-right-width: 1px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:194 */
-.x-rtl.x-grid-cell-special {
-    border-right-width: 0;
-    border-left-width: 1px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:203 */
-.x-grid-dirty-cell > .x-grid-cell-inner:after {
-    content: "\e602";
-    font: 14px/1 ExtJS;
-    color: #cf4c35;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:218 */
-.x-rtl.x-grid-dirty-cell > .x-grid-cell-inner:after {
-    content: "\e603";
-    font: 14px/1 ExtJS;
-    right: 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:231 */
-.x-grid-row .x-grid-cell-selected {
-    color: #fff;
-    background-color: #843f33;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:238 */
-.x-grid-with-col-lines .x-grid-cell {
-    border-style: solid;
-    border-color: #e9e9e9;
-    border-width: 0 1px 0 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:244 */
-.x-grid-with-col-lines .x-grid-item-over .x-grid-cell {
-    border-color: #843f33;
-    border-style: solid;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:249 */
-.x-grid-with-col-lines .x-grid-item-selected .x-grid-cell {
-    border-color: #843f33;
-    border-style: solid;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:257 */
-.x-rtl.x-grid-with-col-lines .x-grid-cell {
-    border-width: 0 0 0 1px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:262 */
-.x-grid-resize-marker {
-    width: 1px;
-    background-color: #0f0f0f;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:18 */
-.x-grid-editor .x-form-display-field {
-    text-overflow: ellipsis;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:24 */
-.x-grid-editor .x-form-action-col-field {
-    padding: 6px 4px 6px 4px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:30 */
-.x-grid-editor .x-form-text {
-    padding-left: 9px;
-    padding-right: 9px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/CellEditing.scss:3 */
-.x-tree-cell-editor .x-form-text {
-    padding-left: 5px;
-    padding-right: 5px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:71 */
-.x-form-trigger-spinner-default {
-    width: 32px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:79 */
-.x-form-trigger-spinner-default:before {
-    content: '';
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:85 */
-.x-form-spinner-default {
-    background-color: #fff;
-    width: 32px;
-    height: 15px;
-    color: #919191;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:131 */
-.x-form-spinner-up-default {
-    font: 16px/1 ExtJS;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-form-spinner-up-default:before {
-    content: "\e61c";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:137 */
-.x-form-spinner-down-default {
-    font: 16px/1 ExtJS;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-form-spinner-down-default:before {
-    content: "\e61b";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:143 */
-.x-form-spinner-up-default {
-    background-position: 0 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:146 */
-.x-form-spinner-up-default.x-form-spinner-over {
-    background-position: -32px 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:148 */
-.x-form-spinner-up-default.x-form-spinner-over.x-form-spinner-focus {
-    background-position: -128px 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:153 */
-.x-form-spinner-up-default.x-form-spinner-focus {
-    background-position: -96px 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:158 */
-.x-form-spinner-up-default.x-form-spinner.x-form-spinner-click {
-    background-position: -64px 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:163 */
-.x-form-spinner-down-default {
-    background-position: 0 -15px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:166 */
-.x-form-spinner-down-default.x-form-spinner-over {
-    background-position: -32px -15px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:168 */
-.x-form-spinner-down-default.x-form-spinner-over.x-form-spinner-focus {
-    background-position: -128px -15px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:173 */
-.x-form-spinner-down-default.x-form-spinner-focus {
-    background-position: -96px -15px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/trigger/Spinner.scss:178 */
-.x-form-spinner-down-default.x-form-spinner.x-form-spinner-click {
-    background-position: -64px -15px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:1 */
-.x-tbar-page-number {
-    width: 30px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:10 */
-.x-btn-icon-el.x-tbar-page-first {
-    font: 16px/16px ExtJS;
-    color: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-btn-icon-el.x-tbar-page-first:before {
-    content: "\e617";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:19 */
-.x-btn-icon-el.x-tbar-page-prev {
-    font: 16px/16px ExtJS;
-    color: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-btn-icon-el.x-tbar-page-prev:before {
-    content: "\e615";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:28 */
-.x-btn-icon-el.x-tbar-page-next {
-    font: 16px/16px ExtJS;
-    color: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-btn-icon-el.x-tbar-page-next:before {
-    content: "\e616";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:37 */
-.x-btn-icon-el.x-tbar-page-last {
-    font: 16px/16px ExtJS;
-    color: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-btn-icon-el.x-tbar-page-last:before {
-    content: "\e618";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:46 */
-.x-btn-icon-el.x-tbar-loading {
-    font: 16px/16px FontAwesome;
-    color: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-btn-icon-el.x-tbar-loading:before {
-    content: "\f021";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:92 */
-.x-rtl.x-tbar-page-first {
-    font: 16px/16px ExtJS;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-rtl.x-tbar-page-first:before {
-    content: "\e618";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:100 */
-.x-rtl.x-tbar-page-prev {
-    font: 16px/16px ExtJS;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-rtl.x-tbar-page-prev:before {
-    content: "\e616";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:108 */
-.x-rtl.x-tbar-page-next {
-    font: 16px/16px ExtJS;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-rtl.x-tbar-page-next:before {
-    content: "\e615";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/toolbar/Paging.scss:116 */
-.x-rtl.x-tbar-page-last {
-    font: 16px/16px ExtJS;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-rtl.x-tbar-page-last:before {
-    content: "\e617";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:1 */
-.x-boundlist {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #d0d0d0;
-    background: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:8 */
-.x-boundlist-item {
-    padding: 0 10px;
-    font: normal 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
-    line-height: 30px;
-    cursor: pointer;
-    cursor: hand;
-    position: relative;
-    /*allow hover in IE on empty items*/
-    border-width: 1px;
-    border-style: dotted;
-    border-color: #fff;
-    color: #404040;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:25 */
-.x-boundlist-selected {
-    color: #fff;
-    background: #5fa2dd;
-    border-color: #5fa2dd;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:33 */
-.x-boundlist-item-over {
-    color: #fff;
-    background: #7fb5e4;
-    border-color: #7fb5e4;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:42 */
-.x-boundlist-floating {
-    border-top-width: 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/BoundList.scss:46 */
-.x-boundlist-above {
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:320 */
-.x-form-text-default.x-tagfield {
-    padding: 3px 0 0 4px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:324 */
-.x-form-text-default .x-tagfield-input {
-    margin: 0 4px 3px 0;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:328 */
-.x-form-text-default .x-tagfield-input-field {
-    height: 24px;
-    line-height: 24px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:333 */
-.x-form-text-default .x-tagfield-item {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    border-radius: 0;
-    background-color: #ececec;
-    border: 1px solid #ececec;
-    padding: 0 21px 0 5px;
-    margin: 0 4px 3px 0;
-    color: #404040;
-    line-height: 22px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:344 */
-.x-form-text-default .x-tagfield-item:hover {
-    background-color: #e5e5e5;
-    border-color: #e5e5e5;
-    color: #404040;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:352 */
-.x-form-text-default .x-tagfield-item.x-tagfield-item-selected {
-    background-color: #7fb5e4;
-    border-color: #7fb5e4;
-    color: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:361 */
-.x-form-text-default .x-tagfield-item.x-rtl {
-    padding: 0 5px 0 21px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:367 */
-.x-form-text-default .x-tagfield-item-close {
-    width: 12px;
-    height: 12px;
-    top: 5px;
-    right: 3px;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-    opacity: 0.85;
-    font: 12px/1 FontAwesome;
-    color: #919191;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
-.x-form-text-default .x-tagfield-item-close:before {
-    content: "\f00d";
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:384 */
-.x-form-text-default .x-tagfield-item-close:hover {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
-    opacity: 0.93;
-    color: #919191;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:395 */
-.x-form-text-default .x-tagfield-item-close:active {
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-    opacity: 1;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:405 */
-.x-form-text-default .x-tagfield-item-close.x-rtl {
-    right: auto;
-    left: 3px;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:412 */
-.x-form-text-default .x-tagfield-item-selected .x-tagfield-item-close {
-    color: #fff;
-}
-/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:416 */
-.x-form-text-default .x-tagfield-item-selected .x-tagfield-item-close:hover {
-    color: #fff;
 }
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/column/Action.scss:1 */
 .x-grid-cell-inner-action-col {
@@ -13329,6 +13063,254 @@ a.x-color-picker-item:hover {
     font: 300 13px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
     background-color: #fff;
     resize: none;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:320 */
+.x-form-text-default.x-tagfield {
+    padding: 3px 0 0 4px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:324 */
+.x-form-text-default .x-tagfield-input {
+    margin: 0 4px 3px 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:328 */
+.x-form-text-default .x-tagfield-input-field {
+    height: 24px;
+    line-height: 24px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:333 */
+.x-form-text-default .x-tagfield-item {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    background-color: #ececec;
+    border: 1px solid #ececec;
+    padding: 0 21px 0 5px;
+    margin: 0 4px 3px 0;
+    color: #404040;
+    line-height: 22px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:344 */
+.x-form-text-default .x-tagfield-item:hover {
+    background-color: #e5e5e5;
+    border-color: #e5e5e5;
+    color: #404040;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:352 */
+.x-form-text-default .x-tagfield-item.x-tagfield-item-selected {
+    background-color: #7fb5e4;
+    border-color: #7fb5e4;
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:361 */
+.x-form-text-default .x-tagfield-item.x-rtl {
+    padding: 0 5px 0 21px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:367 */
+.x-form-text-default .x-tagfield-item-close {
+    width: 12px;
+    height: 12px;
+    top: 5px;
+    right: 3px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+    opacity: 0.85;
+    font: 12px/1 FontAwesome;
+    color: #919191;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/etc/mixins/font-icon.scss:126 */
+.x-form-text-default .x-tagfield-item-close:before {
+    content: "\f00d";
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:384 */
+.x-form-text-default .x-tagfield-item-close:hover {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=93)";
+    opacity: 0.93;
+    color: #919191;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:395 */
+.x-form-text-default .x-tagfield-item-close:active {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    opacity: 1;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:405 */
+.x-form-text-default .x-tagfield-item-close.x-rtl {
+    right: auto;
+    left: 3px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:412 */
+.x-form-text-default .x-tagfield-item-selected .x-tagfield-item-close {
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/var/form/field/Tag.scss:416 */
+.x-form-text-default .x-tagfield-item-selected .x-tagfield-item-close:hover {
+    color: #fff;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:5 */
+.x-grid-view,
+.x-tree-view {
+    z-index: 1;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:10 */
+.x-grid-body {
+    background: #843f33;
+    border-width: 0;
+    border-style: solid;
+    border-color: #d0d0d0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:17 */
+.x-grid-empty {
+    padding: 10px;
+    color: grey;
+    background-color: #843f33;
+    font: 300 14px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:25 */
+.x-grid-item {
+    color: #000;
+    font: 400 14px/17px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+    background-color: #1f2933;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:31 */
+.x-grid-item-alt {
+    background-color: #1a232b;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:35 */
+.x-grid-item-over {
+    color: #000;
+    background-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:42 */
+.x-grid-item-focused {
+    outline: 0;
+    color: #fff;
+    background-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:46 */
+.x-grid-item-focused .x-grid-cell-inner {
+    z-index: 1;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:54 */
+.x-grid-item-focused .x-grid-cell-inner:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    pointer-events: none;
+    border: 0px solid #5fa2dd;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:76 */
+.x-grid-item-selected {
+    color: #fff;
+    background-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:82 */
+.x-grid-with-row-lines .x-grid-item {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e9e9e9;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:88 */
+.x-grid-with-row-lines .x-grid-item:first-child {
+    border-top-color: #1f2933;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:94 */
+.x-grid-with-row-lines .x-grid-item.x-grid-item-over {
+    border-style: solid;
+    border-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:99 */
+.x-grid-with-row-lines .x-grid-item-over + .x-grid-item {
+    border-top-style: solid;
+    border-top-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:104 */
+.x-grid-with-row-lines .x-grid-item.x-grid-item-selected {
+    border-style: solid;
+    border-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:109 */
+.x-grid-with-row-lines .x-grid-item-selected + .x-grid-item {
+    border-top-style: solid;
+    border-top-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:114 */
+.x-grid-with-row-lines .x-grid-item:last-child {
+    border-bottom-width: 1px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:124 */
+.x-ie8 .x-grid-with-row-lines .x-grid-item {
+    border-width: 1px 0;
+    margin-top: -1px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:129 */
+.x-ie8 .x-grid-with-row-lines .x-grid-item:first-child {
+    margin-top: 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:135 */
+.x-grid-cell-inner {
+    position: relative;
+    text-overflow: ellipsis;
+    padding: 7px 10px 6px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:151 */
+.x-grid-cell-special {
+    border-color: #e9e9e9;
+    border-style: solid;
+    border-right-width: 1px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:194 */
+.x-rtl.x-grid-cell-special {
+    border-right-width: 0;
+    border-left-width: 1px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:203 */
+.x-grid-dirty-cell > .x-grid-cell-inner:after {
+    content: "\e602";
+    font: 14px/1 ExtJS;
+    color: #cf4c35;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:218 */
+.x-rtl.x-grid-dirty-cell > .x-grid-cell-inner:after {
+    content: "\e603";
+    font: 14px/1 ExtJS;
+    right: 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:231 */
+.x-grid-row .x-grid-cell-selected {
+    color: #fff;
+    background-color: #843f33;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:238 */
+.x-grid-with-col-lines .x-grid-cell {
+    border-style: solid;
+    border-color: #e9e9e9;
+    border-width: 0 1px 0 0;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:244 */
+.x-grid-with-col-lines .x-grid-item-over .x-grid-cell {
+    border-color: #843f33;
+    border-style: solid;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:249 */
+.x-grid-with-col-lines .x-grid-item-selected .x-grid-cell {
+    border-color: #843f33;
+    border-style: solid;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:257 */
+.x-rtl.x-grid-with-col-lines .x-grid-cell {
+    border-width: 0 0 0 1px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/Table.scss:262 */
+.x-grid-resize-marker {
+    width: 1px;
+    background-color: #0f0f0f;
 }
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/view/DropZone.scss:1 */
 .x-grid-drop-indicator {
@@ -14911,6 +14893,24 @@ a.x-color-picker-item:hover {
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/locking/Lockable.scss:131 */
 .x-rtl > .x-grid-scroll-container > .x-grid-scroll-body {
     direction: rtl;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:18 */
+.x-grid-editor .x-form-display-field {
+    text-overflow: ellipsis;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:24 */
+.x-grid-editor .x-form-action-col-field {
+    padding: 6px 4px 6px 4px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/Editing.scss:30 */
+.x-grid-editor .x-form-text {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+/* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/CellEditing.scss:3 */
+.x-tree-cell-editor .x-form-text {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 /* C:/wamp/www/nithyanandalibrary/libapp/ext/classic/theme-neutral/sass/src/grid/plugin/RowEditing.scss:2 */
 .x-grid-row-editor .x-field {

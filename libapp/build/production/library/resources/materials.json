@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "label": "Agaru-bark"
+    },
+    {
+      "id": 2,
+      "label": "Birch-bark"
+    },
+    {
+      "id": 3,
+      "label": "Gold"
+    },
+    {
+      "id": 4,
+      "label": "Ivory"
+    },
+    {
+      "id": 5,
+      "label": "Other"
+    },
+    {
+      "id": 6,
+      "label": "Palm Leaf"
+    },
+    {
+      "id": 7,
+      "label": "Paper"
+    },
+    {
+      "id": 8,
+      "label": "Sanchi-pat"
+    },
+    {
+      "id": 9,
+      "label": "Silver"
+    },
+    {
+      "id": 10,
+      "label": "Tortoise Shell"
+    },
+    {
+      "id": 11,
+      "label": "Tula-pat"
+    },
+    {
+      "id": 12,
+      "label": "Wood"
+    }
+  ]
+}

@@ -1,38 +1,5 @@
 // Init the singleton.  Any tag-based quick tips will start working.
 Ext.tip.QuickTipManager.init();
-/*
-Ext.define('library.view.main.OtherBookModel', {
-    extend: 'Ext.app.ViewModel',
-    alias: 'viewmodel.otherbookmodel',
-
-    stores:{
-
-        mystore:{
-
-        fields:['title', 'author1', 'author2', 'author3', 'author4', 'type', 'category', 'contributor1', 'contributor2', 'contributor3', 'contributor4', 'edition', 'numpages', 'isbn', 'source_url', 'saved_at_url'],
-        data:{'items':[
-			{
-				title:"Sidhhant Shiromani", author:"Scott", source_url:"https://archive.org/details/SidhhantshiromaniSanskrit_201803", languages:1, type:1, 
-				author1:'Person A', author2:'Person B', contributor1:'1', contributor2:'2'
-			},
-			{title:"Dwight", author:"Schrute", source_url:"http://dwight.book", type:1},
-			{title:"Jim", author:"Halpert", source_url:"http://jim.script", type:2},
-			{title:"Kevin", author:"Malone", source_url:"http://kevin.book", type:1},
-			{title:"Angela", author:"Martin", source_url:"http://angela.script", type:2}
-        ]},
-
-        proxy: {
-            type: 'memory',
-            reader: {
-                type: 'json',
-                rootProperty: 'items'
-            }
-        }
-       }
-
-    }
-});
-*/
 
 var localBookCategories = Ext.create('Ext.data.Store', {
     fields: ['id', 'label'],
@@ -43,107 +10,24 @@ var localBookCategories = Ext.create('Ext.data.Store', {
     ]
 });
 
-// Create the data store for the grid...
-var gridStore = Ext.create('Ext.data.Store', {
-	fields: [{
-		name: 'textbox',
-		type: 'string'
-	}, {
-		name: 'contributions'
-	}],	
-	proxy : {
-		type : 'memory',
-		reader : {
-			type : 'json'
+var tpl = new Ext.create('Ext.XTemplate', 
+	'{[this.currentKey = null]}',
+	'<tpl for=".">',
+		'<tpl if="this.shouldShowHeader(group)">',
+			'<div class="group-header"><b>{[this.currentKey = values.group]}</b></div>',
+		'</tpl>',
+		'<div class="x-boundlist-item"><b>{label}</b> <small><i>({group})</i></small></div>',
+	'</tpl>',
+	{               
+		shouldShowHeader: function(key){
+			return this.currentKey != key;
+		},
+		getHeader: function(key){
+			this.currentKey = key;
+			return key;
 		}
 	}
-});
-
-// Create a cellediting plugin object...
-var extGrid_cellediting = Ext.create('Ext.grid.plugin.CellEditing', {
-	clicksToEdit : 1
-});
-
-function myColumnRenderer(value, metaData, record, rowIndex, colIndex, store) {
-	console.log(record);
-	//console.log(store);
-    //do something with the data and return
-    return value;
-}
-
-// Define the grid columns
-var gridColumns = [
-	{
-		dataIndex : 'textbox',
-		bind: '{textbox}',
-		menuDisabled : true,
-		text : 'Name',
-		flex : 1,
-		editor : new Ext.form.TextField(), 
-		renderer: myColumnRenderer
-	},
-	{
-		dataIndex : 'contributions',
-		bind: '{contributions}',
-		menuDisabled : true,
-		text : 'Contribution(s)',
-		flex : 1,
-		editor : {
-			xtype: 'tagfield',
-			typeAhead: true,
-			triggerOnClick: true,
-			createNewOnBlur: true,
-			createNewOnEnter: true,
-			displayField: 'label',
-		    valueField: 'label',
-		    store: Ext.create('library.store.Contributors',{autoLoad:true}),
-		    queryMode: 'local',
-		    filterPickList: false,
-			triggerAction: 'all'
-		}
-	}
-];
-// Handler to the 'Add row' toolbar button
-var addGridRow = function() {
-
-	var newRowIndex;
-
-	// Add a new blank grid row...
-	gridStore.insert(gridStore.data.length, {textbox:'', contributions:''} /*, new extGrid_model()*/);
-
-	// Get the zero-based row index of the newly added row...
-	newRowIndex = gridStore.getCount() - 1;
-
-	// Focus on the newly added row...
-	authorsGrid.getView().focusRow(newRowIndex);
-
-	// Start editing the Textbox cell of the newly added row...
-	extGrid_cellediting.startEdit(gridStore.getAt(newRowIndex), 0)
-};
-
-// Create a bottom toolbar with a button to add a new grid row
-var authorsGridToolbar = Ext.create('Ext.toolbar.Toolbar', {
-	items: [
-		{
-			  id : 'btn_AddRow'
-			, text : 'Add Contributor'
-			, handler : function() { addGridRow();}
-		}
-	]
-});
-
-var authorsGrid = Ext.create('Ext.grid.Panel', {
-	width : '100%',
-	height: 120,
-	columns : gridColumns,
-	store : gridStore,
-	bbar : authorsGridToolbar,
-	frame : false,
-	bind: {
-            store: '{books.contributors}'
-        },
-	plugins : [extGrid_cellediting]
-});
+);
 
 /**
  * This view is an example list of people.
@@ -160,19 +44,22 @@ Ext.define('library.view.main.OtherForm', {
 	width:'100%',
 	height:'83%',
 	requires: [
+		'library.view.main.CategoryTagField',
+		'library.view.main.MainController',
+		'library.store.ClassificationCategories',
         'library.store.Languages',
+		'library.store.Materials',
 		'library.store.Conditions',
 		'library.store.Contributors'
     ],
+	controller:'main',
 	style: 'color:#fff;font-weight: bold;',
     bodyPadding: 5,
 	viewModel: {
         type: 'otherbookmodel'
     },
 	defaults: {
-		plugins: [/*{
-			ptype: 'formlabelrequired'
-		},*/
+		plugins: [
 		{
 			ptype: 'afterlabelinfo'
 		}]
@@ -180,42 +67,36 @@ Ext.define('library.view.main.OtherForm', {
 	items:[
 		{
 			xtype: 'gridpanel',
-			itemId:'myGridItemId',
-			margin: '5 5 5 0',
-			title:'Books',
+			itemId: 'myGridItemId',
+			margin: '0 5 5 0',
+			title: 'Books',
 			reference : 'localbooks',
-			bodyPadding:5,
-			flex:1,
-            //header: false,
+			bodyPadding: 5,
+			hideHeaders: true,
+			flex: 1,
 			tools: [{
 				itemId: 'refresh',
 				tooltip: 'Reload List',
 				type: 'next',
-				handler: function () {
-					// do refresh
-				}
+				handler: 'refreshGridHandler'
 			}],
-			
 			bind:{
-				store:'{mystore}',
-				selection:'{books}'
+				store: '{mystore}',
+				selection: '{books}'
 			},
 			columns: [
 				{ 
-					text: 'Url', dataIndex: 'source_url', flex: 1,
+					dataIndex: 'source_url', flex: 1,
 					xtype: 'templatecolumn',
-					tpl: '<span>{title}, <a href="{source_url}" target="_blank">{source_url}</a></span>'
+					tpl: '<span>{roman_script_title}, <a href="{source_url}" target="_blank">{source_url}</a></span>'
 				},
 				{
-					xtype:'actioncolumn',
+					xtype: 'actioncolumn',
 					flex: 1,
 					items: [{
 						iconCls: 'x-fa fa-close redIcon',
 						tooltip: 'Reject',
-						handler: function(grid, rowIndex, colIndex) {
-							var rec = grid.getStore().getAt(rowIndex);
-							removeUser(grid, rec);
-						}
+						handler: 'rejectBookHandler'
 					}]
 				}
 			]
@@ -223,7 +104,7 @@ Ext.define('library.view.main.OtherForm', {
 		{
 			xtype: 'form',
 			itemId:'panelbindItemId',
-			margin: '5 15 0 10',
+			margin: '0 0 0 10',
 			padding: 0,
 			bodyPadding:0,
 			width:'60%',
@@ -247,6 +128,7 @@ Ext.define('library.view.main.OtherForm', {
 				{
 				   xtype: 'combobox',
 				   store: localBookCategories,
+				   margin: '0 10 0 0',
 				   fieldLabel: 'Type',
 				   queryMode: 'local',
 				   valueField: 'id',
@@ -256,24 +138,6 @@ Ext.define('library.view.main.OtherForm', {
 				   filterPickList: true,
 				   allowBlank: false,
 				   bind: '{books.type}',
-				   listeners:{
-					   /*select:function(combo, record, eOpts){
-						    var me = this,
-								newValue = me.getValue(),
-								form = combo.up('form'),
-								categoryCard = form.down('#categorycard');
-							if(newValue == '1') {
-								categoryCard.getLayout().setActiveItem('book-card');
-							} else if(newValue == '2') {
-								categoryCard.getLayout().setActiveItem('manuscript-card');
-							} else {
-								categoryCard.getLayout().setActiveItem('empty-card');
-							}
-					   },
-					   change:function(){
-						   
-					   }*/
-				   },
 				   plugins:[{
 						ptype:'afterlabelinfo',
 						qtip:'Indicates whether it is a book or manuscript'
@@ -281,15 +145,43 @@ Ext.define('library.view.main.OtherForm', {
 				},
 				{
 				   xtype: 'textfield',
-				   fieldLabel: 'Title',
+				   fieldLabel: 'Roman Title',
 				   allowBlank: false,
-				   bind: '{books.title}'
+				   bind: '{books.roman_script_title}'
 				},
 				{
 				   xtype: 'textfield',
+				   fieldLabel: 'Original Title',
+				   allowBlank: true,
+				   bind: '{books.original_title}'
+				},
+				{
+				   xtype: 'CategoryTagField',
 				   fieldLabel: 'Category',
 				   allowBlank: true,
+				   displayField: '<strong>{label}</strong> <small><i>({group})</i></small>',
+				   labelTpl: '<strong>{label}</strong> <small><i>({group})</i></small>',
+				   valueField: 'id',
+				   store: Ext.create('library.store.ClassificationCategories',{autoLoad:true}),
+				   queryMode: 'local',
+				   filterPickList: false,
+				   listConfig: {
+					   cls: 'grouped-list'
+				   },
+				   tpl: tpl,
 				   bind: '{books.category}'
+				},
+				{
+				   xtype: 'tagfield',
+				   id: 'languages',
+				   fieldLabel: 'Languages',
+				   allowBlank: true,
+				   displayField: 'label',
+				   valueField: 'id',
+				   store: Ext.create('library.store.Languages',{autoLoad:true}),
+				   queryMode: 'local',
+				   filterPickList: false,
+				   bind: '{books.languages}'
 				},				
 				{
 					xtype: 'panel',
@@ -381,15 +273,17 @@ Ext.define('library.view.main.OtherForm', {
 								]
 							},
 							{
-							   xtype: 'textfield',
+							   xtype: 'textareafield',
 							   id: 'publisher',
 							   fieldLabel: 'Publisher',
 							   allowBlank: false,
-							   bind: '{books.publisher}'
+							   bind: '{books.book_publishers}'
 							},
 							{
 								layout:{type:'hbox', align: 'stretch'},
-								width:'100%',
+								defaults:{
+									labelPad: 35
+								},								
 								items:[{
 								   xtype: 'datefield',
 								   width: '50%',
@@ -398,11 +292,11 @@ Ext.define('library.view.main.OtherForm', {
 								   maxValue: new Date(),
 								   format: 'm/Y',
 								   allowBlank: false,
-								   bind: '{books.published_on}'
+								   bind: '{books.book_published_year}'
 								},{
 								   xtype: 'numberfield',
 								   margin: '10 0 0 10',
-								   labelPad: 0,
+								   labelPad: 30,
 								   width: '48%',
 								   id: 'numpages',
 								   fieldLabel: 'Number of Pages',
@@ -410,7 +304,7 @@ Ext.define('library.view.main.OtherForm', {
 								   allowDecimals: false,
 								   allowExponential: false,
 								   allowBlank: true,
-								   bind: '{books.numpages}'
+								   bind: '{books.book_numpages}'
 								}]
 							},
 							{
@@ -418,14 +312,14 @@ Ext.define('library.view.main.OtherForm', {
 							   id: 'description',
 							   fieldLabel: 'Description',
 							   allowBlank: true,
-							   bind: '{books.description}'
+							   bind: '{books.book_description}'
 							},
 							{
 							   xtype: 'textfield',
 							   id: 'metadata',
 							   fieldLabel: 'Meta-data',
 							   allowBlank: true,
-							   bind: '{books.metadata}'
+							   bind: '{books.book_metadata}'
 							},
 							{
 								layout:{type:'hbox', align: 'stretch'},
@@ -435,39 +329,59 @@ Ext.define('library.view.main.OtherForm', {
 								items:[{
 									   xtype: 'numberfield',
 									   width: '50%',
-									   id: 'isbn',
-									   fieldLabel: 'ISBN',
+									   id: 'isbn13',
+									   fieldLabel: 'ISBN 13',
 									   allowBlank: true,
 									   maxLength:13,
 									   enforceMaxLength:true,
 									   hideTrigger: true,
 									   allowDecimals: false,
 									   allowExponential: false,
-									   bind: '{books.isbn}'
+									   bind: '{books.book_isbn13}'
 									},{
-									   xtype: 'datefield',
-									   margin: '10 0 0 0',
+									   xtype: 'numberfield',
+									   margin: '10 0 0 10',
 									   width: '48%',
-									   labelPad: 5,
-									   id: 'copyright',
-									   maxValue: new Date(),
-									   format: 'Y',
-									   fieldLabel: 'Copyright',
+									   id: 'isbn',
+									   fieldLabel: 'ISBN',
 									   allowBlank: true,
-									   bind: '{books.copyright}'
-								}]
+									   maxLength:10,
+									   enforceMaxLength:true,
+									   hideTrigger: true,
+									   allowDecimals: false,
+									   allowExponential: false,
+									   bind: '{books.book_isbn}'
+									}
+								]
 							},
 							{
-							   xtype: 'tagfield',
-							   id: 'languages',
-							   fieldLabel: 'Languages',
-							   allowBlank: true,
-							   displayField: 'label',
-							   valueField: 'id',
-							   store: Ext.create('library.store.Languages',{autoLoad:true}),
-							   queryMode: 'local',
-							   filterPickList: false,
-							   bind: '{books.languages}'
+								layout: {type:'hbox', align: 'stretch'},
+								defaults:{
+									labelPad: 35
+								},
+								items: [
+									{
+									   xtype: 'checkboxfield',
+									   margin: '10 0 0 0',
+									   width: '50%',
+									   id: 'copyright',
+									   fieldLabel: 'Copyright',
+									   allowBlank: true,
+									   bind: '{books.book_is_copyrighted}'
+									},
+									{
+									   xtype: 'datefield',
+									   margin: '10 0 0 10',
+									   width: '48%',
+									   labelPad: 40,
+									   id: 'copyright_year',
+									   maxValue: new Date(),
+									   format: 'Y',
+									   fieldLabel: 'Copyright Year',
+									   allowBlank: true,
+									   bind: '{books.book_copyright_year}'
+									}
+								]
 							},
 							{
 								layout:{type:'hbox', align: 'stretch'},
@@ -483,17 +397,17 @@ Ext.define('library.view.main.OtherForm', {
 									   allowBlank: true,
 									   minValue:1,
 									   maxValue:100,
-									   bind: '{books.edition}'
+									   bind: '{books.book_edition}'
 									},
 									{
 									   xtype: 'numberfield',
 									   margin: '10 0 0 10',
 									   width: '48%',
-									   labelPad: 5,
+									   //labelPad: 5,
 									   id: 'price',
 									   fieldLabel: 'Price',
 									   allowBlank: true,
-									   bind: '{books.price}'
+									   bind: '{books.book_price}'
 									}								
 								]
 							}
@@ -518,12 +432,13 @@ Ext.define('library.view.main.OtherForm', {
 							   xtype: 'combobox',
 							   id: 'manuscript_material',
 							   fieldLabel: 'Material',
+							   store: Ext.create('library.store.Materials',{autoLoad:true}),
 							   queryMode: 'local',
-							   valueField: 'value',
+							   valueField: 'id',
 							   displayField: 'label',
 							   typeAhead: true,
-							   forceSelection: true,
-							   filterPickList: true,
+							   forceSelection: false,
+							   filterPickList: false,
 							   bind: '{books.manuscript_material}',
 							   plugins:[{
 									ptype:'afterlabelinfo',
@@ -550,7 +465,11 @@ Ext.define('library.view.main.OtherForm', {
 							   xtype: 'textfield',
 							   id: 'manuscript_institute',
 							   fieldLabel: 'Institute',
-							   bind: '{books.manuscript_institute}'
+							   bind: '{books.manuscript_institute}',
+							   plugins:[{
+									ptype:'afterlabelinfo',
+									qtip:'Includes collection from personal library, temple, mutt and prsonal collection'
+							   }]
 							},
 							{
 							   xtype: 'textfield',
@@ -566,7 +485,7 @@ Ext.define('library.view.main.OtherForm', {
 							   xtype: 'textfield',
 							   id: 'manuscript_foliosinbundle',
 							   fieldLabel: 'Folios in Bundle',
-							   bind: '{books.manuscript_foliosinbundle}',
+							   bind: '{books.manuscript_folios_in_bundle}',
 							   plugins:[{
 									ptype:'afterlabelinfo',
 									qtip:'Refers to the number of the folios within a manuscript<br><ul><li>Blank folios should be included in the tally and noted in Remarks.</li><li>One folio is counted for both 1a and 1b (obverse and reverse) sides</li><li>Number of folios in a manuscript can be different from its pagination. <br>For instance, a manuscript may have folios numbered from 1 to 50 and if folios 4-8 are missing, then the number of folios in the manuscript is 45</li></ul>'
@@ -591,13 +510,13 @@ Ext.define('library.view.main.OtherForm', {
 							   xtype: 'textfield',
 							   id: 'manuscript_foliosintext',
 							   fieldLabel: 'Folios in Text',
-							   bind: '{books.manuscript_foliosintext}'
+							   bind: '{books.manuscript_folios_in_text}'
 							},
 							{
 							   xtype: 'textfield',
 							   id: 'manuscript_textrange',
 							   fieldLabel: 'Text Range',
-							   bind: '{books.manuscript_textrange}'
+							   bind: '{books.manuscript_text_range}'
 							},
 							{
 							   xtype: 'textfield',
@@ -633,7 +552,7 @@ Ext.define('library.view.main.OtherForm', {
 									   allowDecimals: false,
 									   allowExponential: false,
 									   width: '50%',
-									   labelPad: 0,
+									   labelPad: 30,
 									   bind: '{books.manuscript_width}',
 									   plugins:[{
 											ptype:'afterlabelinfo',
@@ -646,7 +565,7 @@ Ext.define('library.view.main.OtherForm', {
 							   xtype: 'textfield',
 							   id: 'manuscript_beginningline',
 							   fieldLabel: 'Begining Line',
-							   bind: '{books.manuscript_beginningline}',
+							   bind: '{books.manuscript_beginning_line}',
 							   plugins:[{
 									ptype:'afterlabelinfo',
 									qtip:"The starting lines or some stanzas of the text.<br><ul><li>It should be written in Roman script with diacritical marks or in Devanagari.</li><li>The small texts of a Stotra may be noted. e.g.: Aum namo ganeśāya, namo arihantānam, siddham or any auspicious symbols or any mangala sloka of iṣṭadeva.</li><li>If the starting portion of first folio is missing, the starting text of the available portion may be noted.</li></ul>"
@@ -656,7 +575,7 @@ Ext.define('library.view.main.OtherForm', {
 							   xtype: 'textfield',
 							   id: 'manuscript_endingline',
 							   fieldLabel: 'Ending Line',
-							   bind: '{books.manuscript_endingline}',
+							   bind: '{books.manuscript_ending_line}',
 							   plugins:[{
 									ptype:'afterlabelinfo',
 									qtip:"The ending lines or stanzas of the text before colophon"
@@ -711,12 +630,12 @@ Ext.define('library.view.main.OtherForm', {
 		}
 	]
 });
-
+/*
 var removeUser = function(grid, context){
 		var record = context;
 		Ext.Msg.confirm(
 			'Delete Book',
-			'Are you sure you want to delete the book "' + record.get('title') + ' ' + record.get('source_url') + '"?',
+			'Are you sure you want to delete the book <strong>"' + record.get('roman_script_title') + '"</strong><br> ' + record.get('source_url') + '?',
 			doRemoveUser.bind(this, record)
         );
 	},
@@ -726,3 +645,4 @@ var removeUser = function(grid, context){
             store.remove(record);
         }
     };
+*/	

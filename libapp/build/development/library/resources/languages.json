@@ -1,8 +1,233 @@
-{	
-	"success": true,
-	"data": [
-		{ "id": 1, "label": "Hindi" },
-		{ "id": 2, "label": "Tamil" },
-		{ "id": 3, "label": "Bengali" }
-	]
+{
+  "success": true,
+  "data": [
+    {
+      "id": 1,
+      "label": "Ahirani"
+    },
+    {
+      "id": 2,
+      "label": "Assamese"
+    },
+    {
+      "id": 3,
+      "label": "Awadhi"
+    },
+    {
+      "id": 4,
+      "label": "Bagheli"
+    },
+    {
+      "id": 5,
+      "label": "Bagri Rajasthani"
+    },
+    {
+      "id": 6,
+      "label": "Banjari"
+    },
+    {
+      "id": 7,
+      "label": "Bengali"
+    },
+    {
+      "id": 8,
+      "label": "Bhili"
+    },
+    {
+      "id": 9,
+      "label": "Bhilodi"
+    },
+    {
+      "id": 10,
+      "label": "Bhojpuri"
+    },
+    {
+      "id": 11,
+      "label": "Bodo"
+    },
+    {
+      "id": 12,
+      "label": "Boro"
+    },
+    {
+      "id": 13,
+      "label": "Bundeli"
+    },
+    {
+      "id": 14,
+      "label": "Bundelkhan"
+    },
+    {
+      "id": 15,
+      "label": "Chhattisgarhi"
+    },
+    {
+      "id": 16,
+      "label": "Dhundhari"
+    },
+    {
+      "id": 17,
+      "label": "Dogri"
+    },
+    {
+      "id": 18,
+      "label": "English"
+    },
+    {
+      "id": 19,
+      "label": "French"
+    },
+    {
+      "id": 20,
+      "label": "Garhwali"
+    },
+    {
+      "id": 21,
+      "label": "Gondi"
+    },
+    {
+      "id": 22,
+      "label": "Gujarati"
+    },
+    {
+      "id": 23,
+      "label": "Harauti"
+    },
+    {
+      "id": 24,
+      "label": "Haryanvi"
+    },
+    {
+      "id": 25,
+      "label": "Hindi"
+    },
+    {
+      "id": 26,
+      "label": "Ho"
+    },
+    {
+      "id": 27,
+      "label": "Kangri"
+    },
+    {
+      "id": 28,
+      "label": "Kannada"
+    },
+    {
+      "id": 29,
+      "label": "Kashmiri"
+    },
+    {
+      "id": 30,
+      "label": "Khortha"
+    },
+    {
+      "id": 31,
+      "label": "Khotta"
+    },
+    {
+      "id": 32,
+      "label": "Konkani"
+    },
+    {
+      "id": 33,
+      "label": "Kumaoni"
+    },
+    {
+      "id": 34,
+      "label": "Kurukh"
+    },
+    {
+      "id": 35,
+      "label": "Oraon"
+    },
+    {
+      "id": 36,
+      "label": "Lamani"
+    },
+    {
+      "id": 37,
+      "label": "Lambadi"
+    },
+    {
+      "id": 38,
+      "label": "Magadhi"
+    },
+    {
+      "id": 39,
+      "label": "Magahi"
+    },
+    {
+      "id": 40,
+      "label": "Maithili"
+    },
+    {
+      "id": 41,
+      "label": "Malayalam"
+    },
+    {
+      "id": 42,
+      "label": "Malvi"
+    },
+    {
+      "id": 43,
+      "label": "Marathi"
+    },
+    {
+      "id": 44,
+      "label": "Marwari"
+    },
+    {
+      "id": 45,
+      "label": "Meitei"
+    },
+    {
+      "id": 46,
+      "label": "Mewari"
+    },
+    {
+      "id": 47,
+      "label": "Mundari"
+    },
+    {
+      "id": 48,
+      "label": "Nagpuria"
+    },
+    {
+      "id": 49,
+      "label": "Nepali"
+    },
+    {
+      "id": 50,
+      "label": "Nimadi"
+    },
+    {
+      "id": 51,
+      "label": "Odia"
+    },
+    {
+      "id": 52,
+      "label": "Pahari[c]"
+    },
+    {
+      "id": 53,
+      "label": "Punjabi"
+    },
+    {
+      "id": 54,
+      "label": "Rajasthani"
+    },
+    {
+      "id": 55,
+      "label": "Sadan"
+    },
+    {
+      "id": 56,
+      "label": "Sadri"
+    },
+    {
+      "id": 57,
+      "label": "Santali"
+    }
+  ]
 }
