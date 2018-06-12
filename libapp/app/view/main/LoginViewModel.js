@@ -9,13 +9,7 @@ Ext.define('library.view.main.LoginViewModel', {
     data: {
 		reviewer:'RajaRajeshwari',
 		password:'Sundareshwara',
-    },
-    formulas: {
-        // We'll explain formulas in more detail soon.
-        sourceUrlHtml: function (get) {
-            var url = get('url');
-            return "<a href='" + url + "' target='_blank'>" + "Preview URL" + "</a>";
-        }
     }
+
 });
 

@@ -285,6 +285,28 @@ nodeCleanup(function (exitCode, signal) {
     // release resources here before node exits 
 });
 
+app.post('/api/library/review/reject', function(req,res){
+	mongoDb.collection("arch").findOne({_id:req.body.identifier}, function(err, result){
+	if(!err){
+		result.reviewStatus = "Rejected";
+		mongoDb.collection("arch").deleteOne({_id:req.body.identifier},	null, function(err,r){
+			if(!err){
+				mongoDb.collection("arch_review").insertOne(result ,null, function(err,r){});
+				res.send({success:true});
+			}
+			else{
+				res.send({success:false});
+			}
+			
+		});
+	}
+	else{
+		res.send({success:false});
+	}
+	});
+});
+
+
 app.post('/api/library/review/assign', function (req, res) {
 	// get the first record which is assigned to any user and has not been marked "reviewed"
 	var qry = {
@@ -298,7 +320,7 @@ app.post('/api/library/review/assign', function (req, res) {
 				res.send(result);
 			}
 			else{
-				mongoDb.collection("arch").findOne({}, function(err, result){
+				mongoDb.collection("arch").findOne({ "reviewer" : { "$exists" : false } }, function(err, result){
 					if(!err)
 					{
 						result.reviewer = req.body.reviewer;	
@@ -313,7 +335,6 @@ app.post('/api/library/review/assign', function (req, res) {
 								res.send(result);
 							}
 							else{
-								console.log(err);
 								res.setHeader('Content-Type', 'application/json');
 								res.send({success:false});
 							}
@@ -336,29 +357,70 @@ app.post('/api/library/review/assign', function (req, res) {
 });
 
 app.post('/api/library/review/save', function (req, res) {
-	console.log(req.body)
-	var review = req.body
-	review.reviewStatus = "Reviewed";
-	mongoDb.collection("arch_review").insertOne(review ,null, function(err,r){
-		res.setHeader('Content-Type', 'application/json');
+	var review = req.body;
+	res.setHeader('Content-Type', 'application/json');
+	var id = review.identifier;
+	var reviewObj = review;
+	mongoDb.collection("arch").findOne({_id:id}, function(err, result){	
 		if(!err){
-			res.send({success:true});
+			retObj = Object.create(result);
+			retObj.reviewStatus = "Reviewed";
+			retObj.title = reviewObj.title;
+			if(reviewObj.type == 1){
+				retObj.r_category = reviewObj.category;
+				retObj.r_author1 = reviewObj.author1;
+				retObj.r_contributor1 = reviewObj.contributor1;
+				retObj.r_author2 = reviewObj.author2;
+				retObj.r_contributor2 = reviewObj.contributor2;
+				retObj.r_author3 = reviewObj.author3;
+				retObj.r_contributor3 = reviewObj.contributor3;
+				retObj.r_author4 = reviewObj.author4;
+				retObj.r_contributor4 = reviewObj.contributor4;
+				retObj.r_publisher = reviewObj.publisher;
+				retObj.r_published_on = reviewObj.published_on;
+				retObj.r_numpages = reviewObj.numpages;
+				retObj.r_description = reviewObj.description;
+				retObj.r_metadata = reviewObj.metadata;
+				retObj.r_isbn = reviewObj.isbn;
+				retObj.r_copyright = reviewObj.copyright;
+				retObj.r_languages = reviewObj.languages;
+				retObj.r_price = reviewObj.price;
+				retObj.r_edition = reviewObj.edition;
+			}
+			else{
+				retObj.manuscript_script = reviewObj.manuscript_script;
+				retObj.manuscript_material = reviewObj.manuscript_material;
+				retObj.manuscript_scribe = reviewObj.manuscript_scribe;
+				retObj.manuscript_subject = reviewObj.manuscript_subject;
+				retObj.manuscript_institute = reviewObj.manuscript_institute;
+				retObj.manuscript_address = reviewObj.manuscript_address;
+				retObj.manuscript_foliosinbundle = reviewObj.manuscript_foliosinbundle;
+				retObj.manuscript_condition = reviewObj.manuscript_condition;
+				retObj.manuscript_foliosintext = reviewObj.manuscript_foliosintext;
+				retObj.manuscript_textrange = reviewObj.manuscript_textrange;
+				retObj.manuscript_lines = reviewObj.manuscript_lines;
+				retObj.manuscript_length = reviewObj.manuscript_length;
+				retObj.manuscript_width = reviewObj.manuscript_width;
+				retObj.manuscript_beginningline = reviewObj.manuscript_beginningline;
+				retObj.manuscript_endingline = reviewObj.manuscript_endingline;
+				retObj.manuscript_notes = reviewObj.manuscript_notes;
+				retObj.manuscript_remarks = reviewObj.manuscript_remarks;
+			}
+			mongoDb.collection("arch_review").insertOne(retObj ,null, function(err,r){
+				if(!err){
+					mongoDb.collection("arch").deleteOne({_id:retObj._id},	null, function(err,r){
+						if(!err){res.send({success:true});}
+						else{res.send({success:false});}
+					});
+				}
+				else{res.send({success:false});}
+			});
 		}
-		else{
-			res.send({success:false});
-		}
+		else{res.send({success:false});}
+			
 	});
-	var newvalues = { $set:{
-		reviewStatus:'Reviewed'
-	}};
-	mongoDb.collection("arch").updateOne({_id:review.identifier},newvalues ,null, function(err,r){
-		if(err){
-			console.log(err);
-		}
-	});
-	
-
 });
+
 
 
 app.post('/login', function (req, res) {
@@ -368,7 +430,6 @@ app.post('/login', function (req, res) {
 		response.success = true;
 		response.msg = "OK";
 	}
-	console.log(response)
 	res.setHeader('Content-Type', 'application/json');
 	res.send(response);
 });

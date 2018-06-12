@@ -14,7 +14,7 @@ Ext.define('library.view.main.LoginForm', {
 		'library.view.main.MainController'
 	],	
 	controller:'main',
-	viewModel: 'catalog',
+	viewModel: 'login',
 	fieldDefaults:{
 		margin:'15 0 0 0',
 		anchor:'100%'

@@ -72,20 +72,36 @@ Ext.define('library.view.main.MainController', {
 		   };
 		this.getSearchResult(p);
  	},
+	rejectHandler:function(){
+		var me = this;
+		var viewModel = Ext.getCmp('catalogentryformId').getViewModel();
+		var param = viewModel.data;
+		Ext.Msg.confirm("Reject", "Are you sure you want to reject this article?", function(id, v , o){
+			if(id == "yes"){
+				Ext.Ajax.request({
+				  url : '/api/library/review/reject',
+				  params  : viewModel.data,
+				  method: 'POST',
+				  scope:this,
+				  success : function(response){			
+					   me.assignForReview();
+				  },
+				  failure: function() {
+					 Ext.Msg.alert('Failed', "Failed to save");
+				  }
+				});
+			}
+		});
+	},
+	
 	saveHandler:function(){
 		var viewModel = Ext.getCmp('catalogentryformId').getViewModel();
-		var param = {
-			common:viewModel.data
-		}
-		if(viewModel.data.type == 1){
-			var tmp = Ext.getCmp('catalogbookformid').getViewModel();
-			param.book = tmp.data;
-		}
-		else{
-			var tmp = Ext.getCmp('catalogmenuscriptformid').getViewModel();
-			param.manuscript = tmp.data;
-		}
-		
+		var param = viewModel.data;
+		param.reviewStatus = "Reviewed";
+		var loginViewModel = Ext.getCmp('loginFormId').getViewModel();
+		param.reviewedBy = loginViewModel.reviewer;
+
+
 		Ext.Ajax.request({
 		  url : '/api/library/review/save',
 		  params  : param,
@@ -141,7 +157,9 @@ Ext.define('library.view.main.MainController', {
 			var jsonObj = Ext.JSON.decode(response.responseText);
 			var viewModel = Ext.getCmp('catalogentryformId').getViewModel();
 			viewModel.set("url","https://archive.org/details/" + jsonObj._id);
-			console.log(jsonObj);
+			viewModel.set("identifier",jsonObj.identifier);
+			console.log(jsonObj.title);
+			viewModel.set("title",jsonObj.title);
 		  },
 		  failure: function(response , opts) {
 			  console.log(response);

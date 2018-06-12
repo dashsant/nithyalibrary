@@ -67,8 +67,9 @@ Ext.define('library.view.main.CatalogEntryForm', {
 					{
 					   xtype: 'button',
 					   padding: '10 10 10 0',
-					   text:  'Reject?'
-					},
+					   text:  'Reject?',
+					   handler:'rejectHandler'
+					}
 					]
 					
 				},

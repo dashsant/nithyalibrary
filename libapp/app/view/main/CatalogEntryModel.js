@@ -7,8 +7,7 @@ Ext.define('library.view.main.CatalogEntryModel', {
     alias: 'viewmodel.catalog',
     id: 'catalogentryid',
     data: {
-		reviewer:'RajaRajeshwari',
-		password:'Sundareshwara',
+		identifier:"",
         type: 0,
 		url:"",
 		title:"",
@@ -55,7 +54,8 @@ Ext.define('library.view.main.CatalogEntryModel', {
         // We'll explain formulas in more detail soon.
         sourceUrlHtml: function (get) {
             var url = get('url');
-            return "<a href='" + url + "' target='_blank'>" + "Preview URL" + "</a>";
+			var title = get('title');
+            return "<a href='" + url + "' target='_blank'>" + title + "</a>";
         }
     }
 });

@@ -20,7 +20,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 		'library.view.main.MainController',
 		'library.view.main.CatalogBookModel'
 	],	
-	viewModel: 'catalog',
+//	viewModel: 'catalog',
 	items: [
 	{
 		layout: 'column',

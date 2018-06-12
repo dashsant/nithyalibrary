@@ -16,7 +16,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	defaults:{
 	 labelPad: 35
 	},
-	viewModel: 'catalog',	
+//	viewModel: 'catalog',	
 	items: [
 	{
 	   xtype: 'textfield',
