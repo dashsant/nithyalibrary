@@ -8,9 +8,24 @@ var bodyParser = require('body-parser');
 var nodeCleanup = require('node-cleanup');
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
+  //host: '192.168.0.3:9200',
   host: 'localhost:9200',
   log: 'error'
 });
+var mongoClient = require('mongodb').MongoClient;
+
+var mongoDb = null;
+// Connect to the db
+mongoClient.connect("mongodb://localhost:27017", function(err, db) {
+  if(!err) {
+		mongoDb = db.db("archive_org");
+		console.log("We are connected");
+  }
+  else{
+  console.log(err);
+  }
+});
+
 
 
 var path = require('path');
