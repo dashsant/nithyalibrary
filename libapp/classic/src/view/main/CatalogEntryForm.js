@@ -6,6 +6,24 @@ var localBookCategories = Ext.create('Ext.data.Store', {
         {"id":2, "label":"Manuscript" }
     ]
 });
+var tpl = new Ext.create('Ext.XTemplate', 
+	'{[this.currentKey = null]}',
+	'<tpl for=".">',
+		'<tpl if="this.shouldShowHeader(group)">',
+			'<div class="group-header"><b>{[this.currentKey = values.group]}</b></div>',
+		'</tpl>',
+		'<div class="x-boundlist-item"><b>{label}</b> <small><i>({group})</i></small></div>',
+	'</tpl>',
+	{               
+		shouldShowHeader: function(key){
+			return this.currentKey != key;
+		},
+		getHeader: function(key){
+			this.currentKey = key;
+			return key;
+		}
+	}
+);
 Ext.define('library.view.main.CatalogEntryForm', {
     extend: 'Ext.form.Panel',
     xtype: 'catalogentryform',
@@ -24,7 +42,8 @@ Ext.define('library.view.main.CatalogEntryForm', {
 		'library.view.main.MainController',
 		'library.view.main.CatalogEntryModel',
 		'library.view.main.CatalogMenuscriptForm',
-		'library.view.main.CatalogBookForm'
+		'library.view.main.CatalogBookForm',
+		'library.store.ClassificationCategories',
 	],	
 	viewModel: 'catalog',
 	items:[
@@ -95,11 +114,28 @@ Ext.define('library.view.main.CatalogEntryForm', {
 				   allowBlank: false
 				},
 				{
+				   xtype: 'CategoryTagField',
+				   fieldLabel: 'Category',
+				   allowBlank: true,
+				   displayField: '<strong>{label}</strong> <small><i>({group})</i></small>',
+				   labelTpl: '<strong>{label}</strong> <small><i>({group})</i></small>',
+				   valueField: 'id',
+				   store: Ext.create('library.store.ClassificationCategories',{autoLoad:true}),
+				   queryMode: 'local',
+				   filterPickList: false,
+				   listConfig: {
+					   cls: 'grouped-list'
+				   },
+				   tpl: tpl,
+				   bind: '{category}'
+				},
+/*				{
 				   xtype: 'textfield',
 				   fieldLabel: 'Category',
 				   allowBlank: true,
 				   bind: '{category}'
 				},				
+*/				
 				{
 					xtype: 'panel',
 					layout: {

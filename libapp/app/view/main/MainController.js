@@ -156,6 +156,7 @@ Ext.define('library.view.main.MainController', {
 		  success : function(response){
 			var jsonObj = Ext.JSON.decode(response.responseText);
 			var viewModel = Ext.getCmp('catalogentryformId').getViewModel();
+			viewModel.reset();
 			viewModel.set("url","https://archive.org/details/" + jsonObj._id);
 			viewModel.set("identifier",jsonObj.identifier);
 			console.log(jsonObj.title);

@@ -274,8 +274,8 @@ function processSearchResult(hits , aggr)
     return matchList;
 }
 
-//app.use(express.static(path.join(__dirname, 'libapp/build/production/library')));
-app.use(express.static(path.join(__dirname, 'libapp')));
+app.use(express.static(path.join(__dirname, 'libapp/build/production/library')));
+//app.use(express.static(path.join(__dirname, 'libapp')));
 
 app.use('/api', router);
 
@@ -363,52 +363,51 @@ app.post('/api/library/review/save', function (req, res) {
 	var reviewObj = review;
 	mongoDb.collection("arch").findOne({_id:id}, function(err, result){	
 		if(!err){
-			retObj = Object.create(result);
-			retObj.reviewStatus = "Reviewed";
-			retObj.title = reviewObj.title;
+			result.reviewStatus = "Reviewed";
+			result.title = reviewObj.title;
 			if(reviewObj.type == 1){
-				retObj.r_category = reviewObj.category;
-				retObj.r_author1 = reviewObj.author1;
-				retObj.r_contributor1 = reviewObj.contributor1;
-				retObj.r_author2 = reviewObj.author2;
-				retObj.r_contributor2 = reviewObj.contributor2;
-				retObj.r_author3 = reviewObj.author3;
-				retObj.r_contributor3 = reviewObj.contributor3;
-				retObj.r_author4 = reviewObj.author4;
-				retObj.r_contributor4 = reviewObj.contributor4;
-				retObj.r_publisher = reviewObj.publisher;
-				retObj.r_published_on = reviewObj.published_on;
-				retObj.r_numpages = reviewObj.numpages;
-				retObj.r_description = reviewObj.description;
-				retObj.r_metadata = reviewObj.metadata;
-				retObj.r_isbn = reviewObj.isbn;
-				retObj.r_copyright = reviewObj.copyright;
-				retObj.r_languages = reviewObj.languages;
-				retObj.r_price = reviewObj.price;
-				retObj.r_edition = reviewObj.edition;
+				result.r_category = reviewObj.category;
+				result.r_author1 = reviewObj.author1;
+				result.r_contributor1 = reviewObj.contributor1;
+				result.r_author2 = reviewObj.author2;
+				result.r_contributor2 = reviewObj.contributor2;
+				result.r_author3 = reviewObj.author3;
+				result.r_contributor3 = reviewObj.contributor3;
+				result.r_author4 = reviewObj.author4;
+				result.r_contributor4 = reviewObj.contributor4;
+				result.r_publisher = reviewObj.publisher;
+				result.r_published_on = reviewObj.published_on;
+				result.r_numpages = reviewObj.numpages;
+				result.r_description = reviewObj.description;
+				result.r_metadata = reviewObj.metadata;
+				result.r_isbn = reviewObj.isbn;
+				result.r_copyright = reviewObj.copyright;
+				result.r_languages = reviewObj.languages;
+				result.r_price = reviewObj.price;
+				result.r_edition = reviewObj.edition;
 			}
 			else{
-				retObj.manuscript_script = reviewObj.manuscript_script;
-				retObj.manuscript_material = reviewObj.manuscript_material;
-				retObj.manuscript_scribe = reviewObj.manuscript_scribe;
-				retObj.manuscript_subject = reviewObj.manuscript_subject;
-				retObj.manuscript_institute = reviewObj.manuscript_institute;
-				retObj.manuscript_address = reviewObj.manuscript_address;
-				retObj.manuscript_foliosinbundle = reviewObj.manuscript_foliosinbundle;
-				retObj.manuscript_condition = reviewObj.manuscript_condition;
-				retObj.manuscript_foliosintext = reviewObj.manuscript_foliosintext;
-				retObj.manuscript_textrange = reviewObj.manuscript_textrange;
-				retObj.manuscript_lines = reviewObj.manuscript_lines;
-				retObj.manuscript_length = reviewObj.manuscript_length;
-				retObj.manuscript_width = reviewObj.manuscript_width;
-				retObj.manuscript_beginningline = reviewObj.manuscript_beginningline;
-				retObj.manuscript_endingline = reviewObj.manuscript_endingline;
-				retObj.manuscript_notes = reviewObj.manuscript_notes;
-				retObj.manuscript_remarks = reviewObj.manuscript_remarks;
+				result.manuscript_script = reviewObj.manuscript_script;
+				result.manuscript_material = reviewObj.manuscript_material;
+				result.manuscript_scribe = reviewObj.manuscript_scribe;
+				result.manuscript_subject = reviewObj.manuscript_subject;
+				result.manuscript_institute = reviewObj.manuscript_institute;
+				result.manuscript_address = reviewObj.manuscript_address;
+				result.manuscript_foliosinbundle = reviewObj.manuscript_foliosinbundle;
+				result.manuscript_condition = reviewObj.manuscript_condition;
+				result.manuscript_foliosintext = reviewObj.manuscript_foliosintext;
+				result.manuscript_textrange = reviewObj.manuscript_textrange;
+				result.manuscript_lines = reviewObj.manuscript_lines;
+				result.manuscript_length = reviewObj.manuscript_length;
+				result.manuscript_width = reviewObj.manuscript_width;
+				result.manuscript_beginningline = reviewObj.manuscript_beginningline;
+				result.manuscript_endingline = reviewObj.manuscript_endingline;
+				result.manuscript_notes = reviewObj.manuscript_notes;
+				result.manuscript_remarks = reviewObj.manuscript_remarks;
 			}
-			mongoDb.collection("arch_review").insertOne(retObj ,null, function(err,r){
+			mongoDb.collection("arch_review").insertOne(result ,null, function(err,r){
 				if(!err){
-					mongoDb.collection("arch").deleteOne({_id:retObj._id},	null, function(err,r){
+					mongoDb.collection("arch").deleteOne({_id:result._id},	null, function(err,r){
 						if(!err){res.send({success:true});}
 						else{res.send({success:false});}
 					});
