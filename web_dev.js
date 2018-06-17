@@ -1,5 +1,11 @@
 if(!global['App']) {
-    global.App = {};
+    global.App = {
+		users:[
+		{name:"Ramanathanand" , password:"HelloNithyanand12" , role:"approver"},
+		{name:"Shantidash" , password:"HelloNithyanand12" , role:"reviewer"},
+		
+		]
+	};
 }
 
 var express = require('express');
@@ -11,6 +17,8 @@ var client = new elasticsearch.Client({
   host: '192.168.0.3:9200',
   log: 'error'
 });
+
+
 
 var mongoClient = require('mongodb').MongoClient;
 
@@ -274,8 +282,8 @@ function processSearchResult(hits , aggr)
     return matchList;
 }
 
-app.use(express.static(path.join(__dirname, 'libapp/build/production/library')));
-//app.use(express.static(path.join(__dirname, 'libapp')));
+//app.use(express.static(path.join(__dirname, 'libapp/build/production/library')));
+app.use(express.static(path.join(__dirname, 'libapp')));
 
 app.use('/api', router);
 
@@ -424,11 +432,19 @@ app.post('/api/library/review/save', function (req, res) {
 
 app.post('/login', function (req, res) {
 	var	response = {"success":false,"msg":""};
-	
-	if(req.body.reviewer == "RajaRajeshwari" && req.body.password == "Sundareshwara"){
-		response.success = true;
-		response.msg = "OK";
+	var users = global.App.users;
+	console.log(users);
+	console.log(req.body);
+	for( var i in users) {
+		console.log(users[i]);
+		if(users[i].name == req.body.reviewer && req.body.password == users[i].password){
+			response.success = true;
+			response.msg = users[i].role;
+			break;
+		}
 	}
+	console.log(response)
+
 	res.setHeader('Content-Type', 'application/json');
 	res.send(response);
 });
