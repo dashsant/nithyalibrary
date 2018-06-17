@@ -7,7 +7,6 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 		type:'vbox', 
 		align: 'stretch'
 		}, 
-	id:'catalogmenuscriptformid',
 	margin:0, 
 	padding:0, 
 	itemId:'manuscript-card', 
@@ -20,13 +19,13 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	items: [
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_script',
+	   //id: 'manuscript_script',
 	   fieldLabel: 'Script',
 	   bind: '{manuscript_script}'
 	},
 	{
 	   xtype: 'combobox',
-	   id: 'manuscript_material',
+	   //id: 'manuscript_material',
 	   fieldLabel: 'Material',
 	   queryMode: 'local',
 	   valueField: 'value',
@@ -42,7 +41,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_scribe',
+	   //id: 'manuscript_scribe',
 	   fieldLabel: 'Scribe',
 	   bind: '{manuscript_scribe}',
 	   //plugins:[{
@@ -52,19 +51,19 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_subject',
+	   //id: 'manuscript_subject',
 	   fieldLabel: 'Subject',
 	   bind: '{manuscript_subject}'
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_institute',
+	   //id: 'manuscript_institute',
 	   fieldLabel: 'Institute',
 	   bind: '{manuscript_institute}'
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_address',
+	   //id: 'manuscript_address',
 	   fieldLabel: 'Address',
 	   bind: '{manuscript_address}',
 	  // plugins:[{
@@ -74,7 +73,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_foliosinbundle',
+	   //id: 'manuscript_foliosinbundle',
 	   fieldLabel: 'Folios in Bundle',
 	   bind: '{manuscript_foliosinbundle}',
 	  // plugins:[{
@@ -84,7 +83,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'tagfield',
-	   id: 'manuscript_condition',
+	   //id: 'manuscript_condition',
 	   fieldLabel: 'Condition',
 	   displayField: 'label',
 	   valueField: 'id',
@@ -99,19 +98,19 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_foliosintext',
+	   //id: 'manuscript_foliosintext',
 	   fieldLabel: 'Folios in Text',
 	   bind: '{manuscript_foliosintext}'
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_textrange',
+	   //id: 'manuscript_textrange',
 	   fieldLabel: 'Text Range',
 	   bind: '{manuscript_textrange}'
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_lines',
+	   //id: 'manuscript_lines',
 	   fieldLabel: 'Lines',
 	   bind: '{manuscript_lines}'
 	},
@@ -123,7 +122,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 		items:[
 			{
 			   xtype: 'numberfield',
-			   id: 'manuscript_length',
+			   //id: 'manuscript_length',
 			   fieldLabel: 'Length',
 			   hideTrigger: true,
 			   allowDecimals: false,
@@ -137,7 +136,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 			},
 			{
 			   xtype: 'numberfield',
-			   id: 'manuscript_width',
+			   //id: 'manuscript_width',
 			   fieldLabel: 'Width',
 			   hideTrigger: true,
 			   allowDecimals: false,
@@ -154,7 +153,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_beginningline',
+	   //id: 'manuscript_beginningline',
 	   fieldLabel: 'Begining Line',
 	   bind: '{manuscript_beginningline}',
 	  // plugins:[{
@@ -164,7 +163,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_endingline',
+	   //id: 'manuscript_endingline',
 	   fieldLabel: 'Ending Line',
 	   bind: '{manuscript_endingline}',
 	  // plugins:[{
@@ -174,7 +173,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_notes',
+	   //id: 'manuscript_notes',
 	   fieldLabel: 'Notes/Content',
 	   bind: '{manuscript_notes}',
 	  // plugins:[{
@@ -184,7 +183,7 @@ Ext.define('library.view.main.CatalogMenuscriptForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'manuscript_remarks',
+	   //id: 'manuscript_remarks',
 	   fieldLabel: 'Remarks',
 	   bind: '{manuscript_remarks}',
 	 //  plugins:[{

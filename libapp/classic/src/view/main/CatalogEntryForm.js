@@ -30,7 +30,6 @@ Ext.define('library.view.main.CatalogEntryForm', {
 	layout: {
 		type: 'hbox',align:'fit'
     },
-	id:'catalogentryformId',
 	shrinkWrap:false,
 	flex:1,
 	width:'100%',
@@ -46,6 +45,11 @@ Ext.define('library.view.main.CatalogEntryForm', {
 		'library.store.ClassificationCategories',
 	],	
 	viewModel: 'catalog',
+	setLblMsg:function(msg){
+		var l = this.down('label[itemId=msgLabel]');
+		l.setHtml(msg);
+	},
+
 	items:[
 		{
 			xtype: 'form',
@@ -77,7 +81,6 @@ Ext.define('library.view.main.CatalogEntryForm', {
 					{
 					   xtype: 'label',
 					   fieldLabel: 'Preview URL',
-					   id: 'source_url',
 					   margin: '10 10 10 0',
 					   bind:{
 						   html:'{sourceUrlHtml}'
@@ -141,7 +144,7 @@ Ext.define('library.view.main.CatalogEntryForm', {
 					layout: {
 						type: 'card' 
 					},
-					id: 'categorycard',
+					//id: 'categorycard',
 					bind: {
 						activeItem: '{type}'   //'{selectedItem.value}'
 					},
@@ -181,6 +184,12 @@ Ext.define('library.view.main.CatalogEntryForm', {
 						formBind: true, 
 						style: 'background-color: rgb(141, 67, 54);font-size:18;color:#fff;font-weight: bold;',
 						handler:'saveHandler'
+					},
+					{
+						xtype:'label',
+						itemId:'msgLabel',
+						margin:'0 0 0 10'
+
 					}
 				]
 			}]

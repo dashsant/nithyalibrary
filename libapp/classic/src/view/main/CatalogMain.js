@@ -17,9 +17,17 @@ Ext.define('library.view.main.CatalogMain', {
 	items:[
 		{
 			xtype: 'catalogentryform',
-			itemId:'catalogentryformId',
+			itemId:'catalogreviewid',
 			margin: '5 5 5 0',
 			title:'Review',
-		}
+			id:'catalogreviewid'
+		},
+		{
+			xtype: 'catalogentryform',
+			itemId:'catalogapproveid',
+			margin: '5 5 5 0',
+			title:'Approve',
+			id:'catalogapproveid',
+		}		
 	]
 });

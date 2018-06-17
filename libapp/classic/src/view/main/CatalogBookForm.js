@@ -3,7 +3,6 @@
 Ext.define('library.view.main.CatalogBookForm', {
     extend: 'Ext.form.Panel',
     xtype: 'catalog-book-form',
-	id:'catalogbookformid',
 	layout: { 
 		type:'vbox', 
 		align: 'stretch'
@@ -98,7 +97,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'publisher',
+	   //id: 'publisher',
 	   fieldLabel: 'Publisher',
 	   allowBlank: false,
 	   bind: '{publisher}'
@@ -109,7 +108,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 		items:[{
 		   xtype: 'datefield',
 		   width: '50%',
-		   id: 'published_on',
+		   //id: 'published_on',
 		   fieldLabel: 'Published Year',
 		   maxValue: new Date(),
 		   format: 'm/Y',
@@ -120,7 +119,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 		   margin: '10 0 0 10',
 		   labelPad: 0,
 		   width: '48%',
-		   id: 'numpages',
+		   //id: 'numpages',
 		   fieldLabel: 'Number of Pages',
 		   hideTrigger: true,
 		   allowDecimals: false,
@@ -131,14 +130,14 @@ Ext.define('library.view.main.CatalogBookForm', {
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'description',
+	   //id: 'description',
 	   fieldLabel: 'Description',
 	   allowBlank: true,
 	   bind: '{description}'
 	},
 	{
 	   xtype: 'textfield',
-	   id: 'metadata',
+	   //id: 'metadata',
 	   fieldLabel: 'Meta-data',
 	   allowBlank: true,
 	   bind: '{metadata}'
@@ -151,7 +150,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 		items:[{
 			   xtype: 'numberfield',
 			   width: '50%',
-			   id: 'isbn',
+			   //id: 'isbn',
 			   fieldLabel: 'ISBN',
 			   allowBlank: true,
 			   maxLength:13,
@@ -165,7 +164,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 			   margin: '10 0 0 0',
 			   width: '48%',
 			   labelPad: 5,
-			   id: 'copyright',
+			   //id: 'copyright',
 			   maxValue: new Date(),
 			   format: 'Y',
 			   fieldLabel: 'Copyright',
@@ -175,7 +174,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 	},
 	{
 	   xtype: 'tagfield',
-	   id: 'languages',
+	   //id: 'languages',
 	   fieldLabel: 'Languages',
 	   allowBlank: true,
 	   displayField: 'label',
@@ -194,7 +193,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 			{
 			   xtype: 'numberfield',
 			   width: '50%',
-			   id: 'edition',
+			   //id: 'edition',
 			   fieldLabel: 'Edition',
 			   allowBlank: true,
 			   minValue:1,
@@ -206,7 +205,7 @@ Ext.define('library.view.main.CatalogBookForm', {
 			   margin: '10 0 0 10',
 			   width: '48%',
 			   labelPad: 5,
-			   id: 'price',
+			   //id: 'price',
 			   fieldLabel: 'Price',
 			   allowBlank: true,
 			   bind: '{price}'
