@@ -2,6 +2,7 @@ if(!global['App']) {
     global.App = {
 		users:[
 		{name:"Ramanathanand" , password:"HelloNithyanand12" , role:"approver"},
+		{name:"RajaRajeshwari" , password:"Sundareshwara" , role:"approver"},
 		{name:"Shantidash" , password:"HelloNithyanand12" , role:"reviewer"},
 		
 		]
@@ -313,7 +314,24 @@ app.post('/api/library/review/reject', function(req,res){
 	}
 	});
 });
-
+app.post('/api/library/approve/fetch', function (req, res) {
+	var qry = {
+		reviewer : req.body.reviewer,
+		reviewStatus : "Reviewed"
+	}
+	mongoDb.collection("arch").find().limit(10).toArray(function(err, result) {
+		if(!err){
+			if(result != null){
+				res.setHeader('Content-Type', 'application/json');
+				res.send(result);
+			}
+		}
+		else{
+			res.setHeader('Content-Type', 'application/json');
+			res.send({success:false});
+		}
+	});
+});
 
 app.post('/api/library/review/assign', function (req, res) {
 	// get the first record which is assigned to any user and has not been marked "reviewed"

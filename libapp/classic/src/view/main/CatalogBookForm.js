@@ -116,9 +116,9 @@ Ext.define('library.view.main.CatalogBookForm', {
 		   bind: '{published_on}'
 		},{
 		   xtype: 'numberfield',
-		   margin: '10 0 0 10',
+		   margin: '10 0 0 0',
 		   labelPad: 0,
-		   width: '48%',
+		   width: '49%',
 		   //id: 'numpages',
 		   fieldLabel: 'Number of Pages',
 		   hideTrigger: true,
@@ -162,8 +162,8 @@ Ext.define('library.view.main.CatalogBookForm', {
 			},{
 			   xtype: 'datefield',
 			   margin: '10 0 0 0',
-			   width: '48%',
-			   labelPad: 5,
+			   width: '49%',
+			   labelPad: 0,
 			   //id: 'copyright',
 			   maxValue: new Date(),
 			   format: 'Y',
@@ -202,9 +202,9 @@ Ext.define('library.view.main.CatalogBookForm', {
 			},
 			{
 			   xtype: 'numberfield',
-			   margin: '10 0 0 10',
-			   width: '48%',
-			   labelPad: 5,
+			   margin: '10 0 0 0',
+			   width: '49%',
+			   labelPad: 0,
 			   //id: 'price',
 			   fieldLabel: 'Price',
 			   allowBlank: true,

@@ -7,8 +7,8 @@ Ext.define('library.view.main.LoginViewModel', {
     alias: 'viewmodel.login',
     id: 'loginmodelid',
     data: {
-		reviewer:'RajaRajeshwari',
-		password:'Sundareshwara',
+		reviewer:'Ramanathanand',
+		password:'HelloNithyanand12',
     }
 
 });

@@ -41,7 +41,7 @@ Ext.define('library.view.main.CatalogEntryModel', {
 		this.set("manuscript_foliosintext","");
 		this.set("manuscript_textrange","");
 		this.set("manuscript_lines", 0);
-		this.set("manuscript_length" 0);
+		this.set("manuscript_length", 0);
 		this.set("manuscript_width" , 0);
 		this.set("manuscript_beginningline" , 0);
 		this.set("manuscript_endingline" , 0);

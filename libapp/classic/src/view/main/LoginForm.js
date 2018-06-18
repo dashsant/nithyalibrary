@@ -39,8 +39,7 @@ Ext.define('library.view.main.LoginForm', {
 				fieldLabel: 'Password',
 				allowBlank: false,
 				bind:'{password}',
-				style: 'font-size:18;color:#fff;font-weight: bold;',
-				value: 'Sundareshwara'
+				style: 'font-size:18;color:#fff;font-weight: bold;'
 			}, {
 				xtype: 'displayfield',
 				hideEmptyLabel: false,

@@ -23,7 +23,7 @@ Ext.define('library.view.main.CatalogMain', {
 			id:'catalogreviewid'
 		},
 		{
-			xtype: 'catalogentryform',
+			xtype: 'approvegrid',
 			itemId:'catalogapproveid',
 			margin: '5 5 5 0',
 			title:'Approve',

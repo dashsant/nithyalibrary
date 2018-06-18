@@ -129,7 +129,7 @@ Ext.define('library.view.main.MainController', {
 			  success : function(response){	
 				   var jsonObj = Ext.JSON.decode(response.responseText);
 				   if(jsonObj.success){
-						this.assignForReview();
+						//this.assignForReview();
 						Ext.getCmp('admincard').getLayout().setActiveItem('card-2'); 
 				   }
 				   else{
